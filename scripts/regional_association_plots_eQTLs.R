@@ -14,11 +14,13 @@ library(biomaRt)
 Mart <- useMart(host="www.ensembl.org", biomart="ENSEMBL_MART_ENSEMBL",dataset="hsapiens_gene_ensembl")
 Attr<-listAttributes(Mart)
 
+# /projects/MRC-IEU/users/ph14916/fatty_acids_summary/colocalisation
+# 
 coloc_results<-colocalisation(
-	gtex="~/fatty-acids/data/gtex_snplist_coloc.Rdata",#genetic associations for gene expression from gtex in 1 mb region centred around the index SNP for each region. This file was created using ~/fatty-acids/scripts/extract_eqtls.R
-	eqtlgen="~/fatty-acids/data/eqtlgen_snplist_coloc.Rdata", #genetic associations for gene expression from eqtlgen in a 1mb region centred around the index SNP for each region. This file was created using ~/fatty-acids/scripts/extract_eqtls.R
-	gwis="~/fatty-acids/data/snplist_coloc_gwis_ratios.Rdata", #genetic associations from gwis in a 1mb regino centred around the index SNP for each region. Assumed to contain three data frames called Charge1, Shin1 and Framingham1. This file was created using the script ~/fatty-acids/scripts/extract_gwis_ratios.R 
-	ref_dat="~/fatty-acids/data/data_maf0.01_rs.bim.gz", #reference data. e.g. all SNPs in 1000 genomes European data and their chromosomal coordinates in GRCh37. I obtained this file from Gib  
+	gtex="~/MR_FattyAcids/data/colocalisation/gtex_snplist_coloc.Rdata",#genetic associations for gene expression from gtex in 1 mb region centred around the index SNP for each region. The file can be found here /projects/MRC-IEU/users/ph14916/fatty_acids_summary/colocalisation. This file was created using ~/fatty-acids/scripts/extract_eqtls.R. This file exceeds the file size limit of github of 100mb
+	eqtlgen="~/fatty-acids/data/eqtlgen_snplist_coloc.Rdata", #genetic associations for gene expression from eqtlgen in a 1mb region centred around the index SNP for each region. The file can be found here /projects/MRC-IEU/users/ph14916/fatty_acids_summary/colocalisation. This file was created using ~/fatty-acids/scripts/extract_eqtls.R
+	gwis="~/fatty-acids/data/snplist_coloc_gwis_ratios.Rdata", #genetic associations from gwis in a 1mb regino centred around the index SNP for each region. Assumed to contain three data frames called Charge1, Shin1 and Framingham1. The file can be found here /projects/MRC-IEU/users/ph14916/fatty_acids_summary/colocalisation. This file was created using the script ~/fatty-acids/scripts/extract_gwis_ratios.R 
+	ref_dat="~/fatty-acids/data/data_maf0.01_rs.bim.gz", #reference data. e.g. all SNPs in 1000 genomes European data and their chromosomal coordinates in GRCh37. I obtained this file from Gib. The file can be found here /projects/MRC-IEU/users/ph14916/fatty_acids_summary/colocalisation 
 	ref_turn_off=TRUE, #don't load the ref dataset e.g. because it is already loaded in memory. this can be convenient because it takes a long time to load the reference data
 	tissues=c("Liver.allpairs.txt","Adipose_Subcutaneous.allpairs.txt","Adipose_Visceral_Omentum.allpairs.txt","Whole_Blood.allpairs.txt"), #the tissues to include. Must correspond to file name in gtex
 	coloc_strategy="alltraits_1study_alltissues", #Which coloc strategy to use. 
@@ -26,8 +28,8 @@ coloc_results<-colocalisation(
 	# "alltraits_1study_alltissues" includes 1 study, all fatty acid traits and all tissues per analysis 
 	# "1trait_allstudies_alltissues" includes 1trait, all studies and all tissues per analysis.  
 	turn_off_plot=FALSE, #for convenience can turn the plot function off and only do colocalisation. 
-	region=500000, #how many base pairs should be included in the regional association plot? If set to NULL, the entire available region (1 million base pairs).  
-	fix_charge=TRUE #Add DPAn6_to_AA to CHARGE. This trait is missing from CHARGE but not missing from Shin and Framingham. The purpose is to make the dimensions of the plots consistent, which makes comparing them side by side easier. The plot with DPAn6_to_AA_deleteme or CHARGE_deleteme should be deleted/ignore/covered up with a white square. Note that the colocalisation results including fix_charge=TRUE are not going to be accurate when trait is DPAn6_to_AA. Therefore the function does not return colocalisation results when fix_charge=TRUE
+	region=NULL, #how many base pairs should be included in the regional association plot? If set to NULL, the entire available region (1 million base pairs).  
+	fix_charge=FALSE #Add DPAn6_to_AA to CHARGE. This trait is missing from CHARGE but not missing from Shin and Framingham. The purpose is to make the dimensions of the plots consistent, which makes comparing them side by side easier. The plot with DPAn6_to_AA_deleteme or CHARGE_deleteme should be deleted/ignore/covered up with a white square. Note that the colocalisation results including fix_charge=TRUE are not going to be accurate when trait is DPAn6_to_AA. Therefore the function does not return colocalisation results when fix_charge=TRUE
 	)
 
 res_dat<-do.call(rbind,coloc_results[[1]])
@@ -36,8 +38,8 @@ Col2<-which(names(res_dat) != "region")
 res_dat<-res_dat[,c(Col1,Col2)]
 res_dat2<-res_dat[res_dat$traits != "None",]
 
-write.table(res_dat2,paste("~/fatty-acids/coloc/results/hyprcoloc_",coloc_results[[2]],"_",coloc_results[[3]],".txt",sep=""),sep="\t",col.names=T,row.names=F,quote=F)
-write.table(res_dat,paste("~/fatty-acids/coloc/results/hyprcoloc_",coloc_results[[2]],"_",coloc_results[[3]],"_incl_dropped_traits.txt",sep=""),sep="\t",col.names=T,row.names=F,quote=F)
+write.table(res_dat2,paste("~/fatty-acids/results/coloc/hyprcoloc_",coloc_results[[2]],"_",coloc_results[[3]],".txt",sep=""),sep="\t",col.names=T,row.names=F,quote=F)
+write.table(res_dat,paste("~/fatty-acids/results/coloc/hyprcoloc_",coloc_results[[2]],"_",coloc_results[[3]],"_incl_dropped_traits.txt",sep=""),sep="\t",col.names=T,row.names=F,quote=F)
 
 
 colocalisation<-function(gtex=NULL,eqtlgen=NULL,gwis=NULL,ref_dat=NULL,tissues=NULL,coloc_strategy=NULL,turn_off_plot=FALSE,ref_turn_off=FALSE,region=NULL,fix_charge=FALSE){
@@ -162,7 +164,7 @@ colocalisation<-function(gtex=NULL,eqtlgen=NULL,gwis=NULL,ref_dat=NULL,tissues=N
 				trait_list<-ls()[grep("Traits[0-9]",ls())] 
 
 				trait_list2<-lapply(1:length(trait_list),FUN=function(x) eval(parse(text=trait_list[x])))
-				Plot<-format_data2(trait_list=trait_list2,ld.matrix=Gen.table,snps=SNPlist,coloc_strategy=coloc_strategy)
+				Plot<-format_data2(trait_list=trait_list2,ld.matrix=Gen.table,snps=SNPlist,coloc_strategy=coloc_strategy,Studies[i])
 				ld.matrix<-data.frame(Plot[1])
 				Z.matrix<-data.frame(Plot[2])
 				Markers<-data.frame(Plot[3])
@@ -497,11 +499,18 @@ format_data2<-function(trait_list=NULL,ld.matrix=NULL,snps=NULL,Studies=NULL,col
 		dat_temp$X2<-as.numeric(dat_temp$X2)
 		dat_temp$X2[dat_temp$X1 == "AA:DGLA / D5D"]<-1
 		dat_temp$X2[dat_temp$X1 == "GLA:LA / D6D"]<-2
-		if(sum(grep("deleteme",dat_temp$X1))!=0){
+		Test<-sum(grep("deleteme",dat_temp$X1))!=0
+		if(Test){
 			dat_temp$X2[dat_temp$X1 %in% c("DPAn6:AA_deleteme / ELOVL2","DHA:DPAn3 / ELOVL2")]<-c(3,4)
-		}else{
+		}
+		if(coloc_strategy=="alltraits_1study_alltissues" & !Test){
+			if(Studies[i] != "CHARGE"){
 			dat_temp$X2[dat_temp$X1 %in% c("DPAn6:AA / ELOVL2","DHA:DPAn3 / ELOVL2")]<-c(3,4)
 			}
+			if(Studies[i] == "CHARGE"){
+				dat_temp$X2[dat_temp$X1 == "DHA:DPAn3 / ELOVL2"]<-3
+			}
+		}
 		dat_temp$X2[dat_temp$X1 %in% c("ADA:AA / ELOVL2/5","DPAn3:EPA / ELOVL2/5")]<-c(5,6)
 		dat_temp$X2[dat_temp$X1 =="DGLA:GLA / ELOVL5"]<-7
 		dat_temp$X2[dat_temp$X1 %in% c("POA:PA / SCD","OA:SA / SCD")]<-c(8,9)
@@ -577,6 +586,7 @@ define_region<-function(index_snp=NULL,region=NULL,ref=NULL){
 make_title<-function(Dir=NULL,Info=NULL,type=".png"){
 	Info<-paste(unique(unlist(lapply(1:length(strsplit(Info,split=" ")),FUN=function(x) 
 		unlist(strsplit(Info,split=" ")[x])[1]))),collapse="_")
+	Info<-gsub("_NA","",Info)
 	plot.title<-paste(Dir,paste(Info,collapse="_"),type,sep="")
 	plot.title<-gsub(":","to",plot.title)
 	# plot.title<-gsub(" ","_",plot.title)
