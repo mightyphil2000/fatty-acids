@@ -75,10 +75,75 @@ for(i in 1:length(Files)){
 	gtex[[i]]<-extract_data2(snplist="/projects/MRC-IEU/users/ph14916/fatty_acids_summary/snplist_coloc_bedformat.txt",File=target_file,exact_match=FALSE,file_sep="\t") #snplist_coloc.txt contains 17381 SNPs +/- 500kb of each of 9 index SNPs selected as instruments for fatty acid traits. The SNPs reside at 6 genomic regions: FADS, ELOVL2, SCD, GCKR, PDXDC1, SPTLC3 
 }
 gtex1<-do.call(rbind,gtex)
+
 save("gtex1",file="/projects/MRC-IEU/users/ph14916/fatty_acids_summary/colocalisation/gtex_snplist_coloc.Rdata")
+
 scp ph14916@epi-franklin.epi.bris.ac.uk:/projects/MRC-IEU/users/ph14916/fatty_acids_summary/colocalisation/gtex_snplist_coloc.Rdata .
 
-# Files<-Files[1]
-# Gtex<-extract_data(file_dir = "/projects/MRC-IEU/users/ph14916/gtex",snplist = "/projects/MRC-IEU/users/ph14916/fatty_acids_summary/snplist_coloc_bedformat.txt",type="not_fatty_acids",wk_dir="/projects/MRC-IEU/users/ph14916/fatty_acids_summary/colocalisation/gtex",file_list=Files,exact_match=FALSE)
 
-# save("Gtex",file="/projects/MRC-IEU/users/ph14916/fatty_acids_summary/colocalisation/gtex_snps.Rdata")
+# gtex files too large for github. I though maybe save the separate tissues in separate files would help but even separated by tissue the files are too large 
+# load("/projects/MRC-IEU/users/ph14916/fatty_acids_summary/colocalisation/gtex_snplist_coloc.Rdata")
+# Temp1<-split(gtex1,f=gtex1$file)
+# names(Temp1)<-gsub(".txt","",unique(gtex1$file))
+# # paste("trait",1:length(Temp1),sep="")
+# list2env(Temp1,envir=.GlobalEnv)
+
+# # save(list=names(Temp1),file="/projects/MRC-IEU/users/ph14916/fatty_acids_summary/colocalisation/gtex_snplist_coloc_v2.Rdata")
+
+# # load("/projects/MRC-IEU/users/ph14916/fatty_acids_summary/colocalisation/gtex_snplist_coloc_v2.Rdata")
+
+# rm(list=c("Temp1","gtex1"))
+# Objects<-ls()
+# for(i in 1:length(Objects)){
+# 	print(Objects[i])
+# 	File.save<-paste("/projects/MRC-IEU/users/ph14916/fatty_acids_summary/colocalisation/gtex_snplist_coloc_",Objects[i],".Rdata",sep="")
+# 	Obj<-Objects[i]
+# 	save("Adipose_Subcutaneous.allpairs",file=File.save)
+# }
+
+
+# scp -T username@ip.of.server.copyfrom:"file1.txt file2.txt" "~/yourpathtocopy"
+
+
+
+
+# scp ph14916@epi-franklin.epi.bris.ac.uk:/projects/MRC-IEU/users/ph14916/fatty_acids_summary/colocalisation/gtex_snplist_coloc_Whole_Blood.allpairs.Rdata .
+
+
+# gtex_snplist_coloc_Adipose_Subcutaneous.allpairs.Rdata      
+# gtex_snplist_coloc_Heart_Atrial_Appendage.allpairs.Rdata
+# gtex_snplist_coloc_Adipose_Visceral_Omentum.allpairs.Rdata  
+# gtex_snplist_coloc_Heart_Left_Ventricle.allpairs.Rdata
+# gtex_snplist_coloc_Artery_Aorta.allpairs.Rdata              
+# gtex_snplist_coloc_Liver.allpairs.Rdata
+# gtex_snplist_coloc_Artery_Coronary.allpairs.Rdata           
+# gtex_snplist_coloc_Lung.allpairs.Rdata
+# gtex_snplist_coloc_Artery_Tibial.allpairs.Rdata             
+# gtex_snplist_coloc_Colon_Sigmoid.allpairs.Rdata             
+# gtex_snplist_coloc_Small_Intestine_Terminal_Ileum.allpairs.Rdata
+# gtex_snplist_coloc_Colon_Transverse.allpairs.Rdata          
+# gtex_snplist_coloc_Whole_Blood.allpairs.Rdata
+
+# load("gtex_snplist_coloc_Whole_Blood.allpairs.Rdata")
+# for i in hello 1 * 2 goodbye 
+# do
+#   echo "Looping ... i is set to $i"
+# done
+
+# while read gtexfiles.txt
+# do
+# 	cat $f
+# done
+
+# for f in gtexfiles*.txt;  do echo ${f}; done;
+
+# for i in $(cat $1); do
+#     echo "tester: $i"
+# done
+
+# scp ph14916@epi-franklin.epi.bris.ac.uk:/projects/MRC-IEU/users/ph14916/fatty_acids_summary/colocalisation/gtex_snplist_coloc_Adipose_Subcutaneous.allpairs.Rdata  .
+
+# # Files<-Files[1]
+# # Gtex<-extract_data(file_dir = "/projects/MRC-IEU/users/ph14916/gtex",snplist = "/projects/MRC-IEU/users/ph14916/fatty_acids_summary/snplist_coloc_bedformat.txt",type="not_fatty_acids",wk_dir="/projects/MRC-IEU/users/ph14916/fatty_acids_summary/colocalisation/gtex",file_list=Files,exact_match=FALSE)
+
+# # save("Gtex",file="/projects/MRC-IEU/users/ph14916/fatty_acids_summary/colocalisation/gtex_snps.Rdata")

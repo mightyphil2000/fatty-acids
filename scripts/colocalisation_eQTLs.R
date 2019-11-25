@@ -14,8 +14,7 @@ library(biomaRt)
 Mart <- useMart(host="www.ensembl.org", biomart="ENSEMBL_MART_ENSEMBL",dataset="hsapiens_gene_ensembl")
 Attr<-listAttributes(Mart)
 
-# /projects/MRC-IEU/users/ph14916/fatty_acids_summary/colocalisation
-# 
+ 
 coloc_results<-colocalisation(
 	gtex="~/MR_FattyAcids/data/colocalisation/gtex_snplist_coloc.Rdata",#genetic associations for gene expression from gtex in 1 mb region centred around the index SNP for each region. The file can be found here /projects/MRC-IEU/users/ph14916/fatty_acids_summary/colocalisation. This file was created using ~/fatty-acids/scripts/extract_eqtls.R. This file exceeds the file size limit of github of 100mb
 	eqtlgen="~/fatty-acids/data/eqtlgen_snplist_coloc.Rdata", #genetic associations for gene expression from eqtlgen in a 1mb region centred around the index SNP for each region. The file can be found here /projects/MRC-IEU/users/ph14916/fatty_acids_summary/colocalisation. This file was created using ~/fatty-acids/scripts/extract_eqtls.R
@@ -29,7 +28,7 @@ coloc_results<-colocalisation(
 	# "1trait_allstudies_alltissues" includes 1trait, all studies and all tissues per analysis.  
 	turn_off_plot=FALSE, #for convenience can turn the plot function off and only do colocalisation. 
 	region=NULL, #how many base pairs should be included in the regional association plot? If set to NULL, the entire available region (1 million base pairs).  
-	fix_charge=FALSE #Add DPAn6_to_AA to CHARGE. This trait is missing from CHARGE but not missing from Shin and Framingham. The purpose is to make the dimensions of the plots consistent, which makes comparing them side by side easier. The plot with DPAn6_to_AA_deleteme or CHARGE_deleteme should be deleted/ignore/covered up with a white square. Note that the colocalisation results including fix_charge=TRUE are not going to be accurate when trait is DPAn6_to_AA. Therefore the function does not return colocalisation results when fix_charge=TRUE
+	fix_charge=TRUE #Add DPAn6_to_AA to CHARGE. This trait is missing from CHARGE but not missing from Shin and Framingham. The purpose is to make the dimensions of the plots consistent, which makes comparing them side by side easier. The plot with DPAn6_to_AA_deleteme or CHARGE_deleteme should be deleted/ignore/covered up with a white square. Note that the colocalisation results including fix_charge=TRUE are not going to be accurate when trait is DPAn6_to_AA. Therefore the function does not return colocalisation results when fix_charge=TRUE
 	)
 
 res_dat<-do.call(rbind,coloc_results[[1]])
@@ -164,7 +163,7 @@ colocalisation<-function(gtex=NULL,eqtlgen=NULL,gwis=NULL,ref_dat=NULL,tissues=N
 				trait_list<-ls()[grep("Traits[0-9]",ls())] 
 
 				trait_list2<-lapply(1:length(trait_list),FUN=function(x) eval(parse(text=trait_list[x])))
-				Plot<-format_data2(trait_list=trait_list2,ld.matrix=Gen.table,snps=SNPlist,coloc_strategy=coloc_strategy,Studies[i])
+				Plot<-format_data2(trait_list=trait_list2,ld.matrix=Gen.table,snps=SNPlist,coloc_strategy=coloc_strategy,study=Studies[i])
 				ld.matrix<-data.frame(Plot[1])
 				Z.matrix<-data.frame(Plot[2])
 				Markers<-data.frame(Plot[3])
@@ -455,7 +454,7 @@ format_data1<-function(Fa.tab=NULL,ref.dat=NULL,fatty_acids=FALSE,gene=NULL,gene
 	}
 }
 
-format_data2<-function(trait_list=NULL,ld.matrix=NULL,snps=NULL,Studies=NULL,coloc_strategy=NULL){
+format_data2<-function(trait_list=NULL,ld.matrix=NULL,snps=NULL,Studies=NULL,coloc_strategy=NULL,study=NULL){
 		Temp<-do.call(rbind.fill,trait_list)
 		N<-length(unique(Temp$trait2))
 		Temp<-Temp[which(Temp$z!="NaN"),]
@@ -468,26 +467,16 @@ format_data2<-function(trait_list=NULL,ld.matrix=NULL,snps=NULL,Studies=NULL,col
 		fa_eqtl_traits<-unique(Temp$trait)
 		fa_traits<-fa_eqtl_traits[grep(":",fa_eqtl_traits)]
 		
-		# Fatty acid ratios serve as markers of following enzymes:
-		# D5D	AA_to_DGLA
-		# D5D	EPA_to_ETA #not available
-		# D6D	GLA_to_LA
-		# D6D	SDA_to_ALA
-		# ELOVL2	DPAn6_to_AA
-		# ELOVL2	DHA_to_DPAn3
-		# ELOVL5	DGLA_to_GLA
-		# ELOVL5	ETA_to_SDA
-		# SCD	POA_to_PA
-		# SCD	OA_to_SA
-		# ELOVL2/5	ADA_to_AA
-		# ELOVL2/5	DPAn3_to_EPA
 		eqtl_traits<-fa_eqtl_traits[grep(":",fa_eqtl_traits,invert=T)]
 		fa_traits<-fa_traits[order(fa_traits)]
 		if(coloc_strategy=="1trait_allstudies_alltissues"){
 			Temp$trait[which(Temp$trait == fa_traits)]<-Temp$trait2[which(Temp$trait == fa_traits)]
 			fa_traits<-paste(fa_traits," (",Studies[order(Studies)],")",sep="")
-			Temp$trait
-
+		}
+		if(coloc_strategy=="everything"){
+			# Temp$trait[which(Temp$trait %in% fa_traits)]<-Temp$trait2[which(Temp$trait %in% fa_traits)]
+			fa_traits<-unique(Temp$trait2[which(Temp$trait %in% fa_traits)])
+			# fa_traits<-paste(fa_traits," (",Studies[order(Studies)],")",sep="")
 		}
 		eqtl_traits<-eqtl_traits[order(eqtl_traits)]
 		eqtl_traits1<-eqtl_traits[grep("expression in blood",eqtl_traits,invert=TRUE)]
@@ -504,20 +493,45 @@ format_data2<-function(trait_list=NULL,ld.matrix=NULL,snps=NULL,Studies=NULL,col
 			dat_temp$X2[dat_temp$X1 %in% c("DPAn6:AA_deleteme / ELOVL2","DHA:DPAn3 / ELOVL2")]<-c(3,4)
 		}
 		if(coloc_strategy=="alltraits_1study_alltissues" & !Test){
-			if(Studies[i] != "CHARGE"){
+			if(study != "CHARGE"){
 			dat_temp$X2[dat_temp$X1 %in% c("DPAn6:AA / ELOVL2","DHA:DPAn3 / ELOVL2")]<-c(3,4)
 			}
-			if(Studies[i] == "CHARGE"){
+			if(study == "CHARGE"){
 				dat_temp$X2[dat_temp$X1 == "DHA:DPAn3 / ELOVL2"]<-3
+
 			}
 		}
 		dat_temp$X2[dat_temp$X1 %in% c("ADA:AA / ELOVL2/5","DPAn3:EPA / ELOVL2/5")]<-c(5,6)
 		dat_temp$X2[dat_temp$X1 =="DGLA:GLA / ELOVL5"]<-7
 		dat_temp$X2[dat_temp$X1 %in% c("POA:PA / SCD","OA:SA / SCD")]<-c(8,9)
 		dat_temp<-dat_temp[order(dat_temp$X2),]
-		
-		Temp<-merge(Temp,dat_temp,by.x="trait",by.y="X1")
+
+		if(coloc_strategy=="everything"){
+			Pos<-unlist(lapply(c("CHARGE","Framingham","Shin"),FUN=function(x)
+				grep(x,dat_temp$X1)))
+			dat_temp1<-dat_temp[Pos,]
+			Pos<-unlist(lapply(c("AA:DGLA","GLA:LA","DPAn6:AA","DHA:DPAn3","ADA:AA","DPAn3:EPA","DGLA:GLA","POA:PA","OA:SA"),FUN=function(x)
+				grep(x,dat_temp1$X1)))
+			dat_temp2<-dat_temp1[Pos,]
+			Pos<-unlist(lapply(eqtl_traits,FUN=function(x)
+				grep(x,dat_temp$X1)))
+			dat_temp<-rbind(dat_temp2,dat_temp[Pos,])
+		}
+		dat_temp$X2<-1:nrow(dat_temp)
+
+		# "AA:DGLA / D5D","GLA:LA / D6D","DPAn6:AA","DHA:DPAn3","DPAn6:AA"
+		if(coloc_strategy=="everything"){
+			Pos<-unlist(lapply(c("CHARGE","Framingham","Shin"),FUN=function(x)
+				grep(x,Temp$trait2)))
+			Temp$trait[Pos]<-Temp$trait2[Pos]
+			Temp<-merge(Temp,dat_temp,by.x="trait",by.y="X1")
+		}else{			
+			Temp<-merge(Temp,dat_temp,by.x="trait",by.y="X1")
+		}
 		Temp$trait2<-gsub("_"," ",Temp$trait2)
+		# any(duplicated(paste(Temp$trait2,Temp$marker)))
+		# table(Temp$marker)
+	
 		# Temp<-Temp[order(Temp$marker),]
 		Temp<-Temp[order(Temp$pos),]
 		snporder<-unique(Temp$marker)
