@@ -1,0 +1,14 @@
+rsid	Effect.Allele	Other.Allele	eaf	maf	minor.allele	major.allele	population	pmid	effect_allele_confirmed	outcome	id	study	ProxySNP
+rs174546	C	T	0.359	0.3592	T	C	European	22886559	TRUE	Glioma || id:1013	1013	GliomaScan	NA
+rs174576	C	A	0.363	0.3638	A	C	European	22886559	TRUE	Glioma || id:1013	1013	GliomaScan	NA
+rs603424	G	A	0.162	0.1632	A	G	European	22886559	TRUE	Glioma || id:1013	1013	GliomaScan	NA
+rs174546	G	A	0.3807	0.354	T	C	East Asian	23749188	TRUE	B cell non-Hodgkin lymphoma COR:2	COR:2	Singapore Lymphoma Study	NA
+rs174576	C	A	0.3783	0.354	A	C	East Asian	23749188	TRUE	B cell non-Hodgkin lymphoma COR:2	COR:2	Singapore Lymphoma Study	NA
+rs174546	C	T	0.4432	0.3592	T	C	European	28346443	FALSE	Glioblastoma COR:31	COR:31	GICC/MDA	NA
+rs174576	C	A	0.4353	0.3638	A	C	European	28346443	FALSE	Glioblastoma COR:31	COR:31	GICC/MDA	NA
+rs174546	C	T	0.268210938	0.354	T	C	East Asian	22174901	FALSE	Hepatocellular carcinoma COR:35	COR:35	HKU	NA
+rs174576	C	A	0.268210938	0.354	A	C	East Asian	22174901	FALSE	Hepatocellular carcinoma COR:35	COR:35	HKU	NA
+rs174546	C	T	0.4717	0.354	T	C	East Asian	22807686	TRUE	Hepatocellular carcinoma in chronic hepatitis B virus carriers COR:36	COR:36	Shanghai_Guangdong_discovery	NA
+rs174576	C	A	0.471	0.354	A	C	East Asian	22807686	TRUE	Hepatocellular carcinoma in chronic hepatitis B virus carriers COR:36	COR:36	Shanghai_Guangdong_discovery	NA
+rs174546	C	T	0.4492	0.3592	T	C	European	28346443	FALSE	Non-glioblastoma glioma COR:49	COR:49	GICC/MDA	NA
+rs174576	C	A	0.4382	0.3638	A	C	European	28346443	FALSE	Non-glioblastoma glioma COR:49	COR:49	GICC/MDA	NA

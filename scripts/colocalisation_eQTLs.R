@@ -57,7 +57,9 @@ colocalisation<-function(gtex=NULL,eqtlgen=NULL,gwis=NULL,ref_dat=NULL,tissues=N
 	if(!ref_turn_off){
 		ref <- read.table(ref_dat,stringsAsFactors=F,head=F)
 	}
-	
+	ref[ref$V2 == "rs12210577",]
+	ref$V4[ref$V2 == "rs12210577"]-500000
+	ref$V4[ref$V2 == "rs12210577"]+500000
 	# Tissues<-c("Liver.allpairs.txt","Adipose_Subcutaneous.allpairs.txt","Adipose_Visceral_Omentum.allpairs.txt","Whole_Blood.allpairs.txt")
 
 	gene_tab<-make_gene_table(snps=c("rs174528","rs174528","rs3734398","rs603424"),genes=c("FADS1","FADS2","ELOVL2","SCD")) #function assumes that these are the SNPs and genes of interest

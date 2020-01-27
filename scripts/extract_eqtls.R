@@ -1,9 +1,38 @@
+# source("~/fatty-acids/scripts/extract_snps_functions.R")
 ##########
 # eQTLGen#
 ##########
 
+cd /projects/MRC-IEU/scratch/
 # cp /projects/MRC-IEU/scratch/eQTL-gen-results.zip /projects/MRC-IEU/users/ph14916/eQTLGen 
 # cd /projects/MRC-IEU/users/ph14916/eQTLGen 
+
+#updated file from Jie Zheng combined-eQTLs_full.EAF.beta.se.chr.pos.txt 
+
+cp  /projects/MRC-IEU/scratch/combined-eQTLs_full.EAF.beta.se.chr.pos.txt /projects/MRC-IEU/users/ph14916/eQTLGen  
+cd /projects/MRC-IEU/users/ph14916/eQTLGen  
+# gunzip ENSG00000149485.eQTL.tab.gz
+# gunzip ENSG00000134824.eQTL.tab.gz
+# head ENSG00000149485.eQTL.tab
+# head ENSG00000134824.eQTL.tab
+# rs174546
+
+# grep rs968567 ENSG00000134824.eQTL.tab
+
+# grep -w ENSG00000149485 combined-eQTLs_full.EAF.beta.se.chr.pos.txt | grep -w rs968567 
+# grep -w rs968567 ENSG00000149485.eQTL.tab
+
+# head -1 combined-eQTLs_full.EAF.beta.se.chr.pos.txt 
+# 	EAF 0.148312947324573	beta 0.560779864142844	se 0.0107584286171977
+
+# head -1 ENSG00000149485.eQTL.tab
+# 	EAF 0.148312947324573	beta 0.799339649931238 se	0.0153351414958981
+
+# grep -w ENSG00000134824 combined-eQTLs_full.EAF.beta.se.chr.pos.txt | grep -w rs968567 
+# 	EAF 0.148312947324573	beta 0.999342359176102 se	0.0097290180677342	
+
+# grep -w rs968567 ENSG00000134824.eQTL.tab
+# 	EAF 0.148312947324573	beta 1.30122387159944 se 0.0126679615256129
 
 #########
 #ENSEMBL#
@@ -43,8 +72,11 @@ lapply(1:length(Ens),FUN=function(i) grep(Ens[i],Files)) #ELOVL2 missing (ELOVL2
 # # Res<-read.table("ENSG00000149485.eQTL.tab",sep="\t",head=T,stringsAsFactors=F)
 # eQTL_gen<-extract_data(file_dir = "/projects/MRC-IEU/users/ph14916/eQTLGen",snplist = "/projects/MRC-IEU/users/ph14916/fatty_acids_summary/snplist_coloc.txt",type="not_fatty_acids",wk_dir="/projects/MRC-IEU/users/ph14916/fatty_acids_summary/colocalisation/eQTLGen",file_list=Files)
 # dim(eQTL_gen)
+eqtl_gen<-extract_data3(gene="ENSG00000134824",snplist="/projects/MRC-IEU/users/ph14916/fatty_acids_summary/snplist_coloc.txt",File="/projects/MRC-IEU/users/ph14916/eQTLGen/combined-eQTLs_full.EAF.beta.se.chr.pos.txt")
 
-eqtl_gen<-NULL 
+# grep -w ENSG00000134824 /projects/MRC-IEU/users/ph14916/eQTLGen/combined-eQTLs_full.EAF.beta.se.chr.pos.txt | grep -wf /projects/MRC-IEU/users/ph14916/fatty_acids_summary/snplist_temp2.txt > /projects/MRC-IEU/users/ph14916/fatty_acids_summary/output_temp.txt
+
+# eqtl_gen<-NULL 
 for(i in 1:length(Files)){
 	print(i)
 	print(Files[i])
@@ -62,7 +94,11 @@ scp ph14916@epi-franklin.epi.bris.ac.uk:/projects/MRC-IEU/users/ph14916/fatty_ac
 ######
 #GTEx#
 ######
+# /projects/MRC-IEU/research/data/broad/public/gtex/released/2018-10-05/data/GTEx_Analysis_v7_eQTL_all_associations.
 
+cp GTEx_Analysis_2016-01-15_v7_WholeGenomeSeq_635Ind_PASS_AB02_GQ20_HETX_MISS15_PLINKQC.lookup_table.txt.gz /projects/MRC-IEU/users/ph14916/gtex
+
+cd /projects/MRC-IEU/users/ph14916/gtex
 # cat "/projects/MRC-IEU/users/ph14916/fatty_acids_summary/snplist_coloc_bedformat.txt"
 setwd("/projects/MRC-IEU/users/ph14916/gtex")
 Files<-dir()
@@ -80,6 +116,12 @@ save("gtex1",file="/projects/MRC-IEU/users/ph14916/fatty_acids_summary/colocalis
 
 scp ph14916@epi-franklin.epi.bris.ac.uk:/projects/MRC-IEU/users/ph14916/fatty_acids_summary/colocalisation/gtex_snplist_coloc.Rdata .
 
+grep -w ENSG00000149485.12 Whole_Blood.allpairs.txt  | grep -f /projects/MRC-IEU/users/ph14916/temp.txt 
+ 
+cat /projects/MRC-IEU/users/ph14916/temp.txt 
+ 
+61595564
+61600342
 
 # gtex files too large for github. I though maybe save the separate tissues in separate files would help but even separated by tissue the files are too large 
 # load("/projects/MRC-IEU/users/ph14916/fatty_acids_summary/colocalisation/gtex_snplist_coloc.Rdata")
