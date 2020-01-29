@@ -3,11 +3,9 @@ cd /projects/MRC-IEU/users/ph14916
 cd /projects/MRC-IEU/users/ph14916/fatty_acids_summary/
 
 # plink_dir/plink --bfile 1000genomes/data_maf0.01_rs --extract /projects/MRC-IEU/users/ph14916/fatty_acids_summary/elolv5_snplist.txt  --make-just-bim --out elolv5_bim
-cd /projects/MRC-IEU/users/ph14916/fatty_acids_summary/
-plink_dir/plink --bfile 1000genomes/data_maf0.01_rs --extract /projects/MRC-IEU/users/ph14916/fatty_acids_summary/elolv5_snplist.txt --out plink_dir/snp_r_stats --r square
+# plink_dir/plink --bfile 1000genomes/data_maf0.01_rs --extract /projects/MRC-IEU/users/ph14916/fatty_acids_summary/elolv5_snplist.txt --out plink_dir/snp_r_stats --r square
 
-cd /Users/ph14916/fatty-acids-mr/coloc
-scp ph14916@epi-franklin.epi.bris.ac.uk:/projects/MRC-IEU/users/ph14916/plink_dir/snp_r_stats.ld .
+# scp ph14916@epi-franklin.epi.bris.ac.uk:/projects/MRC-IEU/users/ph14916/plink_dir/snp_r_stats.ld .
 
 
 ######################################################################################
