@@ -284,8 +284,8 @@ write.table(Crc_h,"/projects/MRC-IEU/users/ph14916/fatty_acids_summary/fine_mapp
 write.table(Lun_h,"/projects/MRC-IEU/users/ph14916/fatty_acids_summary/fine_mapping/data/lung_cancer_forcoloc.tab",sep="\t",col.names=T,row.names=F,quote=F)
 write.table(d6d2,"/projects/MRC-IEU/users/ph14916/fatty_acids_summary/fine_mapping/data/GLA_to_LA_forcoloc.tab",sep="\t",col.names=T,row.names=F,quote=F)
 write.table(d5d2,"/projects/MRC-IEU/users/ph14916/fatty_acids_summary/fine_mapping/data/AA_to_DGLA_forcoloc.tab",sep="\t",col.names=T,row.names=F,quote=F)
-write.table(chs2,"/projects/MRC-IEU/users/ph14916/fatty_acids_summary/fine_mapping/data/CHS_EA_HRC_LD_11_61043499_62159523_forcoloc.frq",sep="\t",col.names=T,row.names=F,quote=F)
-write.table(chs.ld2,"/projects/MRC-IEU/users/ph14916/fatty_acids_summary/fine_mapping/data/CHS_EA_HRC_LD_11_61043499_62159523_forcoloc.ld",sep="\t",col.names=T,row.names=F,quote=F)
+write.table(chs2,"/projects/MRC-IEU/users/ph14916/fatty_acids_summary/fine_mapping/data/CHS_LD_forcoloc.frq",sep="\t",col.names=T,row.names=F,quote=F)
+write.table(chs.ld2,"/projects/MRC-IEU/users/ph14916/fatty_acids_summary/fine_mapping/data/CHS_LD_forcoloc.ld",sep="\t",col.names=T,row.names=F,quote=F)
 
 dim(Crc_h)
 dim(Lun_h)
@@ -295,6 +295,8 @@ dim(chs2)
 dim(chs.ld2)
 
 # scp ph14916@epi-franklin.epi.bris.ac.uk:/projects/MRC-IEU/users/ph14916/fatty_acids_summary/fine_mapping/data/* .
+scp ph14916@epi-franklin.epi.bris.ac.uk:/projects/MRC-IEU/users/ph14916/fatty_acids_summary/fine_mapping/data/* .
+
 scp ph14916@epi-franklin.epi.bris.ac.uk:/projects/MRC-IEU/users/ph14916/fatty_acids_summary/fine_mapping/data/snplist_fine_mapping.txt .
 
 scp ph14916@bluecrystalp3.acrc.bris.ac.uk:/projects/MRC-IEU/users/ph14916/fatty_acids_summary/fine_mapping/data/snplist_fine_mapping.txt .
