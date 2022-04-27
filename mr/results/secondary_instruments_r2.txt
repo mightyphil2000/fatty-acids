@@ -1,0 +1,34 @@
+exposure	FADS	r2	nsnps	PUFA	chain.length	MR sensitivity analysis
+Alpha-linolenic acid (18:3n3)	exclude	0.003626512	1	Omega 3	18	NA
+Alpha-linolenic acid (18:3n3)	include	0.037639952	2	Omega 3	18	heterogeneity test
+Eicosapentaenoic acid (20:5n3)	exclude	0.005497588	1	Omega 3	20	NA
+Eicosapentaenoic acid (20:5n3)	include	0.033699068	2	Omega 3	20	heterogeneity test
+Docosahexaenoic acid (22:6n3)	exclude	0.015750332	23	Omega 3	22	"MR egger, weighted median, weighted mode, heterogeneity test"
+Docosahexaenoic acid (22:6n3)	include	0.050682506	24	Omega 3	22	"MR egger, weighted median, weighted mode, heterogeneity test"
+Docosapentaenoic acid (22:5n3)	exclude	0.02515272	2	Omega 3	22	heterogeneity test
+Docosapentaenoic acid (22:5n3)	include	0.099296606	3	Omega 3	22	heterogeneity test
+Omega-3 fatty acids	exclude	0.021928817	29	Omega 3	NA	"MR egger, weighted median, weighted mode, heterogeneity test"
+Omega-3 fatty acids	include	0.089402883	30	Omega 3	NA	"MR egger, weighted median, weighted mode, heterogeneity test"
+Gamma-linolenic acid (18:3n6)	exclude	0.019416928	4	Omega 6	18	heterogeneity test
+Gamma-linolenic acid (18:3n6)	include	0.053063416	5	Omega 6	18	weighted median
+Linoleic acid (18:2n6)	exclude	0.023943551	35	Omega 6	18	"MR egger, weighted median, weighted mode, heterogeneity test"
+Linoleic acid (18:2n6)	include	0.040059823	36	Omega 6	18	"MR egger, weighted median, weighted mode, heterogeneity test"
+Arachidonic acid (20:4n6)	exclude	0.004716874	1	Omega 6	20	NA
+Arachidonic acid (20:4n6)	include	0.308979478	2	Omega 6	20	heterogeneity test
+Dihomo-gamma-linolenic acid (20:3n6)	exclude	0.037510324	2	Omega 6	20	heterogeneity test
+Dihomo-gamma-linolenic acid (20:3n6)	include	0.118605376	3	Omega 6	20	heterogeneity test
+Omega-6 fatty acids	exclude	0.045910499	47	Omega 6	NA	"MR egger, weighted median, weighted mode, heterogeneity test"
+Omega-6 fatty acids	include	0.046213405	48	Omega 6	NA	"MR egger, weighted median, weighted mode, heterogeneity test"
+Dihomo-linolenic acid (20:3n3 or n6)	exclude	0.00591415	1	other	20	NA
+Dihomo-linolenic acid (20:3n3 or n6)	include	0.017783539	2	other	20	heterogeneity test
+Other polyunsaturated fatty acids than 18:2	exclude	0.033504512	10	other	NA	"MR egger, weighted median, weighted mode, heterogeneity test"
+Other polyunsaturated fatty acids than 18:2	include	0.104187784	11	other	NA	"MR egger, weighted median, weighted mode, heterogeneity test"
+Ratio of omega-6 fatty acids to omega-3 fatty acids	exclude	0.026942104	29	other	NA	"MR egger, weighted median, weighted mode, heterogeneity test"
+Ratio of omega-6 fatty acids to omega-3 fatty acids	include	0.087100052	30	other	NA	"MR egger, weighted median, weighted mode, heterogeneity test"
+						
+Stearidonic acid (18:4n3)	include	0.008658009	1	Omega 3	18	NA
+Eicosadienoic acid (20:2n6)	include	0.062582883	1	Omega 6	20	NA
+Adrenic acid (22:4n6)	include	0.069941257	1	Omega 6	22	NA
+Docosapentaenoic acid (22:5n6)	include	0.017034868	1	Omega 6	22	NA
+Tetradecadienoic acid (14:2n9)	exclude	0.01491594	1	other	14	NA
+Tetradecadienoic acid (14:2n9)	include	0.01491594	1	other	14	NA

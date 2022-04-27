@@ -1,5 +1,6 @@
 rm(list=ls())
-# source("~/fatty-acids-mr/mr/plot_mr_results_functions.R")
+# source("~/fatty-acids/mr/scripts/plot_mr_results_allcancers.R")
+library(TwoSampleMR)          
 library(ggforestplot)
 library(ggplot2)
 # install.packages("meta")
@@ -22,10 +23,26 @@ library(meta)
 
 # plot_function<-function(Dat=NULL,exposure=NULL,prune_ncases=NULL,power=NULL,exclude=NULL,Name=NULL,prune_duplicates_outcome=FALSE,force_include=NULL,Order=NULL,prune_duplicate_consortia=FALSE){
 
-load("~/fatty-acids/results/mr/mr_results_Cancer_dat_cleaned.Rdata")
+load("~/fatty-acids/mr/results/mr/mr_results_Cancer_dat_cleaned.Rdata")
 # r2_tab$snps
 
+unique(r2_tab[,c("r2sum","snps")])
+
 exposures<-c("AA_to_DGLA","POA_to_PA","GLA_to_LA","DHA_to_DPA_n3")
+Res[Res$study == "UK Biobank" & Res$original_outcome == "Cancer",]
+Res5<-Res[Res$exposure == "AA_to_DGLA" &Res$original_outcome == "Lung cancer" & Res$study %in% c("TRICL","UK Biobank adjusted for chip","Japanese Biobank"),]
+Res5<-Res[Res$exposure == "AA_to_DGLA" &Res$original_outcome == "Colorectal cancer" & Res$study %in% c("GECCO","Japanese Biobank"),]
+
+MetaGen<-metagen(TE=Res5$b[Res5$exposure=="AA_to_DGLA"],seTE=Res5$se[Res5$exposure=="AA_to_DGLA"],comb.fixed=T,sm="OR")
+MetaGen$pval.fixed
+Res[which(Res$power>=0.8 & as.character(Res$exposure) %in% c("POA_to_PA","DHA_to_DPA_n3")),c("original_outcome","study","or","lci","uci","pval2","ncase","ncontrol")]
+# Res5<-Res[as.character(Res$exposure) %in% c("AA_to_DGLA","POA_to_PA","DHA_to_DPA_n3"),c("original_outcome","pval2","ncase")]
+# Res5[order(Res)]
+Res3<-Res[Res$exposure %in% c("AA_to_DGLA","DHA_to_DPA_n3"),]
+Res3<-Res3[Res3$original_outcome == "Colorectal cancer",]
+Res3[Res3$exposure == "DHA_to_DPA_n3",]
+
+
 
 Exclude<-c("Non-glioblastoma glioma COR:49", "Glioblastoma COR:31")
 
@@ -56,15 +73,111 @@ Meta<-lapply(1:4,FUN=function(x)
 # Haemotological cancers
 
 
-# all cancers single largest per site
-Res1<-format_plot_dat2(Dat=Res,exposure=exposures[1:4], exclude=c("Non-glioblastoma glioma COR:49", "Glioblastoma COR:31","Lung cancer || id:966","Lung cancer adjusted for chip COR:41"),prune_duplicates_outcome=TRUE,Order="b",prune_duplicate_consortia=TRUE)
+#######################################
+# all cancers single largest per site#
+#######################################
+
+# Res2<-Res[Res$power>0.5, ]
+Res$exposure<-as.character(Res$exposure)
+exposures<-c("AA_to_DGLA / FADS","POA_to_PA / SCD","DHA_to_DPA_n3 / ELOVL2")
+
+Res$exposure<-gsub("AA_to_DGLA","AA_to_DGLA / FADS",Res$exposure)
+Res$exposure<-gsub("POA_to_PA","POA_to_PA / SCD",Res$exposure)
+Res$exposure<-gsub("DHA_to_DPA_n3","DHA_to_DPA_n3 / ELOVL2",Res$exposure)
+Res1$name[Res1$pval2<0.15]
+Res1<-format_plot_dat2(Dat=Res,exposure=exposures[1], exclude=c("Non-glioblastoma glioma COR:49", "Glioblastoma COR:31","Lung cancer || id:966","Lung cancer adjusted for chip COR:41"),prune_duplicates_outcome=TRUE,Order="ncase",prune_duplicate_consortia=TRUE,min_power=0.8)
+
+Res2<-format_plot_dat2(Dat=Res,exposure=exposures, exclude=c("Non-glioblastoma glioma COR:49", "Glioblastoma COR:31","Lung cancer || id:966","Lung cancer adjusted for chip COR:41"),prune_duplicates_outcome=TRUE,Order="ncase",prune_duplicate_consortia=TRUE,min_power=0.5)
+
+median(Res1$ncase)
+Plot<-make_plot(Dat=Res1,Colour="exposure",meta_analysis=FALSE)
+pdf(unlist(Plot[2]))
+	Plot[1]
+dev.off()
+
+Res1[Res1$original_outcome == "Lung cancer",]
+
+length(unique(Res1$original_outcome))
+table(Res1$exposure)
+
+Res1[Res1$pval2<0.05,c("original_outcome","exposure","ncase","ncontrol","or","lci","uci","pval2")]
+
+Res2[Res2$pval2<0.05,c("original_outcome","exposure","ncase","ncontrol","or","lci","uci","pval2")]
+unique(Res2$exposure)
+
+
 
 ########################
 # lung cancer results###
 ###########################
-
 # one exposure
 Res1<-format_plot_dat2(Dat=Res,exposure=exposures[1], exclude=c("Non-glioblastoma glioma COR:49", "Glioblastoma COR:31",       "Lung cancer || id:966","Lung cancer adjusted for chip COR:41"),prune_duplicates_outcome=FALSE,Order="b",prune_duplicate_consortia=FALSE,outcomes="Lung cancer",Name="outcome_study")
+
+
+# ?forest_plot_1_to_many
+Res1$weight<-Res1$se*500
+# Res1$weight<-5
+
+Res1[,c("name","b","se","weight","study")]
+Res1$name[Res1$name == "UK Biobank unadjusted for chip\nN cases=2687"]<-"UK Biobank\nN cases=2687"
+Res1$study[Res1$study == "UK Biobank unadjusted for chip"]<-"UK Biobank"
+Res1$study[Res1$study == "TRICL"]<-"ILCCO/TRICL"
+Res1$weight[Res1$study=="ILCCO/TRICL"]<-10
+Res1<-Res1[order(Res1$ncase,decreasing=T),]
+
+Plot2<-forest_plot_1_to_many(mr_res=Res1,TraitM = "study",exponentiate=TRUE,ao_slc=FALSE,weight="weight",col1_width = 2,addcols = "ncase",addcol_widths = 1, xlab = "",)
+pdf("~/fatty-acids/mr/results/mr/plots/lung_cancer_fads1_replication.pdf")
+	Plot2
+dev.off()
+
+     forest_plot_1_to_many(
+       mr_res = "mr_res",
+       b = "b",
+       se = "se",
+       TraitM = "outcome",
+       col1_width = 1,
+       col1_title = "",
+       exponentiate = FALSE,
+       trans = "identity",
+       ao_slc = T,
+       lo = NULL,
+       up = NULL,
+       by = NULL,
+       xlab = "Effect (95% confidence interval)",
+       addcols = NULL,
+       addcol_widths = NULL,
+       addcol_titles = "",
+       subheading_size = 6,
+       shape_points = 15,
+       colour_scheme = "black",
+       col_text_size = 5,
+       weight = NULL
+     )
+     
+
+
+########################
+# colorectal cancer results###
+###########################
+# one exposure
+Res1<-format_plot_dat2(Dat=Res,exposure=exposures[1], exclude=c("Non-glioblastoma glioma COR:49", "Glioblastoma COR:31",       "Lung cancer || id:966","Lung cancer adjusted for chip COR:41"),prune_duplicates_outcome=FALSE,Order="b",prune_duplicate_consortia=FALSE,outcomes="Colorectal cancer",Name="outcome_study")
+
+# ?forest_plot_1_to_many
+Res1$weight<-Res1$se*500
+Res1$weight<-5
+
+Res1[,c("name","b","se","weight","study")]
+# Res1$name[Res1$name == "UK Biobank unadjusted for chip\nN cases=2687"]<-"UK Biobank\nN cases=2687"
+# Res1$study[Res1$study == "UK Biobank unadjusted for chip"]<-"UK Biobank"
+# Res1$study[Res1$study == "TRICL"]<-"ILCCO/TRICL"
+# Res1$weight[Res1$study=="ILCCO/TRICL"]<-10
+Res1<-Res1[order(Res1$ncase,decreasing=T),]
+
+Plot2<-forest_plot_1_to_many(mr_res=Res1,TraitM = "study",exponentiate=TRUE,ao_slc=FALSE,weight="weight",col1_width = 2,addcols = "ncase",addcol_widths = 1, xlab = "")
+
+pdf("~/fatty-acids/mr/results/mr/plots/crc_fads1_replication.pdf")
+	Plot2
+dev.off()
 
 # all exposures all studies
 Res1<-format_plot_dat2(Dat=Res,exclude=c("Non-glioblastoma glioma COR:49", "Glioblastoma COR:31",       "Lung cancer || id:966","Lung cancer adjusted for chip COR:41"),prune_duplicates_outcome=FALSE,Order="b",prune_duplicate_consortia=FALSE,outcomes="Lung cancer",Name="outcome_study")
@@ -73,13 +186,52 @@ pdf(unlist(Plot[2]))
 	Plot[1]
 dev.off()
 
-# all exposures all subtypes
-Res1<-format_plot_dat2(Dat=Res,exclude=c("Non-glioblastoma glioma COR:49", "Glioblastoma COR:31","Lung cancer || id:966","Lung cancer adjusted for chip COR:41"),prune_duplicates_outcome=TRUE,Order="ncase",prune_duplicate_consortia=FALSE,cancer_site="Lung cancer",Name="original_outcome")
+#####################
+# FADS CRC subtypes###
+########################
 
-Plot<-make_plot(Dat=Res1,Colour="exposure",meta_analysis=TRUE)
-pdf(unlist(Plot[2]))
-	Plot[1]
+unique(Res$exposure)
+Res1<-format_plot_dat2(Dat=Res[Res$exposure == "AA_to_DGLA / FADS",]  ,exclude=c("Non-glioblastoma glioma COR:49", "Glioblastoma COR:31","Lung cancer || id:966","Lung cancer adjusted for chip COR:41"),prune_duplicates_outcome=TRUE,Order="ncase",prune_duplicate_consortia=FALSE,cancer_site="Colorectal cancer",Name="original_outcome")
+
+Res1$name
+Res1$weight<-Res1$se*500
+Res1$weight<-5
+Res1$original_outcome[Res1$original_outcome == "Colorectal cancer (distal)"]<-"Colorectal cancer\n(distal)"
+Res1$original_outcome[Res1$original_outcome == "Colorectal cancer (proximal)"]<-"Colorectal cancer\n(proximal)"
+Res1$original_outcome[Res1$original_outcome == "Colorectal cancer in females"]<-"Colorectal cancer\nin females"
+Res1$original_outcome[Res1$original_outcome == "Colorectal cancer in males"]<-"Colorectal cancer\nin males"
+
+Plot2<-forest_plot_1_to_many(mr_res=Res1,TraitM = "original_outcome",exponentiate=TRUE,ao_slc=FALSE,col1_width = 2,weight="weight",addcols = "ncase",addcol_widths = 1, xlab = "")
+
+pdf("~/fatty-acids/mr/results/mr/plots/crc_fads1_subtypes.pdf")
+	Plot2
 dev.off()
+
+#####################
+# FADS lung cancer subtypes###
+#####################
+unique(Res$exposure)
+Res1<-format_plot_dat2(Dat=Res[Res$exposure == "AA_to_DGLA / FADS",]  ,exclude=c("Non-glioblastoma glioma COR:49", "Glioblastoma COR:31","Lung cancer || id:966","Lung cancer adjusted for chip COR:41"),prune_duplicates_outcome=TRUE,Order="ncase",prune_duplicate_consortia=FALSE,cancer_site="Lung cancer",Name="original_outcome")
+
+Res1$name
+Res1$weight<-Res1$se*500
+Res1$weight<-5
+Res1$original_outcome[Res1$original_outcome == "Lung cancer in ever smokers"]<-"Lung cancer in\never smokers"
+Res1$original_outcome[Res1$original_outcome == "Lung adenocarcinoma"]<-"Lung\nadenocarcinoma"
+Res1$original_outcome[Res1$original_outcome == "Squamous cell lung cancer"]<-"Squamous cell\nlung cancer"
+Res1$original_outcome[Res1$original_outcome == "Small cell lung carcinoma"]<-"Small cell\nlung carcinoma"
+Res1$original_outcome[Res1$original_outcome == "Lung cancer in never smokers"]<-"Lung cancer in\nnever smokers"
+
+Plot2<-forest_plot_1_to_many(mr_res=Res1,TraitM = "original_outcome",exponentiate=TRUE,ao_slc=FALSE,weight="weight",col1_width = 2,addcols = "ncase",addcol_widths = 1, xlab = "")
+
+pdf("~/fatty-acids/mr/results/mr/plots/crc_fads1_subtypes.pdf")
+	Plot2
+dev.off()
+
+# Plot<-make_plot(Dat=Res1,Colour="exposure",meta_analysis=TRUE)
+# pdf(unlist(Plot[2]))
+# 	Plot[1]
+# dev.off()
 
 
 
@@ -101,7 +253,7 @@ make_plot<-function(Dat=NULL,Title.plot=NULL,Colour=NULL,Shape=NULL,text.title=1
 	Exposure<-gsub("/","_",Exposure)
 	Exposure<-gsub("__","_",Exposure)
 
-	Title.file<-paste("~/fatty-acids/results/mr/plots/",Exposure,"_",unique(Dat$power_prune),".pdf",sep="")
+	Title.file<-paste("~/fatty-acids/mr/results/mr/plots/",Exposure,"_",unique(Dat$power_prune),".pdf",sep="")
 	Title.file<-gsub("_.pdf",".pdf",Title.file)
 	Title.file<-gsub("__","_",Title.file)
 
@@ -139,9 +291,9 @@ make_plot<-function(Dat=NULL,Title.plot=NULL,Colour=NULL,Shape=NULL,text.title=1
 		Meta<-"no meta analysis"
 	}
 	 return(list(Plot,Title.file,Meta))
-	}
-	
 }
+	
+
 
 # # prune_ncases=1000,power=0.5
 

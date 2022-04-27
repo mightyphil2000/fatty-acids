@@ -1,0 +1,6 @@
+exposure	cancer	instrument	b_exp_sd	b_exp_lci	b_exp_uci	or_can_ea	or_canc_ea_lci	or_can_ea_uci	or_can_exp	or_can_exp_lci	or_can_exp_uci	unit_value	unit	method	FAMRC_id
+Waist circumference	colorectal cancer	rs1741	0.018041857	0.009731778	0.026351936	1.0208136	1.0017856	1.040203	1.13	1.02	1.26	1	sd	"Two-sample Maximum likelihood, random"	60
+Birth weight	colorectal cancer	rs1741	0.018931571	0.010752318	0.027110824	1.0208136	1.0017856	1.040203	1.1	0.92	1.31	1	sd	"Two-sample Maximum likelihood, random"	60
+Lumbar spine bone mineral density	colorectal cancer	rs1741	-0.026473865	-0.040721599	-0.012226132	1.0208136	1.0017856	1.040203	NA	NA	NA	NA	NA	NA	60
+Height	colorectal cancer	rs1741	0.012813891	0.006438488	0.019189295	1.0208136	1.0017856	1.040203	1.04	1	1.08	1	sd	Two-sample maximum likelihood (random)	60
+Triglycerides	colorectal cancer	rs1741	-0.0246	-0.034596	-0.014604	1.0208136	1.0017856	1.040203	0.93	0.84	1.04	1	sd	"Two-sample Maximum likelihood, random"	60

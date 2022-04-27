@@ -1,0 +1,27 @@
+lnor_se	position	chr	p	n	lnor	id	rsid	effect_allele	other_allele	eaf	trait	ID	ncase	ncontrol	pmid	outcome	population	study	UKbiobank	effect_allele_confirmed	open_gwas	efo	efo_id
+0.0479424	106467853	10	0.80995	3835	0.0115332	ieu-a-822	rs3896224	G	A	NA	Pancreatic cancer	122	1896	1939	19648918	Pancreatic cancer	European	PanScan I	FALSE	TRUE	TRUE	pancreatic carcinoma	NA
+0.0477226	69556715	16	0.645816	3835	0.0219572	ieu-a-822	rs889398	T	C	NA	Pancreatic cancer	122	1896	1939	19648918	Pancreatic cancer	European	PanScan I	FALSE	TRUE	TRUE	pancreatic carcinoma	NA
+0.0523824	113240183	2	0.693683	3835	-0.020611	ieu-a-822	rs3811038	C	T	NA	Pancreatic cancer	122	1896	1939	19648918	Pancreatic cancer	European	PanScan I	FALSE	TRUE	TRUE	pancreatic carcinoma	NA
+0.0510558	2881256	4	0.982431	3835	0.0010994	ieu-a-822	rs624833	G	T	NA	Pancreatic cancer	122	1896	1939	19648918	Pancreatic cancer	European	PanScan I	FALSE	TRUE	TRUE	pancreatic carcinoma	NA
+0.0499555	75380511	12	0.0948746	3835	-0.0834216	ieu-a-822	rs10879871	G	T	NA	Pancreatic cancer	122	1896	1939	19648918	Pancreatic cancer	European	PanScan I	FALSE	TRUE	TRUE	pancreatic carcinoma	NA
+0.0595387	128122320	9	0.417042	3835	-0.0483139	ieu-a-822	rs2841334	G	A	NA	Pancreatic cancer	122	1896	1939	19648918	Pancreatic cancer	European	PanScan I	FALSE	TRUE	TRUE	pancreatic carcinoma	NA
+0.078038	92912773	10	0.0705066	3835	0.140979	ieu-a-822	rs17553262	C	A	NA	Pancreatic cancer	122	1896	1939	19648918	Pancreatic cancer	European	PanScan I	FALSE	TRUE	TRUE	pancreatic carcinoma	NA
+0.0483274	113004662	11	0.953979	3835	0.00280393	ieu-a-822	rs4937993	G	A	NA	Pancreatic cancer	122	1896	1939	19648918	Pancreatic cancer	European	PanScan I	FALSE	TRUE	TRUE	pancreatic carcinoma	NA
+0.0755114	655222	2	0.358917	3835	-0.0692429	ieu-a-822	rs13029479	A	G	NA	Pancreatic cancer	122	1896	1939	19648918	Pancreatic cancer	European	PanScan I	FALSE	TRUE	TRUE	pancreatic carcinoma	NA
+0.0701733	32178489	1	0.620396	3835	0.0347878	ieu-a-822	rs4949465	C	T	NA	Pancreatic cancer	122	1896	1939	19648918	Pancreatic cancer	European	PanScan I	FALSE	TRUE	TRUE	pancreatic carcinoma	NA
+0.0476062	31398105	20	0.982644	3835	-0.0010005	ieu-a-822	rs6058897	C	A	NA	Pancreatic cancer	122	1896	1939	19648918	Pancreatic cancer	European	PanScan I	FALSE	TRUE	TRUE	pancreatic carcinoma	NA
+0.061715	27588806	17	0.0289015	3835	0.134793	ieu-a-822	rs8614	A	C	NA	Pancreatic cancer	122	1896	1939	19648918	Pancreatic cancer	European	PanScan I	FALSE	TRUE	TRUE	pancreatic carcinoma	NA
+0.0569244	78896547	15	0.911704	3835	0.00631993	ieu-a-822	rs938682	A	G	NA	Pancreatic cancer	122	1896	1939	19648918	Pancreatic cancer	European	PanScan I	FALSE	TRUE	TRUE	pancreatic carcinoma	NA
+0.054681	49317338	3	0.501736	3835	-0.0367176	ieu-a-822	rs6778080	C	T	NA	Pancreatic cancer	122	1896	1939	19648918	Pancreatic cancer	European	PanScan I	FALSE	TRUE	TRUE	pancreatic carcinoma	NA
+0.0697401	120614014	9	0.898551	3835	-0.00893984	ieu-a-822	rs11793751	C	T	NA	Pancreatic cancer	122	1896	1939	19648918	Pancreatic cancer	European	PanScan I	FALSE	TRUE	TRUE	pancreatic carcinoma	NA
+0.0742752	104413385	10	0.0479601	3835	-0.146761	ieu-a-822	rs12764388	A	G	NA	Pancreatic cancer	122	1896	1939	19648918	Pancreatic cancer	European	PanScan I	FALSE	TRUE	TRUE	pancreatic carcinoma	NA
+0.0491328	26255451	6	0.79851	3835	0.0125788	ieu-a-822	rs6935954	G	A	NA	Pancreatic cancer	122	1896	1939	19648918	Pancreatic cancer	European	PanScan I	FALSE	TRUE	TRUE	pancreatic carcinoma	NA
+0.0478395	3014254	9	0.356649	3835	-0.0441609	ieu-a-822	rs4543592	C	T	NA	Pancreatic cancer	122	1896	1939	19648918	Pancreatic cancer	European	PanScan I	FALSE	TRUE	TRUE	pancreatic carcinoma	NA
+0.0490957	104198251	14	0.366562	3835	-0.0443699	ieu-a-822	rs3742365	C	T	NA	Pancreatic cancer	122	1896	1939	19648918	Pancreatic cancer	European	PanScan I	FALSE	TRUE	TRUE	pancreatic carcinoma	NA
+0.0492245	53719925	18	0.39916	3835	-0.0414472	ieu-a-822	rs17733784	C	T	NA	Pancreatic cancer	122	1896	1939	19648918	Pancreatic cancer	European	PanScan I	FALSE	TRUE	TRUE	pancreatic carcinoma	NA
+0.0496192	136503819	9	0.941717	3835	0.0036065	ieu-a-822	rs2007153	C	T	NA	Pancreatic cancer	122	1896	1939	19648918	Pancreatic cancer	European	PanScan I	FALSE	TRUE	TRUE	pancreatic carcinoma	NA
+0.0483744	63576286	10	0.00261981	3835	-0.145488	ieu-a-822	rs2675638	A	G	NA	Pancreatic cancer	122	1896	1939	19648918	Pancreatic cancer	European	PanScan I	FALSE	TRUE	TRUE	pancreatic carcinoma	NA
+0.060497	27679916	11	0.0175202	3835	0.143581	ieu-a-822	rs6265	T	C	NA	Pancreatic cancer	122	1896	1939	19648918	Pancreatic cancer	European	PanScan I	FALSE	TRUE	TRUE	pancreatic carcinoma	NA
+0.0489293	91839576	8	0.567234	3835	-0.027988	ieu-a-822	rs2062882	A	G	NA	Pancreatic cancer	122	1896	1939	19648918	Pancreatic cancer	European	PanScan I	FALSE	TRUE	TRUE	pancreatic carcinoma	NA
+0.0491478	117496144	7	0.92085	3835	0.00488803	ieu-a-822	rs10233278	T	C	NA	Pancreatic cancer	122	1896	1939	19648918	Pancreatic cancer	European	PanScan I	FALSE	TRUE	TRUE	pancreatic carcinoma	NA
+0.101672	27344719	8	0.846742	3835	-0.0196926	ieu-a-822	rs11780471	A	G	NA	Pancreatic cancer	122	1896	1939	19648918	Pancreatic cancer	European	PanScan I	FALSE	TRUE	TRUE	pancreatic carcinoma	NA

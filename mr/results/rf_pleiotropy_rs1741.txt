@@ -1,0 +1,37 @@
+trait	sig	b_sd	lci	uci	id.outcome	samplesize.outcome	effect_allele.outcome	other_allele.outcome	eaf.outcome	pval.outcome	population	Category		OR CRC	unit	method	OR LC	unit	method	OR bcc	OR scc esoph 	overall cancer	unit	method	PMID	observational study CRC	
+Arachidonic acid (20:4n6)	TRUE	0.105201729	0.072958028	0.137445431	exp3	8631	G	C	0.6921	1.64E-10	European	Arachidonic acid															
+Body mass index	FALSE	0.010290133	0.003674812	0.016905453	ieu-a-2	224420	G	C	0.7333	0.002298	Mixed	Anthropometric															
+Hip circumference	FALSE	0.013385279	0.004815131	0.021955427	ieu-a-48	133714	G	C	0.7333	0.00179999	Mixed	Anthropometric															
+Sitting height ratio	FALSE	0.013	-0.0066	0.0326	ieu-a-1070	21590	G	C	NA	0.21	European	Anthropometric															
+Weight	FALSE	0.012661843	0.000607768	0.024715918	ieu-a-107	67592	G	C	0.7333	0.0340001	European	Anthropometric															
+Waist-to-hip ratio	FALSE	0.012397081	0.003799228	0.020994933	ieu-a-72	132855	G	C	0.7333	0.00359998	Mixed	Anthropometric															
+Body fat	FALSE	0.010620513	-0.000443957	0.021684982	ieu-a-999	72838	G	C	0.686	0.0599198	European	Anthropometric															
+Cigarettes smoked per day	FALSE	0.002916725	-0.003024097	0.008857546	ieu-b-142	261172	G	C	0.704	0.336	European	Behavioural															
+Age of smoking initiation	FALSE	-0.004075391	-0.017768705	0.009617923	ieu-a-964	47961	G	C	0.6908	0.5758	European	Behavioural															
+Smoking initiation	FALSE	0.001160199	-0.002656392	0.004976789	ieu-b-4877	632802	G	C	0.704	0.551001	European	Behavioural															
+Alcohol consumption	FALSE	0.003906838	-0.005194549	0.013008225	ieu-a-1283	112097	G	C	0.7077	0.4001	European	Behavioural															
+Ever vs never smoked	FALSE	-0.009544703	-0.02047205	0.001382644	ieu-a-962	74035	G	C	0.6809	0.0867102	European	Behavioural															
+Former vs current smoker	FALSE	-0.004050058	-0.015399591	0.007299476	ieu-a-963	70675	G	C	0.6975	0.4853	European	Behavioural															
+Urinary albumin-to-creatinine ratio	FALSE	-0.001952517	-0.015346784	0.01144175	ieu-a-1107	54449	G	C	0.731	0.77	European	Kidney function															
+Serum cystatin C (eGFRcys)	FALSE	-0.00043795	-0.017605579	0.016729679	ieu-a-1106	33145	G	C	0.731	0.98	Mixed	Kidney function															
+Serum creatinine (eGFRcrea)	FALSE	-0.000163996	-0.008710853	0.008382861	ieu-a-1105	133723	G	C	0.731	0.97	Mixed	Kidney function															
+Forearm bone mineral density	FALSE	-0.014870225	-0.043864501	0.01412405	ieu-a-977	10805	G	C	0.696261	0.324321	Mixed	Bone health															
+Femoral neck bone mineral density	FALSE	-0.017488193	-0.030967032	-0.004009354	ieu-a-980	49988	G	C	0.696261	0.012857	Mixed	Bone health															
+Telomere length	FALSE	-0.00694895	-0.011370204	-0.002527696	ieu-b-4879	472174	G	C	0.704683	0.0021	European	Other															
+Years of schooling	FALSE	0.002328922	-0.001169424	0.005827267	ieu-a-1239	766345	G	C	0.7126	0.19	European	Other															
+Percent emphysema	FALSE	0.00064478	-0.032845073	0.034134632	ieu-a-1005	7667	G	C	0.337	0.9715	Mixed	Other															
+Sleep duration	FALSE	0.002995546	-0.005515276	0.011506368	ieu-a-1088	128266	G	C	0.707981	0.49	European	Other															
+C-reactive protein	FALSE	-0.009103691	-0.036859833	0.018652451	ieu-a-1015	10112	G	C	0.5583	0.5142	East Asian	Other															
+Chronotype	FALSE	-0.000211072	-0.008721097	0.008298953	ieu-a-1087	128266	G	C	0.707886	0.96	European	Other															
+Age at menarche	FALSE	-0.009481992	-0.016791043	-0.002172941	ieu-a-1095	182416	G	C	0.73	0.0109999	European	Other															
+Platelet count	FALSE	-0.010605212	-0.02132434	0.000113915	ieu-a-1008	66867	G	C	0.5	0.0524699	European	Haemotological	2														
+LDL cholesterol	FALSE	0.0017	-0.009472	0.012872	ieu-a-300	88433	G	C	NA	0.8748	Mixed	Lipid/glycemic	3														
+Total cholesterol	FALSE	-3.00E-04	-0.011276	0.010676	ieu-a-301	93067	G	C	NA	0.9779	Mixed	Lipid/glycemic	5														
+HDL cholesterol	FALSE	0.0109	0.000708	0.021092	ieu-a-299	92820	G	C	NA	0.0307603	Mixed	Lipid/glycemic	6														
+Heart rate	FALSE	-0.012468004	-0.02230119	-0.002634818	ieu-a-1056	93150	G	C	0.6917	0.0129399	Mixed	Other	7														
+Age at menopause	FALSE	-0.001221	-0.013074575	0.010632575	ieu-a-1004	69360	G	C	0.73	0.84	European	Other	8														
+Waist circumference	TRUE	0.018041857	0.009731778	0.026351936	ieu-a-60	142206	G	C	0.7333	2.80E-05	Mixed	Anthropometric		1.13 1.02 1.26	1 sd	"Two-sample Maximum likelihood, random"	NR	NR	NR	NR	NR	NR	NR	NR	NR	NR	NR
+Birth weight	TRUE	0.018931571	0.010752318	0.027110824	ieu-a-1083	139425	G	C	0.71	5.10E-06	European	Anthropometric		1.1 0.92 1.31	1 sd	"Two-sample Maximum likelihood, random"	0.93 0.7 1.23	1 sd	Two-sample IVW fixed	NR	NR	NR	NR	NR	NR	NR	NR
+Lumbar spine bone mineral density	TRUE	-0.026473865	-0.040721599	-0.012226132	ieu-a-982	44731	G	C	0.696261	0.000377998	Mixed	Bone health		NR	NR	NR	NR	NR	NR	NR	NR	NR	NR	NR	NR	NR	NR
+Height	TRUE	0.012813891	0.006438488	0.019189295	ieu-a-89	241450	G	C	0.733	7.50E-05	European	Anthropometric	1	1.04 1 1.08	1 sd	Two-sample maximum likelihood (random)	"1.10, 95% CI 1.00, 1.22"	10 cm	Two-sample IVW fixed	NR	NR	1.098 1.065 1.132	1 sd	One-sample IVW fixed	27598322		
+Triglycerides	TRUE	-0.0246	-0.034596	-0.014604	ieu-a-302	89485	G	C	NA	2.41E-05	Mixed	Lipid/glycemic	4	0.93 0.84 1.04	1 sd	"Two-sample Maximum likelihood, random"	0.98 0.91 1.06	1 sd	Two-sample Likelihood-based	NR	NR	0.9 0.8 1.01	1 sd	One-sample 2SLS			

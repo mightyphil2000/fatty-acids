@@ -1,0 +1,314 @@
+id.exposure	id.outcome	outcome	exposure	method	Q	Q_df	Q_pval
+exp14	1	Basal cell skin carcinoma | 1	Docosahexaenoic acid (22:6n3)	MR Egger	24.309067366331	21	0.278325570811091
+exp14	1	Basal cell skin carcinoma | 1	Docosahexaenoic acid (22:6n3)	Inverse variance weighted	27.0482884694001	22	0.209398158951527
+exp14	3	Colorectal cancer | 3	Docosahexaenoic acid (22:6n3)	Inverse variance weighted	1.68073858147233	1	0.194826341320004
+exp14	12	Colorectal cancer | 12	Docosahexaenoic acid (22:6n3)	MR Egger	11.679317042028	15	0.703122105376765
+exp14	12	Colorectal cancer | 12	Docosahexaenoic acid (22:6n3)	Inverse variance weighted	11.7145136239094	16	0.763387389512841
+exp14	14	Esophageal squamous cell carcinoma | 14	Docosahexaenoic acid (22:6n3)	MR Egger	13.3833252070508	15	0.572716161851521
+exp14	14	Esophageal squamous cell carcinoma | 14	Docosahexaenoic acid (22:6n3)	Inverse variance weighted	13.4843868718431	16	0.637065886271884
+exp14	17	Lung cancer | 17	Docosahexaenoic acid (22:6n3)	MR Egger	15.638176467874	15	0.406497466767676
+exp14	17	Lung cancer | 17	Docosahexaenoic acid (22:6n3)	Inverse variance weighted	15.7495845973577	16	0.470570510703163
+exp14	32	Overall cancer | 32	Docosahexaenoic acid (22:6n3)	MR Egger	0.449303938474941	3	0.929879282428409
+exp14	32	Overall cancer | 32	Docosahexaenoic acid (22:6n3)	Inverse variance weighted	1.47744268249501	4	0.830629560142601
+exp14	33	Overall cancer | 33	Docosahexaenoic acid (22:6n3)	MR Egger	0.920611746000544	3	0.82045108578696
+exp14	33	Overall cancer | 33	Docosahexaenoic acid (22:6n3)	Inverse variance weighted	1.46275142043243	4	0.833218463996337
+exp14	42	Lung cancer | 42	Docosahexaenoic acid (22:6n3)	MR Egger	1.64462108563452	3	0.649315136122136
+exp14	42	Lung cancer | 42	Docosahexaenoic acid (22:6n3)	Inverse variance weighted	2.33987144171125	4	0.673519604297163
+exp14	46	Malignant skin cancer | 46	Docosahexaenoic acid (22:6n3)	MR Egger	1.53984574243324	3	0.673104953450407
+exp14	46	Malignant skin cancer | 46	Docosahexaenoic acid (22:6n3)	Inverse variance weighted	1.79851607827743	4	0.772753835183154
+exp14	54	Respiratory and intrathoracic cancer | 54	Docosahexaenoic acid (22:6n3)	MR Egger	1.24342029660089	3	0.74261026156349
+exp14	54	Respiratory and intrathoracic cancer | 54	Docosahexaenoic acid (22:6n3)	Inverse variance weighted	1.69477555117471	4	0.791666432062869
+exp14	60	Colorectal cancer | 60	Docosahexaenoic acid (22:6n3)	MR Egger	8.04387795079458	2	0.0179181883085882
+exp14	60	Colorectal cancer | 60	Docosahexaenoic acid (22:6n3)	Inverse variance weighted	8.61925329532709	3	0.0348057806835322
+exp14	75	Lung cancer | 75	Docosahexaenoic acid (22:6n3)	MR Egger	21.5100597985258	20	0.367676428134115
+exp14	75	Lung cancer | 75	Docosahexaenoic acid (22:6n3)	Inverse variance weighted	22.4822172460312	21	0.372193488189287
+exp14	99	Esophageal squamous cell carcinoma | 99	Docosahexaenoic acid (22:6n3)	MR Egger	30.8365575248772	16	0.0141175746645046
+exp14	99	Esophageal squamous cell carcinoma | 99	Docosahexaenoic acid (22:6n3)	Inverse variance weighted	31.8762921081572	17	0.0155893555670156
+exp14	135	Basal cell carcinoma | 135	Docosahexaenoic acid (22:6n3)	MR Egger	23.1403856266925	16	0.110032891658879
+exp14	135	Basal cell carcinoma | 135	Docosahexaenoic acid (22:6n3)	Inverse variance weighted	24.7296402490047	17	0.100926766472418
+exp14	140	Overall cancer | 140	Docosahexaenoic acid (22:6n3)	MR Egger	52.9460410765878	21	0.000139996405322918
+exp14	140	Overall cancer | 140	Docosahexaenoic acid (22:6n3)	Inverse variance weighted	53.0041814780469	22	0.000226812900304219
+exp14	141	Overall cancer (excluding non-melanoma skin cancer) | 141	Docosahexaenoic acid (22:6n3)	MR Egger	59.4276377931834	21	1.55849641777183e-05
+exp14	141	Overall cancer (excluding non-melanoma skin cancer) | 141	Docosahexaenoic acid (22:6n3)	Inverse variance weighted	59.4449269526874	22	2.69903671302381e-05
+exp14	143	Colorectal cancer | 143	Docosahexaenoic acid (22:6n3)	MR Egger	22.08442050595	21	0.394659087705069
+exp14	143	Colorectal cancer | 143	Docosahexaenoic acid (22:6n3)	Inverse variance weighted	28.0279761616267	22	0.174755908906749
+exp14	149	Lung cancer | 149	Docosahexaenoic acid (22:6n3)	MR Egger	37.3578644973474	21	0.0153093092301106
+exp14	149	Lung cancer | 149	Docosahexaenoic acid (22:6n3)	Inverse variance weighted	37.3591997113621	22	0.0215954477709366
+exp14	152	Malignant skin cancer | 152	Docosahexaenoic acid (22:6n3)	MR Egger	27.4130196431694	21	0.157596853316079
+exp14	152	Malignant skin cancer | 152	Docosahexaenoic acid (22:6n3)	Inverse variance weighted	28.5025845525768	22	0.159617373649745
+exp14	156	Non-melanoma skin cancer | 156	Docosahexaenoic acid (22:6n3)	MR Egger	32.2268163992785	21	0.0555251440698995
+exp14	156	Non-melanoma skin cancer | 156	Docosahexaenoic acid (22:6n3)	Inverse variance weighted	32.2790078055206	22	0.072762111471922
+exp14	160	Respiratory and intrathoracic cancer | 160	Docosahexaenoic acid (22:6n3)	MR Egger	22.0368288282816	21	0.397390229349668
+exp14	160	Respiratory and intrathoracic cancer | 160	Docosahexaenoic acid (22:6n3)	Inverse variance weighted	22.178861709691	22	0.449257066158682
+exp15	1	Basal cell skin carcinoma | 1	Linoleic acid (18:2n6)	MR Egger	34.8300690482635	23	0.0540707205145315
+exp15	1	Basal cell skin carcinoma | 1	Linoleic acid (18:2n6)	Inverse variance weighted	37.0958307017467	24	0.0428059871032682
+exp15	3	Colorectal cancer | 3	Linoleic acid (18:2n6)	MR Egger	3.81399006634013	3	0.282263039697696
+exp15	3	Colorectal cancer | 3	Linoleic acid (18:2n6)	Inverse variance weighted	15.4208081497199	4	0.00390348360297005
+exp15	12	Colorectal cancer | 12	Linoleic acid (18:2n6)	MR Egger	12.6856685099814	24	0.971023462753204
+exp15	12	Colorectal cancer | 12	Linoleic acid (18:2n6)	Inverse variance weighted	12.7200711061419	25	0.979750938282668
+exp15	14	Esophageal squamous cell carcinoma | 14	Linoleic acid (18:2n6)	MR Egger	58.2611668286683	24	0.000111943144466084
+exp15	14	Esophageal squamous cell carcinoma | 14	Linoleic acid (18:2n6)	Inverse variance weighted	58.7385859885691	25	0.000155657797154998
+exp15	17	Lung cancer | 17	Linoleic acid (18:2n6)	MR Egger	28.0676009687471	24	0.257198888761507
+exp15	17	Lung cancer | 17	Linoleic acid (18:2n6)	Inverse variance weighted	39.2555786785428	25	0.0347237070001222
+exp15	32	Overall cancer | 32	Linoleic acid (18:2n6)	MR Egger	7.21247155177432	5	0.205312027338101
+exp15	32	Overall cancer | 32	Linoleic acid (18:2n6)	Inverse variance weighted	7.21394654893274	6	0.301514085460264
+exp15	33	Overall cancer | 33	Linoleic acid (18:2n6)	MR Egger	2.41123299060757	5	0.789800140633701
+exp15	33	Overall cancer | 33	Linoleic acid (18:2n6)	Inverse variance weighted	2.97602297338538	6	0.811850135168834
+exp15	42	Lung cancer | 42	Linoleic acid (18:2n6)	MR Egger	2.7101168537296	5	0.744570679998233
+exp15	42	Lung cancer | 42	Linoleic acid (18:2n6)	Inverse variance weighted	3.52911689734979	6	0.740091876059384
+exp15	46	Malignant skin cancer | 46	Linoleic acid (18:2n6)	MR Egger	7.65017721852974	5	0.176598102763794
+exp15	46	Malignant skin cancer | 46	Linoleic acid (18:2n6)	Inverse variance weighted	8.66896839739852	6	0.193068688338611
+exp15	54	Respiratory and intrathoracic cancer | 54	Linoleic acid (18:2n6)	MR Egger	3.73790919527941	5	0.587732756188172
+exp15	54	Respiratory and intrathoracic cancer | 54	Linoleic acid (18:2n6)	Inverse variance weighted	3.90552735698111	6	0.689459492692474
+exp15	60	Colorectal cancer | 60	Linoleic acid (18:2n6)	MR Egger	0.824999107644384	1	0.363722586843328
+exp15	60	Colorectal cancer | 60	Linoleic acid (18:2n6)	Inverse variance weighted	8.1654831615639	2	0.0168611759522707
+exp15	75	Lung cancer | 75	Linoleic acid (18:2n6)	MR Egger	17.7632738172111	23	0.770200282899214
+exp15	75	Lung cancer | 75	Linoleic acid (18:2n6)	Inverse variance weighted	24.3288582386008	24	0.442926532474014
+exp15	99	Esophageal squamous cell carcinoma | 99	Linoleic acid (18:2n6)	MR Egger	16.494851220471	19	0.624048675868228
+exp15	99	Esophageal squamous cell carcinoma | 99	Linoleic acid (18:2n6)	Inverse variance weighted	24.0558944512162	20	0.239959099008414
+exp15	135	Basal cell carcinoma | 135	Linoleic acid (18:2n6)	MR Egger	32.8132943354543	23	0.0843755793216802
+exp15	135	Basal cell carcinoma | 135	Linoleic acid (18:2n6)	Inverse variance weighted	32.8205637559969	24	0.107916517525061
+exp15	140	Overall cancer | 140	Linoleic acid (18:2n6)	MR Egger	35.7773473671442	31	0.25403292364268
+exp15	140	Overall cancer | 140	Linoleic acid (18:2n6)	Inverse variance weighted	36.7414504802073	32	0.258433806690641
+exp15	141	Overall cancer (excluding non-melanoma skin cancer) | 141	Linoleic acid (18:2n6)	MR Egger	38.9248453975572	31	0.155122962466396
+exp15	141	Overall cancer (excluding non-melanoma skin cancer) | 141	Linoleic acid (18:2n6)	Inverse variance weighted	39.6898106607906	32	0.164679676234752
+exp15	143	Colorectal cancer | 143	Linoleic acid (18:2n6)	MR Egger	32.3415534092725	31	0.400336971214908
+exp15	143	Colorectal cancer | 143	Linoleic acid (18:2n6)	Inverse variance weighted	38.0505633146581	32	0.21315378755307
+exp15	149	Lung cancer | 149	Linoleic acid (18:2n6)	MR Egger	24.9829364207789	31	0.768480540376438
+exp15	149	Lung cancer | 149	Linoleic acid (18:2n6)	Inverse variance weighted	27.7861293644615	32	0.679896464661569
+exp15	152	Malignant skin cancer | 152	Linoleic acid (18:2n6)	MR Egger	25.61057430103	29	0.646215753017684
+exp15	152	Malignant skin cancer | 152	Linoleic acid (18:2n6)	Inverse variance weighted	25.6158274044838	30	0.694586928492816
+exp15	156	Non-melanoma skin cancer | 156	Linoleic acid (18:2n6)	MR Egger	37.5282932047305	31	0.194743746166822
+exp15	156	Non-melanoma skin cancer | 156	Linoleic acid (18:2n6)	Inverse variance weighted	38.375981472159	32	0.202807811502804
+exp15	160	Respiratory and intrathoracic cancer | 160	Linoleic acid (18:2n6)	MR Egger	14.9536252191928	29	0.985372942802609
+exp15	160	Respiratory and intrathoracic cancer | 160	Linoleic acid (18:2n6)	Inverse variance weighted	15.7077503072533	30	0.985083502184827
+exp16	1	Basal cell skin carcinoma | 1	Omega-3 fatty acids	MR Egger	54.8596164119016	23	0.000203878079985983
+exp16	1	Basal cell skin carcinoma | 1	Omega-3 fatty acids	Inverse variance weighted	55.0882576157668	24	0.000304579019841802
+exp16	3	Colorectal cancer | 3	Omega-3 fatty acids	MR Egger	6.94637858432066	1	0.0083989085919757
+exp16	3	Colorectal cancer | 3	Omega-3 fatty acids	Inverse variance weighted	11.0469807016958	2	0.00399189049968447
+exp16	12	Colorectal cancer | 12	Omega-3 fatty acids	MR Egger	18.1275335267966	18	0.447281224393544
+exp16	12	Colorectal cancer | 12	Omega-3 fatty acids	Inverse variance weighted	20.9125250345076	19	0.341654427735047
+exp16	14	Esophageal squamous cell carcinoma | 14	Omega-3 fatty acids	MR Egger	42.4863521745575	18	0.000945340254023165
+exp16	14	Esophageal squamous cell carcinoma | 14	Omega-3 fatty acids	Inverse variance weighted	44.6991754454115	19	0.000755067108381338
+exp16	17	Lung cancer | 17	Omega-3 fatty acids	MR Egger	24.4237248513349	18	0.141630120657799
+exp16	17	Lung cancer | 17	Omega-3 fatty acids	Inverse variance weighted	25.1667779853364	19	0.155125442207115
+exp16	32	Overall cancer | 32	Omega-3 fatty acids	MR Egger	11.3739866123257	8	0.181395482178914
+exp16	32	Overall cancer | 32	Omega-3 fatty acids	Inverse variance weighted	13.2094716397545	9	0.153354709859639
+exp16	33	Overall cancer | 33	Omega-3 fatty acids	MR Egger	8.03596865139546	8	0.429964502009724
+exp16	33	Overall cancer | 33	Omega-3 fatty acids	Inverse variance weighted	8.38757509104559	9	0.495608373740056
+exp16	42	Lung cancer | 42	Omega-3 fatty acids	MR Egger	4.9911851851431	8	0.75851785726098
+exp16	42	Lung cancer | 42	Omega-3 fatty acids	Inverse variance weighted	5.37650274471975	9	0.800330658251765
+exp16	46	Malignant skin cancer | 46	Omega-3 fatty acids	MR Egger	7.30507587531665	8	0.504103315475303
+exp16	46	Malignant skin cancer | 46	Omega-3 fatty acids	Inverse variance weighted	7.47251242222277	9	0.588047753217502
+exp16	54	Respiratory and intrathoracic cancer | 54	Omega-3 fatty acids	MR Egger	4.67643227192464	8	0.791533109198876
+exp16	54	Respiratory and intrathoracic cancer | 54	Omega-3 fatty acids	Inverse variance weighted	5.08431038231189	9	0.826897622044179
+exp16	60	Colorectal cancer | 60	Omega-3 fatty acids	MR Egger	20.5895129822381	3	0.000128097955044706
+exp16	60	Colorectal cancer | 60	Omega-3 fatty acids	Inverse variance weighted	23.3819904458512	4	0.000106208913808507
+exp16	75	Lung cancer | 75	Omega-3 fatty acids	MR Egger	40.0638907306138	23	0.015117596001465
+exp16	75	Lung cancer | 75	Omega-3 fatty acids	Inverse variance weighted	40.0889384070164	24	0.0209212334387276
+exp16	99	Esophageal squamous cell carcinoma | 99	Omega-3 fatty acids	MR Egger	24.7298796568709	18	0.132539407206326
+exp16	99	Esophageal squamous cell carcinoma | 99	Omega-3 fatty acids	Inverse variance weighted	24.9451609609542	19	0.162355249946962
+exp16	135	Basal cell carcinoma | 135	Omega-3 fatty acids	MR Egger	23.2766752848913	23	0.444714913472157
+exp16	135	Basal cell carcinoma | 135	Omega-3 fatty acids	Inverse variance weighted	23.3240899099309	24	0.50073980873259
+exp16	140	Overall cancer | 140	Omega-3 fatty acids	MR Egger	60.4028490558546	27	0.000233534047259933
+exp16	140	Overall cancer | 140	Omega-3 fatty acids	Inverse variance weighted	60.6648678384866	28	0.000334707663814464
+exp16	141	Overall cancer (excluding non-melanoma skin cancer) | 141	Omega-3 fatty acids	MR Egger	76.9172019313793	27	1.09752188528118e-06
+exp16	141	Overall cancer (excluding non-melanoma skin cancer) | 141	Omega-3 fatty acids	Inverse variance weighted	76.9506119190567	28	1.88262942718783e-06
+exp16	143	Colorectal cancer | 143	Omega-3 fatty acids	MR Egger	49.044105246949	27	0.00585609824514375
+exp16	143	Colorectal cancer | 143	Omega-3 fatty acids	Inverse variance weighted	49.1430472794447	28	0.00804741123963591
+exp16	149	Lung cancer | 149	Omega-3 fatty acids	MR Egger	41.677201863581	27	0.0354072218822041
+exp16	149	Lung cancer | 149	Omega-3 fatty acids	Inverse variance weighted	41.9127365093345	28	0.0441864439167514
+exp16	152	Malignant skin cancer | 152	Omega-3 fatty acids	MR Egger	35.0053445651144	27	0.13873058771552
+exp16	152	Malignant skin cancer | 152	Omega-3 fatty acids	Inverse variance weighted	35.0478438923974	28	0.168478914791095
+exp16	156	Non-melanoma skin cancer | 156	Omega-3 fatty acids	MR Egger	34.2331523605974	27	0.15937385865622
+exp16	156	Non-melanoma skin cancer | 156	Omega-3 fatty acids	Inverse variance weighted	35.9689621184698	28	0.143389820760669
+exp16	160	Respiratory and intrathoracic cancer | 160	Omega-3 fatty acids	MR Egger	23.5782076124051	27	0.653595868009094
+exp16	160	Respiratory and intrathoracic cancer | 160	Omega-3 fatty acids	Inverse variance weighted	23.6462083612032	28	0.700064861758209
+exp17	1	Basal cell skin carcinoma | 1	Omega-6 fatty acids	MR Egger	82.925584283851	38	3.46256261169717e-05
+exp17	1	Basal cell skin carcinoma | 1	Omega-6 fatty acids	Inverse variance weighted	83.5901566380871	39	4.34132895156947e-05
+exp17	3	Colorectal cancer | 3	Omega-6 fatty acids	MR Egger	10.399634911647	1	0.00126040231206693
+exp17	3	Colorectal cancer | 3	Omega-6 fatty acids	Inverse variance weighted	10.4431127774525	2	0.00539891976616366
+exp17	12	Colorectal cancer | 12	Omega-6 fatty acids	MR Egger	35.6937291295707	29	0.182658272931466
+exp17	12	Colorectal cancer | 12	Omega-6 fatty acids	Inverse variance weighted	36.2412803349237	30	0.200283649068122
+exp17	14	Esophageal squamous cell carcinoma | 14	Omega-6 fatty acids	MR Egger	68.1843760315433	29	5.35003859937307e-05
+exp17	14	Esophageal squamous cell carcinoma | 14	Omega-6 fatty acids	Inverse variance weighted	68.1889551688858	30	8.44961838168437e-05
+exp17	17	Lung cancer | 17	Omega-6 fatty acids	MR Egger	39.2248177797324	29	0.097432116117997
+exp17	17	Lung cancer | 17	Omega-6 fatty acids	Inverse variance weighted	42.6312058985132	30	0.0631257330160856
+exp17	32	Overall cancer | 32	Omega-6 fatty acids	MR Egger	18.2523413951868	18	0.439149163872404
+exp17	32	Overall cancer | 32	Omega-6 fatty acids	Inverse variance weighted	18.5890931501012	19	0.483465788865042
+exp17	33	Overall cancer | 33	Omega-6 fatty acids	MR Egger	20.3924106534335	18	0.311165901081908
+exp17	33	Overall cancer | 33	Omega-6 fatty acids	Inverse variance weighted	22.6471790492294	19	0.253239723206764
+exp17	42	Lung cancer | 42	Omega-6 fatty acids	MR Egger	13.9717407479127	18	0.730931584106328
+exp17	42	Lung cancer | 42	Omega-6 fatty acids	Inverse variance weighted	14.2283192867552	19	0.770222442482672
+exp17	46	Malignant skin cancer | 46	Omega-6 fatty acids	MR Egger	12.9121197019455	18	0.796767096266919
+exp17	46	Malignant skin cancer | 46	Omega-6 fatty acids	Inverse variance weighted	14.0543526149644	19	0.780513667279694
+exp17	54	Respiratory and intrathoracic cancer | 54	Omega-6 fatty acids	MR Egger	17.4748420411815	18	0.490717802128189
+exp17	54	Respiratory and intrathoracic cancer | 54	Omega-6 fatty acids	Inverse variance weighted	17.63182988101	19	0.547142913058094
+exp17	60	Colorectal cancer | 60	Omega-6 fatty acids	MR Egger	21.9270029389583	3	6.75526522678369e-05
+exp17	60	Colorectal cancer | 60	Omega-6 fatty acids	Inverse variance weighted	23.5488580817088	4	9.83494506076763e-05
+exp17	75	Lung cancer | 75	Omega-6 fatty acids	MR Egger	43.2986030134811	37	0.220383055280637
+exp17	75	Lung cancer | 75	Omega-6 fatty acids	Inverse variance weighted	47.1970383541376	38	0.145643077751334
+exp17	99	Esophageal squamous cell carcinoma | 99	Omega-6 fatty acids	MR Egger	38.4289104171263	27	0.0713292414570234
+exp17	99	Esophageal squamous cell carcinoma | 99	Omega-6 fatty acids	Inverse variance weighted	39.0572506532636	28	0.080006481981749
+exp17	135	Basal cell carcinoma | 135	Omega-6 fatty acids	MR Egger	28.5075498326559	26	0.333945408228873
+exp17	135	Basal cell carcinoma | 135	Omega-6 fatty acids	Inverse variance weighted	29.4741669299472	27	0.338290329442799
+exp17	140	Overall cancer | 140	Omega-6 fatty acids	MR Egger	70.7174535232314	44	0.00648544483127838
+exp17	140	Overall cancer | 140	Omega-6 fatty acids	Inverse variance weighted	70.7975771480345	45	0.00836919427690968
+exp17	141	Overall cancer (excluding non-melanoma skin cancer) | 141	Omega-6 fatty acids	MR Egger	55.8447658594429	44	0.108591774192842
+exp17	141	Overall cancer (excluding non-melanoma skin cancer) | 141	Omega-6 fatty acids	Inverse variance weighted	58.2703733675364	45	0.0885451876370448
+exp17	143	Colorectal cancer | 143	Omega-6 fatty acids	MR Egger	56.6638646143712	44	0.0954016143861763
+exp17	143	Colorectal cancer | 143	Omega-6 fatty acids	Inverse variance weighted	58.5268300224099	45	0.0849533079612108
+exp17	149	Lung cancer | 149	Omega-6 fatty acids	MR Egger	34.1597015559673	44	0.856953848431121
+exp17	149	Lung cancer | 149	Omega-6 fatty acids	Inverse variance weighted	34.1630776718983	45	0.88053603142286
+exp17	152	Malignant skin cancer | 152	Omega-6 fatty acids	MR Egger	72.0416760766158	43	0.00361372451522271
+exp17	152	Malignant skin cancer | 152	Omega-6 fatty acids	Inverse variance weighted	74.502023450953	44	0.00275897075395574
+exp17	156	Non-melanoma skin cancer | 156	Omega-6 fatty acids	MR Egger	77.3484314061956	44	0.00140627905371492
+exp17	156	Non-melanoma skin cancer | 156	Omega-6 fatty acids	Inverse variance weighted	80.350740073044	45	0.000935326605082949
+exp17	160	Respiratory and intrathoracic cancer | 160	Omega-6 fatty acids	MR Egger	37.4934814377468	43	0.708307625293978
+exp17	160	Respiratory and intrathoracic cancer | 160	Omega-6 fatty acids	Inverse variance weighted	37.5904886415222	44	0.741355808412138
+exp18	1	Basal cell skin carcinoma | 1	Ratio of omega-6 fatty acids to omega-3 fatty acids	MR Egger	50.439027492976	23	0.000806629833874733
+exp18	1	Basal cell skin carcinoma | 1	Ratio of omega-6 fatty acids to omega-3 fatty acids	Inverse variance weighted	50.4437000436316	24	0.00124294231192334
+exp18	3	Colorectal cancer | 3	Ratio of omega-6 fatty acids to omega-3 fatty acids	MR Egger	5.57424091025814	1	0.0182265642054112
+exp18	3	Colorectal cancer | 3	Ratio of omega-6 fatty acids to omega-3 fatty acids	Inverse variance weighted	10.7563889553272	2	0.00461614897047613
+exp18	12	Colorectal cancer | 12	Ratio of omega-6 fatty acids to omega-3 fatty acids	MR Egger	21.83819664917	20	0.349354706358789
+exp18	12	Colorectal cancer | 12	Ratio of omega-6 fatty acids to omega-3 fatty acids	Inverse variance weighted	23.8742777124786	21	0.299189959147874
+exp18	14	Esophageal squamous cell carcinoma | 14	Ratio of omega-6 fatty acids to omega-3 fatty acids	MR Egger	51.9283139757198	20	0.000116630963653567
+exp18	14	Esophageal squamous cell carcinoma | 14	Ratio of omega-6 fatty acids to omega-3 fatty acids	Inverse variance weighted	52.6095641224305	21	0.000156392473504649
+exp18	17	Lung cancer | 17	Ratio of omega-6 fatty acids to omega-3 fatty acids	MR Egger	31.7959948467031	20	0.0455211951452059
+exp18	17	Lung cancer | 17	Ratio of omega-6 fatty acids to omega-3 fatty acids	Inverse variance weighted	34.9279135043345	21	0.0287536373059307
+exp18	32	Overall cancer | 32	Ratio of omega-6 fatty acids to omega-3 fatty acids	MR Egger	11.2959478889646	9	0.255967432417145
+exp18	32	Overall cancer | 32	Ratio of omega-6 fatty acids to omega-3 fatty acids	Inverse variance weighted	13.1506267524581	10	0.21537164748589
+exp18	33	Overall cancer | 33	Ratio of omega-6 fatty acids to omega-3 fatty acids	MR Egger	7.24537074722243	9	0.61158944595532
+exp18	33	Overall cancer | 33	Ratio of omega-6 fatty acids to omega-3 fatty acids	Inverse variance weighted	8.27193232702689	10	0.602293765660945
+exp18	42	Lung cancer | 42	Ratio of omega-6 fatty acids to omega-3 fatty acids	MR Egger	10.5121888470053	9	0.3106316758381
+exp18	42	Lung cancer | 42	Ratio of omega-6 fatty acids to omega-3 fatty acids	Inverse variance weighted	10.6208452762296	10	0.387809963191206
+exp18	46	Malignant skin cancer | 46	Ratio of omega-6 fatty acids to omega-3 fatty acids	MR Egger	6.10655330002971	9	0.729208431696946
+exp18	46	Malignant skin cancer | 46	Ratio of omega-6 fatty acids to omega-3 fatty acids	Inverse variance weighted	7.7373424747698	10	0.654475482587864
+exp18	54	Respiratory and intrathoracic cancer | 54	Ratio of omega-6 fatty acids to omega-3 fatty acids	MR Egger	7.16855612618978	9	0.619575244971675
+exp18	54	Respiratory and intrathoracic cancer | 54	Ratio of omega-6 fatty acids to omega-3 fatty acids	Inverse variance weighted	7.16871091642765	10	0.70942739921548
+exp18	60	Colorectal cancer | 60	Ratio of omega-6 fatty acids to omega-3 fatty acids	MR Egger	24.2686162078057	3	2.1953342679651e-05
+exp18	60	Colorectal cancer | 60	Ratio of omega-6 fatty acids to omega-3 fatty acids	Inverse variance weighted	24.5528636784595	4	6.18720869308462e-05
+exp18	75	Lung cancer | 75	Ratio of omega-6 fatty acids to omega-3 fatty acids	MR Egger	40.5997614096611	21	0.00628167312524877
+exp18	75	Lung cancer | 75	Ratio of omega-6 fatty acids to omega-3 fatty acids	Inverse variance weighted	41.6329060391947	22	0.00692232532652186
+exp18	99	Esophageal squamous cell carcinoma | 99	Ratio of omega-6 fatty acids to omega-3 fatty acids	MR Egger	16.2318939952148	16	0.43689678509777
+exp18	99	Esophageal squamous cell carcinoma | 99	Ratio of omega-6 fatty acids to omega-3 fatty acids	Inverse variance weighted	16.297484273577	17	0.502852466495206
+exp18	135	Basal cell carcinoma | 135	Ratio of omega-6 fatty acids to omega-3 fatty acids	MR Egger	20.3958413270908	22	0.558293887945528
+exp18	135	Basal cell carcinoma | 135	Ratio of omega-6 fatty acids to omega-3 fatty acids	Inverse variance weighted	20.6436007860042	23	0.602842345091929
+exp18	140	Overall cancer | 140	Ratio of omega-6 fatty acids to omega-3 fatty acids	MR Egger	51.3372224046727	26	0.00216939611988322
+exp18	140	Overall cancer | 140	Ratio of omega-6 fatty acids to omega-3 fatty acids	Inverse variance weighted	53.0405632129013	27	0.00199001369489853
+exp18	141	Overall cancer (excluding non-melanoma skin cancer) | 141	Ratio of omega-6 fatty acids to omega-3 fatty acids	MR Egger	57.7825125969873	26	0.000330678995383231
+exp18	141	Overall cancer (excluding non-melanoma skin cancer) | 141	Ratio of omega-6 fatty acids to omega-3 fatty acids	Inverse variance weighted	61.1535647445813	27	0.000185856494296806
+exp18	143	Colorectal cancer | 143	Ratio of omega-6 fatty acids to omega-3 fatty acids	MR Egger	45.0955390905132	26	0.0114902009644032
+exp18	143	Colorectal cancer | 143	Ratio of omega-6 fatty acids to omega-3 fatty acids	Inverse variance weighted	45.2973710271723	27	0.0151242836789271
+exp18	149	Lung cancer | 149	Ratio of omega-6 fatty acids to omega-3 fatty acids	MR Egger	28.2876826285022	26	0.344449158522939
+exp18	149	Lung cancer | 149	Ratio of omega-6 fatty acids to omega-3 fatty acids	Inverse variance weighted	28.3799577259784	27	0.391588231396546
+exp18	152	Malignant skin cancer | 152	Ratio of omega-6 fatty acids to omega-3 fatty acids	MR Egger	43.4984121887833	26	0.0171041900208975
+exp18	152	Malignant skin cancer | 152	Ratio of omega-6 fatty acids to omega-3 fatty acids	Inverse variance weighted	43.7301978221843	27	0.0220436394243885
+exp18	156	Non-melanoma skin cancer | 156	Ratio of omega-6 fatty acids to omega-3 fatty acids	MR Egger	39.1307024355113	26	0.0473706982011448
+exp18	156	Non-melanoma skin cancer | 156	Ratio of omega-6 fatty acids to omega-3 fatty acids	Inverse variance weighted	39.1444309073687	27	0.0614684519420993
+exp18	160	Respiratory and intrathoracic cancer | 160	Ratio of omega-6 fatty acids to omega-3 fatty acids	MR Egger	21.2859546478542	26	0.727056879283712
+exp18	160	Respiratory and intrathoracic cancer | 160	Ratio of omega-6 fatty acids to omega-3 fatty acids	Inverse variance weighted	23.6030758344832	27	0.652230624976789
+exp4	1	Basal cell skin carcinoma | 1	Dihomo-gamma-linolenic acid (20:3n6)	Inverse variance weighted	0.775708731612828	1	0.37845678375073
+exp4	12	Colorectal cancer | 12	Dihomo-gamma-linolenic acid (20:3n6)	Inverse variance weighted	0.587649893131128	1	0.443329332045735
+exp4	14	Esophageal squamous cell carcinoma | 14	Dihomo-gamma-linolenic acid (20:3n6)	Inverse variance weighted	1.32733616630384	1	0.24927966996711
+exp4	17	Lung cancer | 17	Dihomo-gamma-linolenic acid (20:3n6)	Inverse variance weighted	0.444945160113506	1	0.504745243719949
+exp4	75	Lung cancer | 75	Dihomo-gamma-linolenic acid (20:3n6)	Inverse variance weighted	1.44983758587139	1	0.22855401501412
+exp4	99	Esophageal squamous cell carcinoma | 99	Dihomo-gamma-linolenic acid (20:3n6)	Inverse variance weighted	0.960410842900952	1	0.327083387924719
+exp4	135	Basal cell carcinoma | 135	Dihomo-gamma-linolenic acid (20:3n6)	Inverse variance weighted	0.756253108165565	1	0.384503652450977
+exp4	140	Overall cancer | 140	Dihomo-gamma-linolenic acid (20:3n6)	Inverse variance weighted	1.0613234299938	1	0.302913535271468
+exp4	141	Overall cancer (excluding non-melanoma skin cancer) | 141	Dihomo-gamma-linolenic acid (20:3n6)	Inverse variance weighted	0.233828110255885	1	0.628699756214544
+exp4	143	Colorectal cancer | 143	Dihomo-gamma-linolenic acid (20:3n6)	Inverse variance weighted	2.56077656458254	1	0.109544762185731
+exp4	149	Lung cancer | 149	Dihomo-gamma-linolenic acid (20:3n6)	Inverse variance weighted	0.0220142459640352	1	0.882049207988796
+exp4	152	Malignant skin cancer | 152	Dihomo-gamma-linolenic acid (20:3n6)	Inverse variance weighted	1.97718677283178	1	0.15968708836329
+exp4	156	Non-melanoma skin cancer | 156	Dihomo-gamma-linolenic acid (20:3n6)	Inverse variance weighted	3.09769047746754	1	0.0784034485516847
+exp4	160	Respiratory and intrathoracic cancer | 160	Dihomo-gamma-linolenic acid (20:3n6)	Inverse variance weighted	0.153262226758901	1	0.695437149119131
+exp5	1	Basal cell skin carcinoma | 1	Docosapentaenoic acid (22:5n3)	Inverse variance weighted	2.56088726986963	1	0.109537091921835
+exp5	3	Colorectal cancer | 3	Docosapentaenoic acid (22:5n3)	Inverse variance weighted	7.5806030786981	1	0.00589996978885791
+exp5	12	Colorectal cancer | 12	Docosapentaenoic acid (22:5n3)	Inverse variance weighted	2.06658112862767	1	0.150558702664971
+exp5	14	Esophageal squamous cell carcinoma | 14	Docosapentaenoic acid (22:5n3)	Inverse variance weighted	4.82030995550386	1	0.0281262870826004
+exp5	17	Lung cancer | 17	Docosapentaenoic acid (22:5n3)	Inverse variance weighted	0.0493534465281008	1	0.824192167997442
+exp5	60	Colorectal cancer | 60	Docosapentaenoic acid (22:5n3)	Inverse variance weighted	10.0808157568565	1	0.0014982099012169
+exp5	75	Lung cancer | 75	Docosapentaenoic acid (22:5n3)	Inverse variance weighted	0.747130699048138	1	0.387386191697277
+exp5	99	Esophageal squamous cell carcinoma | 99	Docosapentaenoic acid (22:5n3)	Inverse variance weighted	0.559249550454886	1	0.454562768185789
+exp5	135	Basal cell carcinoma | 135	Docosapentaenoic acid (22:5n3)	Inverse variance weighted	0.0971602121199327	1	0.755264477657625
+exp5	140	Overall cancer | 140	Docosapentaenoic acid (22:5n3)	Inverse variance weighted	0.822563621691682	1	0.364431687803315
+exp5	141	Overall cancer (excluding non-melanoma skin cancer) | 141	Docosapentaenoic acid (22:5n3)	Inverse variance weighted	0.522728405739722	1	0.469680136689765
+exp5	143	Colorectal cancer | 143	Docosapentaenoic acid (22:5n3)	Inverse variance weighted	0.670151246962317	1	0.41299888043672
+exp5	149	Lung cancer | 149	Docosapentaenoic acid (22:5n3)	Inverse variance weighted	0.802120570307142	1	0.370460109201524
+exp5	152	Malignant skin cancer | 152	Docosapentaenoic acid (22:5n3)	Inverse variance weighted	1.32459549275854	1	0.249768965813559
+exp5	156	Non-melanoma skin cancer | 156	Docosapentaenoic acid (22:5n3)	Inverse variance weighted	0.519584735429966	1	0.471018875793822
+exp5	160	Respiratory and intrathoracic cancer | 160	Docosapentaenoic acid (22:5n3)	Inverse variance weighted	3.01355792071617	1	0.0825708667928376
+exp7	1	Basal cell skin carcinoma | 1	Gamma-linolenic acid (18:3n6)	MR Egger	2.43153877671669	2	0.296481816860725
+exp7	1	Basal cell skin carcinoma | 1	Gamma-linolenic acid (18:3n6)	Inverse variance weighted	3.70364555383007	3	0.295294449451192
+exp7	12	Colorectal cancer | 12	Gamma-linolenic acid (18:3n6)	MR Egger	0.659789559031139	1	0.416634246676243
+exp7	12	Colorectal cancer | 12	Gamma-linolenic acid (18:3n6)	Inverse variance weighted	0.98209537214499	2	0.611984890149686
+exp7	14	Esophageal squamous cell carcinoma | 14	Gamma-linolenic acid (18:3n6)	MR Egger	0.738319533756144	1	0.390199723679292
+exp7	14	Esophageal squamous cell carcinoma | 14	Gamma-linolenic acid (18:3n6)	Inverse variance weighted	0.985315410751022	2	0.611000375419919
+exp7	17	Lung cancer | 17	Gamma-linolenic acid (18:3n6)	MR Egger	0.169775723224111	1	0.680311206479695
+exp7	17	Lung cancer | 17	Gamma-linolenic acid (18:3n6)	Inverse variance weighted	0.179145434950117	2	0.914321775535949
+exp7	32	Overall cancer | 32	Gamma-linolenic acid (18:3n6)	Inverse variance weighted	1.08212301958343	1	0.2982231070886
+exp7	33	Overall cancer | 33	Gamma-linolenic acid (18:3n6)	Inverse variance weighted	0.0165664721951601	1	0.897586482699039
+exp7	42	Lung cancer | 42	Gamma-linolenic acid (18:3n6)	Inverse variance weighted	0.92799594729996	1	0.33538421892019
+exp7	46	Malignant skin cancer | 46	Gamma-linolenic acid (18:3n6)	Inverse variance weighted	0.256099750309224	1	0.612812430516782
+exp7	54	Respiratory and intrathoracic cancer | 54	Gamma-linolenic acid (18:3n6)	Inverse variance weighted	0.602573460652838	1	0.437597815441461
+exp7	60	Colorectal cancer | 60	Gamma-linolenic acid (18:3n6)	MR Egger	0.109401289521077	1	0.740826791280543
+exp7	60	Colorectal cancer | 60	Gamma-linolenic acid (18:3n6)	Inverse variance weighted	2.40751385758336	2	0.300064769651117
+exp7	75	Lung cancer | 75	Gamma-linolenic acid (18:3n6)	MR Egger	0.199071700453039	2	0.905257495600489
+exp7	75	Lung cancer | 75	Gamma-linolenic acid (18:3n6)	Inverse variance weighted	0.266468621524808	3	0.966206318892406
+exp7	99	Esophageal squamous cell carcinoma | 99	Gamma-linolenic acid (18:3n6)	MR Egger	0.848971279968299	2	0.654106144664421
+exp7	99	Esophageal squamous cell carcinoma | 99	Gamma-linolenic acid (18:3n6)	Inverse variance weighted	0.92440244763945	3	0.819535298724965
+exp7	135	Basal cell carcinoma | 135	Gamma-linolenic acid (18:3n6)	Inverse variance weighted	0.0857549667756774	1	0.769644842233808
+exp7	140	Overall cancer | 140	Gamma-linolenic acid (18:3n6)	MR Egger	1.29174751898029	2	0.524204313451274
+exp7	140	Overall cancer | 140	Gamma-linolenic acid (18:3n6)	Inverse variance weighted	5.35858921307217	3	0.14734548682222
+exp7	141	Overall cancer (excluding non-melanoma skin cancer) | 141	Gamma-linolenic acid (18:3n6)	MR Egger	3.74452088197	2	0.153775667831313
+exp7	141	Overall cancer (excluding non-melanoma skin cancer) | 141	Gamma-linolenic acid (18:3n6)	Inverse variance weighted	4.70839306190364	3	0.194438425862697
+exp7	143	Colorectal cancer | 143	Gamma-linolenic acid (18:3n6)	MR Egger	2.72158219763209	2	0.256457813209557
+exp7	143	Colorectal cancer | 143	Gamma-linolenic acid (18:3n6)	Inverse variance weighted	5.49848330626661	3	0.138729360608325
+exp7	149	Lung cancer | 149	Gamma-linolenic acid (18:3n6)	MR Egger	3.60556692969801	2	0.164839424324094
+exp7	149	Lung cancer | 149	Gamma-linolenic acid (18:3n6)	Inverse variance weighted	4.75732440191409	3	0.190454259163047
+exp7	152	Malignant skin cancer | 152	Gamma-linolenic acid (18:3n6)	Inverse variance weighted	1.23727766016502	1	0.265996360846902
+exp7	156	Non-melanoma skin cancer | 156	Gamma-linolenic acid (18:3n6)	MR Egger	0.900708072738895	2	0.637402448021914
+exp7	156	Non-melanoma skin cancer | 156	Gamma-linolenic acid (18:3n6)	Inverse variance weighted	8.85076874798023	3	0.0313422264221603
+exp7	160	Respiratory and intrathoracic cancer | 160	Gamma-linolenic acid (18:3n6)	Inverse variance weighted	0.0667014825396175	1	0.796201391661163
+exp9	1	Basal cell skin carcinoma | 1	Other polyunsaturated fatty acids than 18:2	MR Egger	12.4098580174185	7	0.0878608060068374
+exp9	1	Basal cell skin carcinoma | 1	Other polyunsaturated fatty acids than 18:2	Inverse variance weighted	13.6350854778863	8	0.0917867610764985
+exp9	3	Colorectal cancer | 3	Other polyunsaturated fatty acids than 18:2	MR Egger	5.75638543610186	1	0.0164288353365663
+exp9	3	Colorectal cancer | 3	Other polyunsaturated fatty acids than 18:2	Inverse variance weighted	8.539497665445	2	0.0139852953608048
+exp9	12	Colorectal cancer | 12	Other polyunsaturated fatty acids than 18:2	MR Egger	8.7264977116077	7	0.272893380172785
+exp9	12	Colorectal cancer | 12	Other polyunsaturated fatty acids than 18:2	Inverse variance weighted	9.77187715702262	8	0.281403673015988
+exp9	14	Esophageal squamous cell carcinoma | 14	Other polyunsaturated fatty acids than 18:2	MR Egger	26.4800156961001	7	0.00041326066891605
+exp9	14	Esophageal squamous cell carcinoma | 14	Other polyunsaturated fatty acids than 18:2	Inverse variance weighted	29.4603237727221	8	0.000263193137715773
+exp9	17	Lung cancer | 17	Other polyunsaturated fatty acids than 18:2	MR Egger	10.0449382338412	7	0.186041130564543
+exp9	17	Lung cancer | 17	Other polyunsaturated fatty acids than 18:2	Inverse variance weighted	10.0662985326352	8	0.260403439295715
+exp9	32	Overall cancer | 32	Other polyunsaturated fatty acids than 18:2	MR Egger	0.937821817530799	1	0.332838644696006
+exp9	32	Overall cancer | 32	Other polyunsaturated fatty acids than 18:2	Inverse variance weighted	1.69143145940029	2	0.429250021249767
+exp9	33	Overall cancer | 33	Other polyunsaturated fatty acids than 18:2	MR Egger	0.833759406134033	1	0.361187705316135
+exp9	33	Overall cancer | 33	Other polyunsaturated fatty acids than 18:2	Inverse variance weighted	2.02377274129514	2	0.363532575189252
+exp9	42	Lung cancer | 42	Other polyunsaturated fatty acids than 18:2	MR Egger	0.00230678595336446	1	0.961693121383725
+exp9	42	Lung cancer | 42	Other polyunsaturated fatty acids than 18:2	Inverse variance weighted	0.755917107148573	2	0.685258901609468
+exp9	46	Malignant skin cancer | 46	Other polyunsaturated fatty acids than 18:2	MR Egger	0.0191609433212908	1	0.889906073824585
+exp9	46	Malignant skin cancer | 46	Other polyunsaturated fatty acids than 18:2	Inverse variance weighted	0.308272531197264	2	0.85715521228501
+exp9	54	Respiratory and intrathoracic cancer | 54	Other polyunsaturated fatty acids than 18:2	MR Egger	0.00201655445844366	1	0.964182184463473
+exp9	54	Respiratory and intrathoracic cancer | 54	Other polyunsaturated fatty acids than 18:2	Inverse variance weighted	0.480200482357638	2	0.78654901251447
+exp9	60	Colorectal cancer | 60	Other polyunsaturated fatty acids than 18:2	MR Egger	24.0918681841891	6	0.000502321674007559
+exp9	60	Colorectal cancer | 60	Other polyunsaturated fatty acids than 18:2	Inverse variance weighted	25.4280411258007	7	0.000636964684031642
+exp9	75	Lung cancer | 75	Other polyunsaturated fatty acids than 18:2	MR Egger	3.04445875433583	7	0.880859184044836
+exp9	75	Lung cancer | 75	Other polyunsaturated fatty acids than 18:2	Inverse variance weighted	3.61151206116887	8	0.890365008890889
+exp9	99	Esophageal squamous cell carcinoma | 99	Other polyunsaturated fatty acids than 18:2	MR Egger	4.22020463420015	6	0.646904237339914
+exp9	99	Esophageal squamous cell carcinoma | 99	Other polyunsaturated fatty acids than 18:2	Inverse variance weighted	5.55009151680058	7	0.593148963014819
+exp9	135	Basal cell carcinoma | 135	Other polyunsaturated fatty acids than 18:2	MR Egger	5.86954588847112	7	0.555061893649878
+exp9	135	Basal cell carcinoma | 135	Other polyunsaturated fatty acids than 18:2	Inverse variance weighted	6.66992023993625	8	0.572627786673218
+exp9	140	Overall cancer | 140	Other polyunsaturated fatty acids than 18:2	MR Egger	9.60527505024207	8	0.293830026324035
+exp9	140	Overall cancer | 140	Other polyunsaturated fatty acids than 18:2	Inverse variance weighted	13.0153898904552	9	0.161911121727924
+exp9	141	Overall cancer (excluding non-melanoma skin cancer) | 141	Other polyunsaturated fatty acids than 18:2	MR Egger	8.64965508397724	8	0.37270673985819
+exp9	141	Overall cancer (excluding non-melanoma skin cancer) | 141	Other polyunsaturated fatty acids than 18:2	Inverse variance weighted	9.66608995535744	9	0.378187049332178
+exp9	143	Colorectal cancer | 143	Other polyunsaturated fatty acids than 18:2	MR Egger	10.4999096800128	8	0.231675453372048
+exp9	143	Colorectal cancer | 143	Other polyunsaturated fatty acids than 18:2	Inverse variance weighted	10.7555832616626	9	0.292835262826712
+exp9	149	Lung cancer | 149	Other polyunsaturated fatty acids than 18:2	MR Egger	6.51321754952046	8	0.589941922515071
+exp9	149	Lung cancer | 149	Other polyunsaturated fatty acids than 18:2	Inverse variance weighted	9.00197051017663	9	0.437092312865946
+exp9	152	Malignant skin cancer | 152	Other polyunsaturated fatty acids than 18:2	MR Egger	10.9991602707243	8	0.201746783465213
+exp9	152	Malignant skin cancer | 152	Other polyunsaturated fatty acids than 18:2	Inverse variance weighted	13.7729222684935	9	0.130635200024329
+exp9	156	Non-melanoma skin cancer | 156	Other polyunsaturated fatty acids than 18:2	MR Egger	9.69953198148109	8	0.286751281509334
+exp9	156	Non-melanoma skin cancer | 156	Other polyunsaturated fatty acids than 18:2	Inverse variance weighted	14.0920736810056	9	0.119087477629063
+exp9	160	Respiratory and intrathoracic cancer | 160	Other polyunsaturated fatty acids than 18:2	MR Egger	7.89522183123368	8	0.443771636047318
+exp9	160	Respiratory and intrathoracic cancer | 160	Other polyunsaturated fatty acids than 18:2	Inverse variance weighted	8.43974502478276	9	0.490508220092026

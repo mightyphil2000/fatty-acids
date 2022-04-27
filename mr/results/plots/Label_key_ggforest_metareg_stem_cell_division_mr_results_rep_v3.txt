@@ -1,0 +1,12 @@
+COL Colorectal cancer
+PAN Pancreatic cancer
+ORA Oral cavity and pharyngeal cancer
+LIV Liver cancer
+ESO Esophageal squamous cell carcinoma
+BAS Basal cell carcinoma
+MEL Melanoma
+LUN Lung adenocarcinoma
+GLI Glioma
+CHR Chronic lymphocytic leukaemia
+THY Thyroid cancer
+SMA Small bowel cancer

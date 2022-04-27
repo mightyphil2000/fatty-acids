@@ -1,0 +1,133 @@
+trait	trait2	Category
+Non-cancer illness code  self-reported: bladder problem (not cancer)	Bladder problem (not cancer)	NA
+Diagnoses - main ICD10: N20 Calculus of kidney and ureter	Calculus of kidney & ureter	NA
+Vascular/heart problems diagnosed by doctor: Stroke	Stroke	NA
+Diagnoses - main ICD10: M72 Fibroblastic disorders	Fibroblastic disorders	Bone/connective tissue
+Non-cancer illness code  self-reported: muscle or soft tissue injuries	Muscle or soft tissue injuries	Bone/connective tissue
+Ischemic stroke (cardioembolic)	Ischemic stroke (cardioembolic)	NA
+Other abnormal uterine and caginal bleeding	Other abnormal uterine & caginal bleeding	NA
+Non-cancer illness code  self-reported: osteoporosis	Osteoporosis	NA
+Stroke, including SAH	Stroke, including SAH	NA
+Illnesses of mother: Stroke	Stroke	NA
+Ischemic stroke (cardioembolic)	Ischemic stroke (cardioembolic)	NA
+Diagnoses - main ICD10: D25 Leiomyoma of uterus	Leiomyoma of uterus	Bone/connective tissue
+Illnesses of siblings: Stroke	Stroke	NA
+Stroke	Stroke	NA
+STROKE	STROKE	NA
+Illnesses of father: Stroke	Stroke	NA
+Hearing difficulty/problems: Yes	NA Yes	NA
+Mouth/teeth dental problems: Bleeding gums	Bleeding gums	NA
+Non-cancer illness code  self-reported: sleep apnoea	Sleep apnoea	NA
+STROKE	STROKE	NA
+Non-cancer illness code  self-reported: kidney stone/ureter stone/bladder stone	Kidney stone	NA
+Diagnoses - main ICD10: R04 Haemorrhage from respiratory passages	Respiratory haemorrhage	NA
+Non-cancer illness code  self-reported: hayfever/allergic rhinitis	Hayfever/allergic rhinitis	NA
+Diagnoses - main ICD10: R07 Pain in throat and chest	Pain in throat & chest	NA
+Ischemic stroke (small-vessel)	Ischemic stroke (small-vessel)	NA
+Non-cancer illness code  self-reported: iron deficiency anaemia	Iron deficiency anaemia	NA
+Eye problems/disorders: Injury or trauma resulting in loss of vision	Loss of vision	NA
+Alzheimer's disease	Alzheimer's disease	Psychiatric / neurological
+Diagnoses - secondary ICD10: N95.0 Postmenopausal bleeding	N95.0 Postmenopausal bleeding	NA
+Diagnoses - main ICD10: I83 Varicose veins of lower extremities	Varicose veins of lower extremities	NA
+Diagnoses - main ICD10: J33 Nasal polyp	Nasal polyp	NA
+Diagnoses - main ICD10: M54 Dorsalgia	Dorsalgia	NA
+Non-cancer illness code  self-reported: joint disorder	Joint disorder	NA
+Non-cancer illness code  self-reported: hiatus hernia	Hiatus hernia	NA
+Fractured/broken bones in last 5 years	Fractured/broken bones in last 5 years	NA
+Coronary heart disease	Coronary heart disease	Cardiometabolic
+Cancer code  self-reported: basal cell carcinoma	Basal cell carcinoma	NA
+Non-cancer illness code  self-reported: depression	Depression	NA
+Non-cancer illness code  self-reported: gastro-oesophageal reflux (gord) / gastric reflux	Gastro-oesophageal reflux	NA
+Myocardial infarction	Myocardial infarction	Cardiometabolic
+Diagnoses - main ICD10: R55 Syncope and collapse	Syncope & collapse	NA
+Ischaemic Stroke, excluding all haemorrhages	Ischaemic Stroke, excluding all haemorrhages	NA
+Non-cancer illness code  self-reported: anxiety/panic attacks	Anxiety/panic attacks	NA
+Diagnoses - main ICD10: K35 Acute appendicitis	Acute appendicitis	Autoimmune/inflammatory
+Diagnoses - main ICD10: K80 Cholelithiasis	Cholelithiasis	NA
+Ischemic stroke	Ischemic stroke	NA
+Ischemic stroke	Ischemic stroke	NA
+Diagnoses - main ICD10: K40 Inguinal hernia	Inguinal hernia	NA
+Diagnoses - main ICD10: N92 Excessive  frequent and irregular menstruation	Excessive/irregular menstruation	NA
+Non-cancer illness code  self-reported: gout	Gout	NA
+Fractured bone site(s): Ankle	Ankle	NA
+Ischemic stroke (large artery atherosclerosis)	Ischemic stroke (large artery atherosclerosis)	NA
+Non-cancer illness code  self-reported: chronic obstructive airways disease/copd	Chronic obstructive airways disease	NA
+Ulcerative colitis	Ulcerative colitis	Autoimmune / inflammatory
+Multiple sclerosis	Multiple sclerosis	Autoimmune / inflammatory
+Parkinson's disease	Parkinson's disease	Psychiatric / neurological
+Diagnoses - main ICD10: N93 Other abnormal uterine and vaginal bleeding	Other abnormal uterine & vaginal bleeding	NA
+Diagnoses - main ICD10: M23 Internal derangement of knee	Internal derangement of knee	NA
+Rheumatoid arthritis	Rheumatoid arthritis	Autoimmune / inflammatory
+Eye problems/disorders: Diabetes related eye disease	Diabetes related eye disease	NA
+Eye problems/disorders: Cataract	Cataract	NA
+Mouth/teeth dental problems: Bleeding gums	Bleeding gums	NA
+Non-cancer illness code  self-reported: hypertension	Hypertension	NA
+Non-cancer illness code  self-reported: osteoarthritis	Osteoarthritis	NA
+Primary sclerosing cholangitis	Primary sclerosing cholangitis	Autoimmune / inflammatory
+Diagnoses - main ICD10: I48 Atrial fibrillation and flutter	Atrial fibrillation & flutter	NA
+Non-cancer illness code  self-reported: hypothyroidism/myxoedema	Hypothyroidism/myxoedema	NA
+Ischemic stroke (large artery atherosclerosis)	Ischemic stroke (large artery atherosclerosis)	NA
+Non-cancer illness code  self-reported: diverticular disease/diverticulitis	Diverticular disease/diverticulitis	Autoimmune/inflammatory
+Non-cancer illness code  self-reported: emphysema/chronic bronchitis	Emphysema/chronic bronchitis	NA
+Cardioembolic stroke	Cardioembolic stroke	Cardiometabolic
+Non-cancer illness code  self-reported: enlarged prostate	Enlarged prostate	NA
+Diagnoses - main ICD10: N93.8 Other specified abnormal uterine and vaginal bleeding	N93.8 Other specified abnormal uterine & vaginal bleeding	NA
+Non-cancer illness code  self-reported: pulmonary embolism +/- dvt	Pulmonary embolism +/- dvt	NA
+Stroke, including SAH	Stroke, including SAH	NA
+Inflammatory bowel disease	Inflammatory bowel disease	Autoimmune / inflammatory
+Diagnoses - main ICD10: N95.0 Postmenopausal bleeding	N95.0 Postmenopausal bleeding	NA
+Juvenile idiopathic arthritis	Juvenile idiopathic arthritis	Autoimmune / inflammatory
+Stroke, excluding SAH	Stroke, excluding SAH	NA
+GI-bleeding	GI-bleeding	NA
+Illnesses of siblings: Stroke	Stroke	NA
+Diagnoses - main ICD10: K29 Gastritis and duodenitis	Gastritis & duodenitis	Autoimmune/inflammatory
+Non-cancer illness code  self-reported: hyperthyroidism/thyrotoxicosis	Hyperthyroidism/thyrotoxicosis	NA
+Diagnoses - main ICD10: K43 Ventral hernia	Ventral hernia	NA
+Fractured bone site(s): Other bones	Other bones	NA
+Diagnoses - main ICD10: K20 Oesophagitis	Oesophagitis	NA
+Diagnoses - main ICD10: M16 Coxarthrosis [arthrosis of hip]	Coxarthrosis [arthrosis of hip]	Bone/connective tissue
+Fractured bone site(s): Arm	NA Arm	NA
+Non-cancer illness code  self-reported: deep venous thrombosis (dvt)	Deep venous thrombosis	NA
+Non-cancer illness code  self-reported: vaginal prolapse/uterine prolapse	Vaginal prolapse/uterine prolapse	NA
+Cough on most days	Cough on most days	NA
+Diagnoses - main ICD10: R11 Nausea and vomiting	Nausea & vomiting	NA
+Diagnoses - main ICD10: L03 Cellulitis	Cellulitis	NA
+Diagnoses - main ICD10: K60 Fissure and fistula of anal and rectal regions	Anal/rectal fissure	NA
+Diagnoses - main ICD10: N40 Hyperplasia of prostate	Hyperplasia of prostate	NA
+Fracture resulting from simple fall	Fracture resulting from simple fall	NA
+Stroke	Stroke	NA
+Diagnoses - main ICD10: K44 Diaphragmatic hernia	Diaphragmatic hernia	NA
+Schizophrenia	Schizophrenia	Psychiatric / neurological
+Non-cancer illness code  self-reported: arthritis (nos)	Arthritis (nos)	NA
+Diagnoses - main ICD10: G56 Mononeuropathies of upper limb	Mononeuropathies of upper limb	NA
+Non-cancer illness code  self-reported: uterine fibroids	Uterine fibroids	Bone/connective tissue
+Diagnoses - main ICD10: I84 Haemorrhoids	Haemorrhoids	NA
+Non-cancer illness code, self-reported: stroke	Stroke	NA
+Ischemic stroke (small-vessel)	Ischemic stroke (small-vessel)	NA
+Ischaemic Stroke, excluding all haemorrhages	Ischaemic Stroke, excluding all haemorrhages	NA
+Non-cancer illness code  self-reported: asthma	Asthma	NA
+Diagnoses - main ICD10: H25 Senile cataract	Senile cataract	NA
+Diagnoses - main ICD10: N93.9 Abnormal uterine and vaginal bleeding, unspecified	N93.9 Abnormal uterine & vaginal bleeding, unspecified	NA
+Ischemic stroke	Ischemic stroke	Cardiometabolic
+Diagnoses - main ICD10: R10 Abdominal and pelvic pain	Abdominal & pelvic pain	NA
+Non-cancer illness code  self-reported: psoriasis	Psoriasis	NA
+Diagnoses - main ICD10: R35 Polyuria	Polyuria	NA
+Ischemic stroke	Ischemic stroke	NA
+Fractured bone site(s): Wrist	Wrist	NA
+Diagnoses - main ICD10: I80 Phlebitis and thrombophlebitis	Phlebitis & thrombophlebitis	NA
+Eczema	Eczema	Autoimmune / inflammatory
+Eye problems/disorders: Glaucoma	Glaucoma	NA
+Postmenopausal bleeding	Postmenopausal bleeding	NA
+GI-bleeding	GI-bleeding	NA
+Vascular/heart problems diagnosed by doctor: Angina	Angina	NA
+Diagnoses - main ICD10: N81 Female genital prolapse	Female genital prolapse	NA
+Diagnoses - main ICD10: M17 Gonarthrosis [arthrosis of knee]	Gonarthrosis [arthrosis of knee]	NA
+Cancer code  self-reported: malignant melanoma	Malignant melanoma	NA
+Diagnoses - main ICD10: G47 Sleep disorders	Sleep disorders	Psychiatric/neurological
+Diagnoses - main ICD10: K57 Diverticular disease of intestine	Diverticular disease of intestine	NA
+Non-cancer illness code  self-reported: migraine	Migraine	NA
+Crohn's disease	Crohn's disease	Autoimmune / inflammatory
+Stroke, excluding SAH	Stroke, excluding SAH	NA
+Non-cancer illness code  self-reported: pernicious anaemia	Pernicious anaemia	NA
+Gastrointestinal hemorrhage	Gastrointestinal hemorrhage	NA
+Gastrointestinal hemorrhage	Gastrointestinal hemorrhage	NA

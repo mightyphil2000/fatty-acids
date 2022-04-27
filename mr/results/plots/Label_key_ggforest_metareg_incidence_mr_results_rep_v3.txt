@@ -1,0 +1,28 @@
+COL Colorectal cancer
+LUN Lung cancer
+KID Kidney cancer
+ORA Oral cavity and pharyngeal cancer
+ESO Esophageal adenocarcinoma
+PAN Pancreatic cancer
+BLA Bladder cancer
+CER Cervical cancer
+MYE Myeloid leukaemia
+BRE Breast cancer
+PRO Prostate cancer
+OVA Ovarian cancer
+MEL Melanoma
+END Endometrial cancer
+DIF Diffuse large b cell lymphoma
+ACU Acute lymphoblastic leukaemia
+CHR Chronic lymphocytic leukaemia
+HOD Hodgkin’s lymphoma
+FOL Follicular lymphoma
+THY Thyroid cancer
+MUL Multiple myeloma
+LYM Lymphoma
+LEU Leukaemia
+CEN Central nervous system and eye cancer
+LIV Liver & bile duct cancer
+END Endocrine gland cancer
+SMA Small bowel cancer
+NON Non-hodgkin lymphoma unspecified

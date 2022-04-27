@@ -1,0 +1,35 @@
+region	Chr	start	end	gene	pval	SNP	trait	author
+3760	11	61000001	61500000		2e-59; 2e-10; 4.838e-08; 1.053e-12; 4.5e-08; 2.27e-09; 1.88e-09	rs7925523; rs11827215; rs879486; rs12285167; rs3741259	gamma-linolenic acid (18:3n6); linoleic acid (18:2n6); dihomo-gamma-linolenic acid (20:3n6); arachidonic acid (20:4n6); ratio of bis-allylic bonds to total fatty acids in lipids; polyunsaturated fatty acids other than 18:2	Dorajoo R; Guan; Kettunen
+4829	16	500001	1000000		2.209e-11; 3.152e-09	rs13336445; rs577543	gamma-linolenic acid (18:3n6)	Guan
+4858	16	15000001	15500000	PDXDC1; NTAN1; C16orf45; KIAA0430; MYH11; NDEI; RRN3; PARN; PLA2G10	1.971e-12; 1.562e-67; 1.639e-10; 9.86e-16; 2.551e-11	rs4985155; rs1741; rs1136001; rs6498540	gamma-linolenic acid (18:3n6); dihomo-gamma-linolenic acid (20:3n6); arachidonic acid (20:4n6); linoleic acid (18:2n6); dihomo-linolenic acid (20:3n3 or n6)	Guan; Shin
+555	2	27500001	28000000	GCKR; C2orf16; SNX17; ZNF513; KRTCAP3; FNDC4; PPM1G; IFT172; NRBP1; ZNF512; GCKR-FNDC4	3e-08; 9.037e-09; 4.04e-08; 3.37e-14; 9.73e-10; 1.95e-19; 1.28e-10; 3.53e-20; 1.13e-09; 6.24e-19	rs780094; rs1260326	gondoic acid (20:1n9); docosapentaenoic acid (22:5n3); ratio of bis-allylic bonds to total fatty acids in lipids; omega-3 fatty acids; omega-6 fatty acids; omega-7, omega-9 and saturated fatty acids; linoleic acid (18:2n6); monounsaturated fatty acid; polyunsaturated fatty acids other than 18:2; total fatty acids	Hu Y; Lemaitre; Kettunen
+4739	15	58500001	59000000	LIPC	1.44e-13; 1.08e-09; 1.54e-18; 5.99e-15; 9.01e-13; 9.42e-12; 1.17e-11; 6.53e-15; 9.47e-23; 2.11e-22; 7.41e-19; 4.76e-19; 4.48e-26	rs261334; rs1077835; rs174418; rs1800588	docosahexaenoic acid (22:6n3); omega-3 fatty acids; polyunsaturated fatty acids other than 18:2; omega-6 fatty acids; omega-7, omega-9 and saturated fatty acids; linoleic acid (18:2n6); total fatty acids; monounsaturated fatty acid	Kettunen
+111	1	55000001	55500000		2.03e-08; 1.32e-08; 2.13e-09; 1.3e-12	rs190934192; rs113105517; rs4609471	omega-6 fatty acids; linoleic acid (18:2n6)	Kettunen
+112	1	55500001	56000000	PCSK9	1.12e-14; 3.26e-15; 4.88e-09	rs11591147; rs17414716	omega-6 fatty acids; linoleic acid (18:2n6); total fatty acids	Kettunen
+3759	11	60500001	61000000		3.18e-09; 2.26e-08; 6.67e-09; 3.91e-12	rs415742; rs139872716; rs17825908; rs186832402	polyunsaturated fatty acids other than 18:2	Kettunen
+110	1	54500001	55000000		4.03e-08	rs143341434	linoleic acid (18:2n6)	Kettunen
+127	1	63000001	63500000		4.02e-11; 1.2e-12	rs12239737	omega-6 fatty acids; linoleic acid (18:2n6)	Kettunen
+542	2	21000001	21500000		6.37e-10	rs4296389	linoleic acid (18:2n6)	Kettunen
+1272	3	142500001	143000000	PCOLCE2	1e-10	rs2581624	arachidonic acid (20:4n6)	Tintle
+1529	4	73000001	73500000		2.29e-09; 7.45e-09	rs144064722	omega-6 fatty acids; linoleic acid (18:2n6)	Kettunen
+1532	4	74500001	75000000		2.35e-08	rs76246956	omega-6 fatty acids	Kettunen
+1915	5	74500001	75000000		7.52e-11; 1.66e-13	rs79225634	omega-6 fatty acids; linoleic acid (18:2n6)	Kettunen
+2129	6	500001	1000000		2.461e-08	rs7774711	docosahexaenoic acid (22:6n3)	Shin
+3496	10	65000001	65500000	JMJD1C	6.803e-09	rs7080386	linoleic acid (18:2n6)	Guan
+3565	10	99500001	100000000		4e-08	rs7903338	alpha-linolenic acid (18:3n3)	Dorajoo R
+3639	11	500001	1000000		8e-10; 7.43e-15	rs12806663	gamma-linolenic acid (18:3n6); polyunsaturated fatty acids other than 18:2	Dorajoo R; Kettunen
+3762	11	62000001	62500000		1.55e-11	rs7936002	polyunsaturated fatty acids other than 18:2	Kettunen
+3770	11	66000001	66500000		6.55e-09	rs12421620	polyunsaturated fatty acids other than 18:2	Kettunen
+3772	11	67000001	67500000		3.8e-10	rs2429461	polyunsaturated fatty acids other than 18:2	Kettunen
+3788	11	75000001	75500000		1.09e-08	rs36016715	polyunsaturated fatty acids other than 18:2	Kettunen
+3922	12	7000001	7500000	MBOAT5; PHB2; PTPN6; C1S	3e-30	rs12580543	linoleic acid (18:2n6)	Tintle
+4024	12	58000001	58500000		2.65e-08	rs2277324	docosahexaenoic acid (22:6n3)	Tanaka
+4296	13	60000001	60500000	DIAPH3	5.2e-09	rs76065946	docosapentaenoic acid (22:5n6)	Mychaleckyj
+4853	16	12500001	13000000	SNX29	4.5e-11	rs7198595	polyunsaturated FA-6/polyunsaturated FA-3	Mychaleckyj
+4857	16	14500001	15000000		3.348e-21	rs11645411	dihomo-gamma-linolenic acid (20:3n6)	Guan
+4859	16	15500001	16000000		1.747e-17	rs4781685	dihomo-gamma-linolenic acid (20:3n6)	Guan
+4941	16	56500001	57000000	intergenic; CETP	4.77e-09; 1.43e-08	rs821840	omega-6 fatty acids; linoleic acid (18:2n6)	Kettunen
+5367	19	19000001	19500000		1.21e-09; 6.67e-09; 3.38e-12	rs145717049	docosahexaenoic acid (22:6n3); omega-3 fatty acids; polyunsaturated fatty acids other than 18:2	Kettunen
+5368	19	19500001	20000000		1.1e-09; 2.95e-12; 2.08e-14	rs143988316	docosahexaenoic acid (22:6n3); omega-3 fatty acids; polyunsaturated fatty acids other than 18:2	Kettunen
+5369	19	20000001	20500000		1.73e-08	rs4608457	polyunsaturated fatty acids other than 18:2	Kettunen
+5664	21	45000001	45500000		3.42e-08	rs144723570	linoleic acid (18:2n6)	Kettunen

@@ -1,0 +1,31 @@
+trait	sig	b_sd	lci	uci	id.outcome	samplesize.outcome	effect_allele.outcome	other_allele.outcome	eaf.outcome	pval.outcome	population	Category	OR CRC	unit	method	OR LC	unit	method	OR bcc	OR scc esoph 	overall cancer	unit	method	PMID	observational study CRC	
+Dihomo-gamma-linolenic acid (20:3n6)	TRUE	0.092408246	0.060941405	0.123875087	exp4	8631	T	C	0.6614	8.82E-09	European	Dihomo-gamma-linolenic acid														
+Height	FALSE	0.004840972	-0.000815518	0.010497461	ieu-a-89	251882	T	C	0.608	0.0949992	European	Anthropometric														
+Body mass index	FALSE	0.000764712	-0.005080744	0.006610167	ieu-a-2	235927	T	C	0.6083	0.7976	Mixed	Anthropometric														
+Hip circumference	FALSE	0.008264803	0.000813257	0.015716349	ieu-a-48	145181	T	C	0.6083	0.0219999	Mixed	Anthropometric														
+Waist-to-hip ratio	FALSE	0.001559586	-0.005912564	0.009031736	ieu-a-72	144386	T	C	0.6083	0.68	Mixed	Anthropometric														
+Birth weight	FALSE	0.011385692	0.003415708	0.019355676	ieu-a-1083	134749	T	C	0.66	0.0051	European	Anthropometric														
+Waist circumference	FALSE	0.006157507	-0.001083721	0.013398736	ieu-a-60	153739	T	C	0.6083	0.0959997	Mixed	Anthropometric														
+Weight	FALSE	-0.002316561	-0.013247299	0.008614176	ieu-a-107	67472	T	C	0.6083	0.68	European	Anthropometric														
+Sitting height ratio	FALSE	0.0024	-0.0172	0.022	ieu-a-1070	21590	T	C	NA	0.81	European	Anthropometric														
+Body fat	FALSE	-0.008212636	-0.018881422	0.002456151	ieu-a-999	75440	T	C	0.6622	0.1314	European	Anthropometric														
+Alcohol consumption	FALSE	0.00478475	-0.003954476	0.013523975	ieu-a-1283	111573	T	C	0.6568	0.2831	European	Behavioural														
+Ever vs never smoked	FALSE	-0.013829883	-0.024566902	-0.003092865	ieu-a-962	74035	T	C	0.658	0.01187	European	Behavioural														
+Cigarettes smoked per day	FALSE	0.002572469	-0.008775377	0.013920316	ieu-a-961	68028	T	C	0.6753	0.6566	European	Behavioural														
+Age of smoking initiation	FALSE	-0.005181551	-0.01872267	0.008359569	ieu-a-964	47961	T	C	0.6777	0.453	European	Behavioural														
+Former vs current smoker	FALSE	0.007810862	-0.003341163	0.018962887	ieu-a-963	70675	T	C	0.6774	0.1706	European	Behavioural														
+Platelet count	FALSE	0.00830006	-0.002419184	0.019019305	ieu-a-1008	66867	T	C	0.5	0.1291	European	Haemotological														
+Urinary albumin-to-creatinine ratio	FALSE	0.008571157	-0.003787072	0.020929386	ieu-a-1107	53328	T	C	0.619	0.17	European	Kidney function														
+Serum cystatin C (eGFRcys)	FALSE	-0.00852566	-0.024440227	0.007388906	ieu-a-1106	32158	T	C	0.619	0.31	Mixed	Kidney function														
+Serum creatinine (eGFRcrea)	FALSE	-0.00086541	-0.00866795	0.006937129	ieu-a-1105	133783	T	C	0.619	0.87	Mixed	Kidney function														
+Femoral neck bone mineral density	FALSE	-0.008203698	-0.021002946	0.004595551	ieu-a-980	49988	T	C	0.624264	0.218964	Mixed	Bone health														
+Forearm bone mineral density	FALSE	-0.006092241	-0.033624355	0.021439873	ieu-a-977	10805	T	C	0.624264	0.670649	Mixed	Bone health														
+Lumbar spine bone mineral density	FALSE	-0.003961642	-0.017492313	0.009569029	ieu-a-982	44731	T	C	0.624264	0.575146	Mixed	Bone health														
+Percent emphysema	FALSE	-0.001726354	-0.03371726	0.030264552	ieu-a-1005	7667	T	C	0.4283	0.9194	Mixed	Other														
+Age at menarche	FALSE	0.000512445	-0.006140513	0.007165402	ieu-a-1095	182416	T	C	0.61	0.88	European	Other														
+Age at menopause	FALSE	-0.008257027	-0.019046209	0.002532155	ieu-a-1004	69360	T	C	0.61	0.19	European	Other														
+Chronotype	FALSE	0.010787109	0.002636578	0.018937639	ieu-a-1087	128266	T	C	0.656796	0.00949992	European	Other														
+Sleep duration	FALSE	0.001862372	-0.00628772	0.010012463	ieu-a-1088	128266	T	C	0.656682	0.649999	European	Other														
+Heart rate	FALSE	-0.003894009	-0.013797773	0.006009755	ieu-a-1056	87534	T	C	0.6621	0.4407	Mixed	Other														
+C-reactive protein	FALSE	-0.007046855	-0.034670525	0.020576816	ieu-a-1015	10112	T	C	0.532	0.6327	East Asian	Other														
+Years of schooling	TRUE	0.005777784	0.002503022	0.009052547	ieu-a-1239	766345	T	C	0.6276	0.000560003	European	Other	NR	NR	NR	NR	NR	NR	NR	NR	NR	NR	NR	NR	NR	NR

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	method	nsnp	b	se	pval
+exp2	csi	lifetime smoking index	AA:DGLA	Wald ratio	1	-0.00122052875543096	0.00168530216562447	0.468930965619113

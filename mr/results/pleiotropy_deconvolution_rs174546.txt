@@ -1,0 +1,33 @@
+exposure	cancer	instrument	b_exp_sd	b_exp_lci	b_exp_uci	or_can_ea	or_canc_ea_lci	or_can_ea_uci	or_can_exp	or_can_exp_lci	or_can_exp_uci	unit_value	unit	method	sd_value_opengwas	source_sd_value	unit_sd_value_opengwas	FAMRC_id
+Height	colorectal cancer	rs174546	0.012	0.007	0.018	1.064	1.045	1.083	1.04	1	1.08	1	sd	Two-sample maximum likelihood (random)	6.99	OpenGWAS (ieu-a-89)	cm	60
+Platelet count	colorectal cancer	rs174546	-0.029	-0.04	-0.019	1.064	1.045	1.083	NA	NA	NA	NA	NA	NA	5993.4	OpenGWAS (ieu-a-1008)	100x10^9/l	60
+LDL cholesterol	colorectal cancer	rs174546	0.012	0.007	0.018	1.064	1.045	1.083	1.14	1.04	1.25	1	sd	Two-sample maximum likelihood	NA	NA	NA	60
+Triglycerides	colorectal cancer	rs174546	-0.046	-0.053	-0.039	1.064	1.045	1.083	0.93	0.84	1.04	1	sd	"Two-sample Maximum likelihood, random"	NA	NA	NA	60
+Total cholesterol	colorectal cancer	rs174546	0.045	0.039	0.052	1.064	1.045	1.083	1.09	1.01	1.18	1	sd	"Two-sample Maximum likelihood, random"	NA	NA	NA	60
+HDL cholesterol	colorectal cancer	rs174546	0.038	0.031	0.045	1.064	1.045	1.083	1.03	0.92	1.14	1	sd	"Two-sample Maximum likelihood, random"	NA	NA	NA	60
+Heart rate	colorectal cancer	rs174546	-0.029	-0.039	-0.02	1.064	1.045	1.083	NA	NA	NA	NA	NA	NA	NA	NA	NA	60
+Age at menopause	colorectal cancer	rs174546	0.019	0.009	0.03	1.064	1.045	1.083	1	0.95	1.05	1	year	Two-sample Weighted median	3.93	OpenGWAS (ieu-a-1004)	years	60
+Height	lung cancer	rs174546	0.012	0.007	0.018	1.033	1.008	1.059	1.1	1	1.22	10	cm	Two-sample IVW fixed	6.99	OpenGWAS (ieu-a-89)	cm	75
+Platelet count	lung cancer	rs174546	-0.029	-0.04	-0.019	1.033	1.008	1.059	1.62	1.15	2.27	100x10^9	L^-1	Two-sample IVW	5993.4	OpenGWAS (ieu-a-1008)	100x10^9/l	75
+LDL cholesterol	lung cancer	rs174546	0.012	0.007	0.018	1.033	1.008	1.059	0.9	0.84	0.97	1	sd	Two-sample maximum likelihood	NA	NA	NA	75
+Triglycerides	lung cancer	rs174546	-0.046	-0.053	-0.039	1.033	1.008	1.059	0.98	0.91	1.06	1	sd	Two-sample Likelihood-based	NA	NA	NA	75
+Total cholesterol	lung cancer	rs174546	0.045	0.039	0.052	1.033	1.008	1.059	0.94	0.88	1.01	1	sd	Two-sample Likelihood-based	NA	NA	NA	75
+HDL cholesterol	lung cancer	rs174546	0.038	0.031	0.045	1.033	1.008	1.059	1.01	0.94	1.07	1	sd	Two-sample Likelihood-based	NA	NA	NA	75
+Heart rate	lung cancer	rs174546	-0.029	-0.039	-0.02	1.033	1.008	1.059	NA	NA	NA	NA	NA	NA	NA	NA	NA	75
+Age at menopause	lung cancer	rs174546	0.019	0.009	0.03	1.033	1.008	1.059	NA	NA	NA	NA	NA	NA	3.93	OpenGWAS (ieu-a-1004)	years	75
+Height	basal cell skin cancer	rs174546	0.012	0.007	0.018	1.041	1.018	1.063	NA	NA	NA	NA	NA	NA	6.99	OpenGWAS (ieu-a-89)	cm	1; 135; 70
+Platelet count	basal cell skin cancer	rs174546	-0.029	-0.04	-0.019	1.041	1.018	1.063	NA	NA	NA	NA	NA	NA	5993.4	OpenGWAS (ieu-a-1008)	100x10^9/l	1; 135; 70
+LDL cholesterol	basal cell skin cancer	rs174546	0.012	0.007	0.018	1.041	1.018	1.063	NA	NA	NA	NA	NA	NA	NA	NA	NA	1; 135; 70
+Triglycerides	basal cell skin cancer	rs174546	-0.046	-0.053	-0.039	1.041	1.018	1.063	NA	NA	NA	NA	NA	NA	NA	NA	NA	1; 135; 70
+Total cholesterol	basal cell skin cancer	rs174546	0.045	0.039	0.052	1.041	1.018	1.063	NA	NA	NA	NA	NA	NA	NA	NA	NA	1; 135; 70
+HDL cholesterol	basal cell skin cancer	rs174546	0.038	0.031	0.045	1.041	1.018	1.063	NA	NA	NA	NA	NA	NA	NA	NA	NA	1; 135; 70
+Heart rate	basal cell skin cancer	rs174546	-0.029	-0.039	-0.02	1.041	1.018	1.063	NA	NA	NA	NA	NA	NA	NA	NA	NA	1; 135; 70
+Age at menopause	basal cell skin cancer	rs174546	0.019	0.009	0.03	1.041	1.018	1.063	NA	NA	NA	NA	NA	NA	3.93	OpenGWAS (ieu-a-1004)	years	1; 135; 70
+Height	overall cancer	rs174546	0.012	0.007	0.018	1.017	1.007	1.028	1.098	1.065	1.132	1	sd	One-sample IVW fixed	6.99	OpenGWAS (ieu-a-89)	cm	140; 33
+Platelet count	overall cancer	rs174546	-0.029	-0.04	-0.019	1.017	1.007	1.028	NA	NA	NA	NA	NA	NA	5993.4	OpenGWAS (ieu-a-1008)	100x10^9/l	140; 33
+LDL cholesterol	overall cancer	rs174546	0.012	0.007	0.018	1.017	1.007	1.028	1	0.99	1.01	10	mg/dL decrease	Two-sample IVW fixed effects	38.67459	OpenGWAS (ieu-a-300)	mg/dL	140; 33
+Triglycerides	overall cancer	rs174546	-0.046	-0.053	-0.039	1.017	1.007	1.028	0.9	0.8	1.01	1	sd	One-sample 2SLS	NA	NA	NA	140; 33
+Total cholesterol	overall cancer	rs174546	0.045	0.039	0.052	1.017	1.007	1.028	NA	NA	NA	NA	NA	NA	NA	NA	NA	140; 33
+HDL cholesterol	overall cancer	rs174546	0.038	0.031	0.045	1.017	1.007	1.028	1.07	0.96	1.19	1	sd	One-sample 2SLS	NA	NA	NA	140; 33
+Heart rate	overall cancer	rs174546	-0.029	-0.039	-0.02	1.017	1.007	1.028	NA	NA	NA	NA	NA	NA	NA	NA	NA	140; 33
+Age at menopause	overall cancer	rs174546	0.019	0.009	0.03	1.017	1.007	1.028	NA	NA	NA	NA	NA	NA	3.93	OpenGWAS (ieu-a-1004)	years	140; 33

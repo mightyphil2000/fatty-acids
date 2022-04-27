@@ -1,0 +1,37 @@
+trait	sig	b_sd	lci	uci	id.outcome	samplesize.outcome	effect_allele.outcome	other_allele.outcome	eaf.outcome	pval.outcome	population	Category	OR CRC	unit	method	OR LC	unit	method	OR bcc	OR scc esoph 	overall cancer	unit	method	PMID	observational study CRC
+Birth weight	FALSE	-0.011	-0.019	-0.004	ieu-a-1083	143674	C	T	0.66	0.00359998	European	Anthropometric													
+Waist-to-hip ratio	FALSE	-0.003	-0.009	0.003	ieu-a-72	226572	C	T	0.6333	0.34	Mixed	Anthropometric													
+Waist circumference	FALSE	-0.003	-0.009	0.003	ieu-a-60	244412	C	T	0.6333	0.35	Mixed	Anthropometric													
+Body mass index	FALSE	-0.002	-0.007	0.003	ieu-a-2	339153	C	T	0.6333	0.3628	Mixed	Anthropometric													
+Sitting height ratio	FALSE	-0.002	-0.022	0.018	ieu-a-1070	21590	C	T	NA	0.84	European	Anthropometric													
+Weight	FALSE	0.002	-0.009	0.013	ieu-a-107	67563	C	T	0.6333	0.780001	European	Anthropometric													
+Body fat	FALSE	0	-0.009	0.01	ieu-a-999	100689	C	T	0.6683	0.9431	European	Anthropometric													
+Hip circumference	FALSE	0	-0.006	0.006	ieu-a-48	227402	C	T	0.6333	0.96	Mixed	Anthropometric													
+Age of smoking initiation	FALSE	-0.009	-0.022	0.005	ieu-a-964	47961	C	T	0.674	0.2147	European	Behavioural													
+Cigarettes smoked per day	FALSE	0.007	0.002	0.013	ieu-b-142	263236	C	T	0.667	0.0117999	European	Behavioural													
+Ever vs never smoked	FALSE	-0.005	-0.016	0.005	ieu-a-962	74035	C	T	0.6541	0.3244	European	Behavioural													
+Former vs current smoker	FALSE	0.002	-0.009	0.013	ieu-a-963	70675	C	T	0.6728	0.754699	European	Behavioural													
+Alcohol consumption	FALSE	-0.001	-0.01	0.008	ieu-a-1283	112176	C	T	0.6541	0.7952	European	Behavioural													
+Smoking initiation	FALSE	0.001	-0.003	0.004	ieu-b-4877	632802	C	T	0.667	0.676	European	Behavioural													
+Forearm bone mineral density	FALSE	-0.041	-0.07	-0.012	ieu-a-977	10805	C	T	0.681225	0.00577006	Mixed	Bone health													
+Lumbar spine bone mineral density	FALSE	-0.016	-0.03	-0.002	ieu-a-982	44731	C	T	0.670088	0.0290569	Mixed	Bone health													
+Femoral neck bone mineral density	FALSE	0.003	-0.01	0.016	ieu-a-980	49988	C	T	0.630072	0.681704	Mixed	Bone health													
+Serum creatinine (eGFRcrea)	FALSE	0.004	-0.004	0.012	ieu-a-1105	133801	C	T	0.659	0.28	Mixed	Kidney function													
+Urinary albumin-to-creatinine ratio	FALSE	0.003	-0.009	0.016	ieu-a-1107	54450	C	T	0.659	0.59	European	Kidney function													
+Serum cystatin C (eGFRcys)	FALSE	-0.003	-0.019	0.013	ieu-a-1106	33145	C	T	0.659	0.7	Mixed	Kidney function													
+Percent emphysema	FALSE	-0.015	-0.047	0.018	ieu-a-1005	7667	C	T	0.3944	0.3747	Mixed	Other													
+Sleep duration	FALSE	-0.012	-0.02	-0.004	ieu-a-1088	128266	C	T	0.653667	0.00290001	European	Other													
+C-reactive protein	FALSE	-0.011	-0.04	0.017	ieu-a-1015	10112	C	T	0.6204	0.4482	East Asian	Other													
+Chronotype	FALSE	0.005	-0.003	0.014	ieu-a-1087	128266	C	T	0.65356	0.19	European	Other													
+Telomere length	FALSE	-0.002	-0.006	0.002	ieu-b-4879	472174	C	T	0.663832	0.41	European	Other													
+Years of schooling	FALSE	0.001	-0.002	0.004	ieu-a-1239	766345	C	T	0.6531	0.506001	European	Other													
+Age at menarche	FALSE	0	-0.006	0.007	ieu-a-1095	182416	C	T	0.63	0.94	European	Other													
+AA:DGLA	TRUE	0.865	0.839	0.891	exp2	8631	C	T	0.6793	0	European	PUFA desaturase activity													
+Height	TRUE	0.012	0.007	0.018	ieu-a-89	253196	C	T	0.633	5.50E-05	European	Anthropometric													
+Platelet count	TRUE	-0.029	-0.04	-0.019	ieu-a-1008	66867	C	T	0.5	7.03E-08	European	Haemotological													
+LDL cholesterol	TRUE	0.048	0.041	0.055	ieu-a-300	173017	C	T	0.6425	1.63E-39	Mixed	Lipid/glycemic													
+Triglycerides	TRUE	-0.046	-0.053	-0.039	ieu-a-302	177785	C	T	0.6425	7.42E-38	Mixed	Lipid/glycemic													
+Total cholesterol	TRUE	0.045	0.039	0.052	ieu-a-301	187272	C	T	0.6425	2.62E-37	Mixed	Lipid/glycemic													
+HDL cholesterol	TRUE	0.038	0.031	0.045	ieu-a-299	187087	C	T	0.6425	8.30E-28	Mixed	Lipid/glycemic													
+Heart rate	TRUE	-0.029	-0.039	-0.02	ieu-a-1056	89335	C	T	0.6509	2.75E-09	Mixed	Other													
+Age at menopause	TRUE	0.019	0.009	0.03	ieu-a-1004	69360	C	T	0.63	0.000539995	European	Other													

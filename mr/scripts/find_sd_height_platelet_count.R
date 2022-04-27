@@ -1,0 +1,5 @@
+ao<-TwoSampleMR::available_outcomes()
+data.frame(ao[ao$trait == "Height" & !is.na(ao$sd),])
+data.frame(ao[ao$trait == "Platelet count" & !is.na(ao$sd),c("sd","unit")])
+data.frame(ao[ao$trait == "Age at menopause" & !is.na(ao$sd),c("sd","unit","id")])
+data.frame(ao[ao$trait == "LDL cholesterol" & !is.na(ao$sd),c("sd","unit","id","note")])

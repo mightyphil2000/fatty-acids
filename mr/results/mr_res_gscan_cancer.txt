@@ -1,0 +1,31 @@
+"id.exposure"	"id.outcome"	"outcome"	"exposure"	"method"	"nsnp"	"b"	"se"	"pval"
+"1"	"ieu-b-142"	"ieu-a-985"	"Lung cancer || id:ieu-a-985"	"Cigarettes smoked per day || id:ieu-b-142"	"MR Egger"	21	1.60394738738238	0.217598740501408	5.53066807295087e-07
+"2"	"ieu-b-142"	"ieu-a-985"	"Lung cancer || id:ieu-a-985"	"Cigarettes smoked per day || id:ieu-b-142"	"Weighted median"	21	1.48684409060985	0.112945325612859	1.4087085905831e-39
+"3"	"ieu-b-142"	"ieu-a-985"	"Lung cancer || id:ieu-a-985"	"Cigarettes smoked per day || id:ieu-b-142"	"Inverse variance weighted"	21	1.07807390296172	0.151538281392028	1.1256241594641e-12
+"4"	"ieu-b-142"	"ieu-a-985"	"Lung cancer || id:ieu-a-985"	"Cigarettes smoked per day || id:ieu-b-142"	"Simple mode"	21	0.937074338674917	0.279843200127558	0.00319870343766174
+"5"	"ieu-b-142"	"ieu-a-985"	"Lung cancer || id:ieu-a-985"	"Cigarettes smoked per day || id:ieu-b-142"	"Weighted mode"	21	1.43891740372059	0.103055374693336	8.95491094485718e-12
+"6"	"ieu-b-142"	"ieu-a-986"	"Lung cancer || id:ieu-a-986"	"Cigarettes smoked per day || id:ieu-b-142"	"MR Egger"	21	0.0291739616724295	0.253731041299363	0.909667515895181
+"7"	"ieu-b-142"	"ieu-a-986"	"Lung cancer || id:ieu-a-986"	"Cigarettes smoked per day || id:ieu-b-142"	"Weighted median"	21	-0.0063308175824167	0.185417440397652	0.972762646708982
+"8"	"ieu-b-142"	"ieu-a-986"	"Lung cancer || id:ieu-a-986"	"Cigarettes smoked per day || id:ieu-b-142"	"Inverse variance weighted"	21	0.0265434534255328	0.148264900563234	0.857916326090472
+"9"	"ieu-b-142"	"ieu-a-986"	"Lung cancer || id:ieu-a-986"	"Cigarettes smoked per day || id:ieu-b-142"	"Simple mode"	21	-0.4313059380583	0.393928952791119	0.286578925154066
+"10"	"ieu-b-142"	"ieu-a-986"	"Lung cancer || id:ieu-a-986"	"Cigarettes smoked per day || id:ieu-b-142"	"Weighted mode"	21	-0.00149194456793822	0.207427886672229	0.994332451454626
+"11"	"ieu-b-142"	"ieu-a-987"	"Lung cancer || id:ieu-a-987"	"Cigarettes smoked per day || id:ieu-b-142"	"MR Egger"	22	1.47246618554081	0.183721669176634	1.13314683235889e-07
+"12"	"ieu-b-142"	"ieu-a-987"	"Lung cancer || id:ieu-a-987"	"Cigarettes smoked per day || id:ieu-b-142"	"Weighted median"	22	1.1847452519868	0.0857179583085627	1.89257086661098e-43
+"13"	"ieu-b-142"	"ieu-a-987"	"Lung cancer || id:ieu-a-987"	"Cigarettes smoked per day || id:ieu-b-142"	"Inverse variance weighted"	22	1.0344033022106	0.124307686773932	8.69934026976317e-17
+"14"	"ieu-b-142"	"ieu-a-987"	"Lung cancer || id:ieu-a-987"	"Cigarettes smoked per day || id:ieu-b-142"	"Simple mode"	22	0.829667186345224	0.179033735013777	0.00014278850711668
+"15"	"ieu-b-142"	"ieu-a-987"	"Lung cancer || id:ieu-a-987"	"Cigarettes smoked per day || id:ieu-b-142"	"Weighted mode"	22	1.27867354756333	0.0725235242656364	4.5909062509512e-14
+"16"	"ieu-b-4877"	"ieu-a-985"	"Lung cancer || id:ieu-a-985"	"smoking initiation || id:ieu-b-4877"	"MR Egger"	82	0.196274265377952	0.461682425968444	0.671884496236848
+"17"	"ieu-b-4877"	"ieu-a-985"	"Lung cancer || id:ieu-a-985"	"smoking initiation || id:ieu-b-4877"	"Weighted median"	82	0.240506196026509	0.107706095306387	0.0255498718416546
+"18"	"ieu-b-4877"	"ieu-a-985"	"Lung cancer || id:ieu-a-985"	"smoking initiation || id:ieu-b-4877"	"Inverse variance weighted"	82	0.271875327960878	0.0875841452975863	0.00190819168592403
+"19"	"ieu-b-4877"	"ieu-a-985"	"Lung cancer || id:ieu-a-985"	"smoking initiation || id:ieu-b-4877"	"Simple mode"	82	0.304405516952547	0.287538816086256	0.292902050725058
+"20"	"ieu-b-4877"	"ieu-a-985"	"Lung cancer || id:ieu-a-985"	"smoking initiation || id:ieu-b-4877"	"Weighted mode"	82	0.223635020429364	0.257823518798974	0.38828765325727
+"21"	"ieu-b-4877"	"ieu-a-986"	"Lung cancer || id:ieu-a-986"	"smoking initiation || id:ieu-b-4877"	"MR Egger"	82	0.98326479355449	0.906966334970117	0.2815659018923
+"22"	"ieu-b-4877"	"ieu-a-986"	"Lung cancer || id:ieu-a-986"	"smoking initiation || id:ieu-b-4877"	"Weighted median"	82	0.355341872818436	0.258379577341257	0.169047523938825
+"23"	"ieu-b-4877"	"ieu-a-986"	"Lung cancer || id:ieu-a-986"	"smoking initiation || id:ieu-b-4877"	"Inverse variance weighted"	82	0.550408220685571	0.172038881143151	0.00137749989322265
+"24"	"ieu-b-4877"	"ieu-a-986"	"Lung cancer || id:ieu-a-986"	"smoking initiation || id:ieu-b-4877"	"Simple mode"	82	-0.0866843901385108	0.648850342676976	0.894052707959139
+"25"	"ieu-b-4877"	"ieu-a-986"	"Lung cancer || id:ieu-a-986"	"smoking initiation || id:ieu-b-4877"	"Weighted mode"	82	-0.221012652535495	0.681149276081116	0.746418524279565
+"26"	"ieu-b-4877"	"ieu-a-987"	"Lung cancer || id:ieu-a-987"	"smoking initiation || id:ieu-b-4877"	"MR Egger"	85	0.489011689737088	0.357592749347273	0.175157207984274
+"27"	"ieu-b-4877"	"ieu-a-987"	"Lung cancer || id:ieu-a-987"	"smoking initiation || id:ieu-b-4877"	"Weighted median"	85	0.506165957151118	0.0898552493366353	1.76971879691749e-08
+"28"	"ieu-b-4877"	"ieu-a-987"	"Lung cancer || id:ieu-a-987"	"smoking initiation || id:ieu-b-4877"	"Inverse variance weighted"	85	0.489772551140111	0.0693243790151875	1.60685860723062e-12
+"29"	"ieu-b-4877"	"ieu-a-987"	"Lung cancer || id:ieu-a-987"	"smoking initiation || id:ieu-b-4877"	"Simple mode"	85	0.524247410728269	0.234481806731045	0.0280188026971929
+"30"	"ieu-b-4877"	"ieu-a-987"	"Lung cancer || id:ieu-a-987"	"smoking initiation || id:ieu-b-4877"	"Weighted mode"	85	0.495521921612919	0.216317498070909	0.0244849794060693

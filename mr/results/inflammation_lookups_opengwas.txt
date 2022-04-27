@@ -1,0 +1,11 @@
+trait2	trait	organ	beta	se	p	ncase	ncontrol	ea	nea	eaf	consortium	pmid	id
+Inflammatory bowel disease	Inflammatory bowel disease	Digestive tract	-0.0602097	0.0104221	7.59924e-09	31665	33977	C	T	0.6684	IIBDGC	26192919	ieu-a-294
+Crohn's disease	Crohn's disease	Digestive tract	-0.0892387	0.0125388	1.10306e-12	17897	33977	C	T	0.6684	IIBDGC	26192919	ieu-a-12
+Ulcerative colitis	Ulcerative colitis	Digestive tract	-0.0293107	0.0131687	0.0260286	13768	33977	C	T	0.6684	IIBDGC	26192919	ieu-a-970
+Esophagitis	K20 Oesophagitis	Digestive tract	-0.0114227190183327	0.0213144681518686	0.59	4931	458079	C	T	0.655983	MRC-IEU	NA	ukb-b-19354
+Asthma	asthma	Lung	0.0523680948538901	0.0068027094415248	1.39991e-14	53598	409335	C	T	0.655985	MRC-IEU	NA	ukb-b-18113
+Emphysema/chronic bronchitis	Chronic bronchitis/emphysema	Lung	0.00869635264639278	0.00734441592407719	0.24	46263	356126	C	T	0.655923	MRC-IEU	NA	ukb-b-9127
+Chronic obstructive pulmonary disease	COPD differential diagnosis	Lung	0.0228	0.01	0.0230102	30819	65680	C	T	0.5851	NA	NA	finn-a-COPD_EXCL
+Bronchitis	Bronchitis	Lung	0.0138	0.0152	0.364	10395	86104	C	T	0.5851	NA	NA	finn-a-BRONCHITIS
+Eczema/dermatitis	eczema/dermatitis	Skin	-0.0367760985872716	0.0138730543407958	0.008	11819	451114	C	T	0.655985	MRC-IEU	NA	ukb-b-20141
+Psoriasis	Psoriasis	Skin	0.00893984	0.016638	0.59105	10588	22806	C	T	NA	NA	23143594	ebi-a-GCST005527

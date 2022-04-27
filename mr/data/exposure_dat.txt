@@ -1,0 +1,7 @@
+file	SNP	chr	bp	effect_allele	other_allele	eaf	beta	se	z	p	n	info	type	pmid	author	consortium	exposure	chain	chain.length	SigSNPs	sample_size.analysis	population	sex	year
+N6meta2041.tbl.fixed.tab	rs4985155	16	15129459	G	A	0.351706	-0.0925428498102296	0.0159396416722897	-5.80583	6.40497e-09	8631	1	1	24823311	Guan	CHARGE	arachidonic acid (20:4n6) European	20:4n6	20	yes	8631	European	Males and females	2014
+N6meta2041.tbl.fixed.tab	rs16966952	16	15135943	A	G	0.318898	-0.103449231112421	0.0163313643638015	-6.33439	2.38275e-10	8631	1	1	24823311	Guan	CHARGE	arachidonic acid (20:4n6) European	20:4n6	20	yes	8631	European	Males and females	2014
+N6meta2041.tbl.fixed.tab	rs2280018	16	15150833	C	A	0.585302	-0.0144773025792122	0.0154489322769035	-0.937107	0.348704	8631	1	1	24823311	Guan	CHARGE	arachidonic acid (20:4n6) European	20:4n6	20	yes	8631	European	Males and females	2014
+score_c204n6_pooled_allchr_qc1.tab	rs16966952	NA	NA	A	G	0.3957	0.0486	0.0659	NA	0.4608	1361	NA	NA	26584805	Dorajoo R	SCHS pooled	arachidonic acid (20:4n6) East Asian	20:4n6	20	yes	1361	East Asian	Males and females	2015
+score_c204n6_pooled_allchr_qc1.tab	rs4985155	NA	NA	A	G	0.5169	-0.0585	0.066	NA	0.3752	1361	NA	NA	26584805	Dorajoo R	SCHS pooled	arachidonic acid (20:4n6) East Asian	20:4n6	20	yes	1361	East Asian	Males and females	2015
+score_c204n6_pooled_allchr_qc1.tab	rs2280018	NA	NA	A	C	0.5825	-0.1111	0.0658	NA	0.09145	1361	NA	NA	26584805	Dorajoo R	SCHS pooled	arachidonic acid (20:4n6) East Asian	20:4n6	20	yes	1361	East Asian	Males and females	2015
