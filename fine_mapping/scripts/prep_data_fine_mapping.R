@@ -1,5 +1,5 @@
 # map rsids to ld matrix freq file
-# restrict file to snps present in ukbiobank bim file
+ # restrict file to snps present in ukbiobank bim file
 # remove positions mappign to >1 rsid
 # remove SNPs with 0 MAF / NaN correlation
 # retrieve SNPs from fatty acid ratio files (AA:DGLA and LA:GLA)
@@ -13,8 +13,8 @@ ukb<-read.table("/projects/MRC-IEU/users/ph14916/ukb_bed/UKBB_10K.bim",head=F,st
 
 chs.ld<-read.table("/projects/MRC-IEU/users/ph14916/fatty_acids_summary/CHS_ld_reference_panel/CHS_EA_HRC_LD_11_61043499_62159523.ld",head=F,stringsAsFactors=F)
 
+ukb$SNP<-paste(ukb$V1,":",ukb$V4,sep="")
 ukb1<-ukb[ukb$V1 == 11,]
-ukb1$SNP<-paste(ukb1$V1,":",ukb1$V4,sep="")
 names(ukb1)[names(ukb1) == "V2"]<-"rsid"
 names(ukb1)[names(ukb1) == "V5"]<-"allele1_ukb"
 names(ukb1)[names(ukb1) == "V6"]<-"allele2_ukb"
@@ -78,14 +78,96 @@ all(chs1$SNP == Temp$SNP)
 any(chs1$SNP  != Temp$SNP)
 
 ######################################################################################
-# Extract SNPs for AA:DGLA (FADS1 enzyme activity) and LA:GLA (FADS2 enzyme activity)#
+# Extract SNPs for AA:DGLA (FADS1 enzyme activity) and GLA:LA (FADS2 enzyme activity)#
 ######################################################################################
 
-setwd("/projects/MRC-IEU/users/ph14916/fatty_acids_summary/gwis/charge")
+# setwd("/projects/MRC-IEU/users/ph14916/fatty_acids_summary/gwis/charge")
 
-d5d<-read.table("/projects/MRC-IEU/users/ph14916/fatty_acids_summary/gwis/charge/AA_to_DGLA.tab",sep="\t",head=T,stringsAsFactors=F)
-d6d<-read.table("/projects/MRC-IEU/users/ph14916/fatty_acids_summary/gwis/charge/GLA_to_LA.tab",sep="\t",head=T,stringsAsFactors=F)
-d6d[which(d6d$SNP == "rs11231053"),]
+# old file paths: 
+ # "/projects/MRC-IEU/users/ph14916/fatty_acids_summary/gwis/charge/AA_to_DGLA.tab"
+ # "/projects/MRC-IEU/users/ph14916/fatty_acids_summary/gwis/charge/GLA_to_LA.tab"
+
+aau<-read.table("/newprojects/mrcieu/research/data/MR/fatty_acids/data/charge/hg19/N6meta2041.tbl.fixed.tab",sep="\t",stringsAsFactors=F,head=T)
+aaa<-read.table("/newprojects/mrcieu/research/data/MR/fatty_acids/data/charge/hg19/N6meta204_adjSNPs1.tbl.fixed.tab",sep="\t",stringsAsFactors=F,head=T)
+names(aau)[names(aau) == "snp"]<-"SNP"
+names(aaa)[names(aaa) == "snp"]<-"SNP"
+
+aau[aau$SNP == "rs10740118",]
+aaa[aaa$SNP == "rs10740118",]
+
+dgla_unj<-read.table("/newprojects/mrcieu/research/data/MR/fatty_acids/data/charge/hg19/N6meta2031.tbl.fixed.tab",sep="\t",stringsAsFactors=F,head=T)
+dgla_adj<-read.table("/newprojects/mrcieu/research/data/MR/fatty_acids/data/charge/hg19/N6meta203_adjSNPs1.tbl.fixed.tab",sep="\t",stringsAsFactors=F,head=T)
+dgla_unj[dgla_unj$snp %in% snp,]
+dgla_adj[dgla_adj$snp %in% snp,]
+
+lau<-read.table("/newprojects/mrcieu/research/data/MR/fatty_acids/data/charge/hg19/N6meta1821.tbl.fixed.tab",sep="\t",head=T,stringsAsFactors=F)
+laa<-read.table("/newprojects/mrcieu/research/data/MR/fatty_acids/data/charge/hg19/N6meta182_adjSNPs1.tbl.fixed.tab",sep="\t",head=T,stringsAsFactors=F) 
+
+lau[lau$snp == "rs10740118",]
+laa[laa$snp == "rs10740118",]
+
+d5d<-aaa
+d5d2<-aau
+
+# cd /newprojects/mrcieu/research/data/MR/fatty_acids/data/charge/hg19/ratios/
+d5d_filepath<-"/newprojects/mrcieu/research/data/MR/fatty_acids/data/charge/hg19/ratios/AA_to_DGLA_adjSNP.tab"
+d5d_filepath2<-"/newprojects/mrcieu/research/data/MR/fatty_acids/data/charge/hg19/ratios/AA_to_DGLA.tab"
+d6d_filepath<-"/newprojects/mrcieu/research/data/MR/fatty_acids/data/charge/hg19/ratios/GLA_to_LA_adjSNP.tab"
+
+d5d<-read.table(d5d_filepath,sep="\t",head=T,stringsAsFactors=F)
+d5d2<-read.table(d5d_filepath2,sep="\t",head=T,stringsAsFactors=F)
+snp<-c("rs16966952","rs2280018","rs174547","rs10740118")
+d5d[d5d$SNP %in% snp,]
+d5d2[d5d2$SNP %in% snp,]
+
+d5d$z<-abs(d5d$beta/d5d$se)
+d5d2$z<-abs(d5d2$beta/d5d2$se)
+
+df1<-merge(d5d,d5d2,by="SNP")
+df2<-merge(df1,ukb,by.x="SNP",by.y="V2")
+df3<-df2[df2$V1 == 11,]
+df3<-df3[df3$V4 >= 61043499	& df3$V4<= 62159523,]
+df4<-df2[df2$V1 == 16,]
+df4<-df4[df4$V4 >= 14568448	& df4$V4<= 15733196,]
+df5<-df2[df2$V1 == 1,]
+Pos<-sample(1:nrow(df5),size=10000)
+df5<-df5[Pos,]
+# Pos<-sample(1:nrow(df2),size=10000)
+# df6<-df2[Pos,]
+
+
+plot(df3$z.x,df3$z.y,main="chromosome 11 candidate region (N SNPs=565)",xlab = "adjusted",ylab="unadjusted")
+plot(df4$z.x,df4$z.y,main="chromosome 16 candidate region (N SNPs=146)",xlab = "adjusted",ylab="unadjusted")
+plot(df5$z.x,df5$z.y,main="chromosome 1 random 10000 SNPs",xlab = "adjusted",ylab="unadjusted")
+plot(df5$se.x,df5$se.y,main="chromosome 1 random 10000 SNPs",xlab = "adjusted se",ylab="unadjusted se")
+plot(df5$beta.x,df5$beta.y,main="chromosome 1 random 10000 SNPs",xlab = "adjusted beta",ylab="unadjusted beta")
+
+hist(df5$z.x-df5$z.y)
+hist(df5$z.x)
+hist(df5$z.y)
+# plot(df6$z.x,df6$z.y)
+df4[df4$SNP %in% snp,c("SNP","beta.y","se.y","beta.x","se.x","z.x","z.y","pval.x","pval.y")]
+
+cor(df5$z.x,df5$z.y)
+cor(df4$z.x,df4$z.y)
+cor(df3$z.x,df3$z.y)
+
+# which(df1$pval.x<5e-8)
+# which(df1$pval.y<5e-8)
+# df2<-df1[which(df1$pval.x<5e-8 | df1$pval.y<5e-8),]
+
+# d5d[which(d5d$SNP== "rs174547"),]
+# length(which(d5d$beta == 0))
+
+d5d_2<-d5d[d5d$beta != 0,]
+d5d_2<-d5d_2[order(d5d_2$z,decreasing=T),]
+Pos<-which(d5d_2$pval < 5e-8)
+d5d_2[Pos,]
+# snps<-c("rs174547","rs174528")
+# d5d_2[d5d_2$SNP %in% snps,]
+
+d6d<-read.table(d6d_filepath,sep="\t",head=T,stringsAsFactors=F)
+# d6d[which(d6d$SNP == "rs11231053"),]
 # d5d2<-d5d[d5d$SNP %in% snps,]
 
 any(duplicated(d5d$SNP))
@@ -164,11 +246,11 @@ dim(d6d3_h)
 dim(chs5)
 dim(chs.ld7)
 
-write.table(d5d2_h,"/projects/MRC-IEU/users/ph14916/fatty_acids_summary/fine_mapping/data/AA_to_DGLA_fine_mapping.tab",sep="\t",col.names=T,row.names=F,quote=F)
-write.table(d6d3_h,"/projects/MRC-IEU/users/ph14916/fatty_acids_summary/fine_mapping/data/GLA_to_LA_fine_mapping.tab",sep="\t",col.names=T,row.names=F,quote=F)
-write.table(chs5,"/projects/MRC-IEU/users/ph14916/fatty_acids_summary/fine_mapping/data/CHS_EA_HRC_LD_11_61043499_62159523_fine_mapping.frq",sep="\t",col.names=T,row.names=F,quote=F)
-write.table(chs.ld7,"/projects/MRC-IEU/users/ph14916/fatty_acids_summary/fine_mapping/data/CHS_EA_HRC_LD_11_61043499_62159523_fine_mapping.ld",sep="\t",col.names=T,row.names=F,quote=F)
-write.table(chs5$SNP,"/projects/MRC-IEU/users/ph14916/fatty_acids_summary/fine_mapping/data/snplist_fine_mapping.txt",col.names=F,row.names=F,quote=F)
+write.table(d5d2_h,"/projects/MRC-IEU/users/ph14916/fatty_acids_summary/fine_mapping/data/AA_to_DGLA_fine_mapping_adjSNP.tab",sep="\t",col.names=T,row.names=F,quote=F)
+write.table(d6d3_h,"/projects/MRC-IEU/users/ph14916/fatty_acids_summary/fine_mapping/data/GLA_to_LA_fine_mapping_adjSNP.tab",sep="\t",col.names=T,row.names=F,quote=F)
+write.table(chs5,"/projects/MRC-IEU/users/ph14916/fatty_acids_summary/fine_mapping/data/CHS_EA_HRC_LD_11_61043499_62159523_fine_mapping_adjSNP.frq",sep="\t",col.names=T,row.names=F,quote=F)
+write.table(chs.ld7,"/projects/MRC-IEU/users/ph14916/fatty_acids_summary/fine_mapping/data/CHS_EA_HRC_LD_11_61043499_62159523_fine_mapping_adjSNP.ld",sep="\t",col.names=T,row.names=F,quote=F)
+write.table(chs5$SNP,"/projects/MRC-IEU/users/ph14916/fatty_acids_summary/fine_mapping/data/snplist_fine_mapping_adjSNP.txt",col.names=F,row.names=F,quote=F)
 
 
 #####################################################################################################################
@@ -295,6 +377,8 @@ dim(chs2)
 dim(chs.ld2)
 
 # scp ph14916@epi-franklin.epi.bris.ac.uk:/projects/MRC-IEU/users/ph14916/fatty_acids_summary/fine_mapping/data/* .
+scp ph14916@epi-franklin.epi.bris.ac.uk:/projects/MRC-IEU/users/ph14916/fatty_acids_summary/fine_mapping/data/*adjSNP* .
+
 scp ph14916@epi-franklin.epi.bris.ac.uk:/projects/MRC-IEU/users/ph14916/fatty_acids_summary/fine_mapping/data/* .
 
 scp ph14916@epi-franklin.epi.bris.ac.uk:/projects/MRC-IEU/users/ph14916/fatty_acids_summary/fine_mapping/data/snplist_fine_mapping.txt .

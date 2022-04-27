@@ -28,3 +28,4 @@ This is a table of 559 SNP RSids, their genomic coordinates and their frequency 
 This is the correlation matrix for 559 SNPs from the CHS (N=2408). The CHS is one of the cohorts in the CHARGE consortium meta-analysis that generated the results we are using to define AA:DGLA (FADS1) and GLA:LA (FADS2). The CHS represents 28% of the participants in the CHARGE consortium. I could also send you a correlation matrix based on UK Biobank (N=10,000), if you thought that would be useful?
 
 All files within each set (colocalisation set and fine mapping set) have been harmonised so that the number of SNPs, the ordering of SNPs and SNP effect alleles are consistent across summary association statistics and the CHS correlation matrix. 
+

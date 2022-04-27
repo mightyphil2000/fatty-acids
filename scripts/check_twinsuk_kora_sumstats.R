@@ -1,0 +1,27 @@
+# devtools::install_github("MRCIEU/CheckSumStats")
+library(CheckSumStats)
+library(ieugwasr)
+devtools::load_all()
+devtools::document()
+devtools::check()
+
+ao<-gwasinfo()
+ID<-ao$id[which(ao$trait=="Arachidonate (20:4n6)")]
+# top_hits<-tophits(id=ID,r2=0.01,force_server=TRUE)
+top_hits<-tophits(id=ID,r2=0.01,pval=1.03e-10,force_server=TRUE)
+
+gc_list<-find_hits_in_gwas_catalog(gwas_hits=top_hits$rsid,trait="Plasma omega-6 polyunsaturated fatty acid levels (arachidonic acid)",efo="arachidonic acid measurement")
+snplist<-make_snplist(trait="Plasma omega-6 polyunsaturated fatty acid levels (arachidonic acid)",efo="arachidonic acid measurement",ref1000G_superpops=TRUE,snplist_user=top_hits$rsid)
+puf <- ieugwasr::associations(id=ID, variants=snplist,proxies=0)  
+Dat<-format_data(dat=puf,outcome="arachidonic acid",population="European",study="TwinsUK/KORA",ncontrol=7367,UKbiobank=FALSE,rsid="rsid",effect_allele="ea",other_allele="nea",beta="beta",se="se",eaf="eaf",p="p")
+Plot1<-make_plot_maf(ref_1000G="EUR",target_dat=Dat,Title_size=10,Title_xaxis_size=10)
+Plot2<-make_plot_maf(ref_1000G=c("AFR","AMR","EAS","EUR","SAS","ALL"),target_dat=Dat,Title_size=10,Title_xaxis_size=8)
+Plot3<-make_plot_gwas_catalog(dat=Dat,trait="Plasma omega-6 polyunsaturated fatty acid levels (arachidonic acid)",efo="arachidonic acid measurement",beta="beta",se="se",force_all_trait_study_hits=TRUE)
+Dat<-predict_beta_sd(dat=data.frame(Dat))
+Plot4<-make_plot_pred_effect(dat=Dat,pred_beta = "beta_sd",pred_beta_se="se_sd",beta="beta",se="se",bias=FALSE)
+Plot5<-make_plot_pred_effect(dat=Dat,pred_beta = "beta_sd",pred_beta_se="se_sd",beta="beta",se="se",bias=TRUE)
+Plot6<-zz_plot(dat=Dat,beta="beta",se="se")
+
+Plot_list2<-c("Plot1","Plot2","Plot3", "Plot4","Plot5","Plot6")
+Plot_list<-lapply(1:length(Plot_list2),FUN=function(x) eval(parse(text=Plot_list2[x])))
+combine_plots(Plot_list=Plot_list,out_file="~/qc_report_twinsuk_kora.png")
