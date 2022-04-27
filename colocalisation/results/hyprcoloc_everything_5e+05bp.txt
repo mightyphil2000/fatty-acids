@@ -1,0 +1,15 @@
+region	iteration	traits	posterior_prob	regional_prob	candidate_snp	posterior_explained_by_snp	dropped_trait	max	min	bp	traits_nice_names	dropped_trait_nice_names
+ELOVL2	1	T11, T20, T26, T29	0.686	0.8653	rs1225717	0.8913	NA	11231112	10738813	492299	DHA:DPAn3 (Framingham), GLA:LA (Shin), POA:PA (Shin), ELOVL2 expression in Liver (GTEx) mac=74	NA
+FADS1	1	T4, T5, T10, T11, T13, T14, T15, T19, T21, T22, T24, T27, T28, T30, T31	0.4228	0.5363	rs174547	0.6732	NA	61792714	61362758	429956	ADA:AA (CHARGE), ADA:AA (Framingham), DHA:DPAn3 (CHARGE), DHA:DPAn3 (Framingham), DPAn3:EPA (CHARGE), DPAn3:EPA (Framingham), DPAn3:EPA (Shin), GLA:LA (Framingham), OA:SA (CHARGE), OA:SA (Framingham), POA:PA (CHARGE), FADS1 expression in Adipose_Subcutaneous (GTEx) mac=86, FADS1 expression in Adipose_Visceral_Omentum (GTEx) mac=86, FADS1 expression in Liver (GTEx) mac=86, FADS1 expression in Whole_Blood (GTEx) mac=86	NA
+FADS1	2	T2, T7	0.9952	1	rs174555	1	NA	61792714	61362758	429956	AA:DGLA (Framingham), DGLA:GLA (CHARGE)	NA
+FADS1	3	T1, T18	0.5776	1	rs174546	0.8627	NA	61792714	61362758	429956	AA:DGLA (CHARGE), GLA:LA (CHARGE)	NA
+FADS1	5	T6, T8	0.9976	1	rs174556	1	NA	61792714	61362758	429956	ADA:AA (Shin), DGLA:GLA (Framingham)	NA
+FADS1	6	T3, T29	1	1	rs968567	1	NA	61792714	61362758	429956	AA:DGLA (Shin), FADS1 expression in blood (eQTLGen)	NA
+FADS2	1	T4, T5, T10, T19, T21	0.8994	1	rs102275	0.3782	NA	61792714	61362758	429956	ADA:AA (CHARGE), ADA:AA (Framingham), DHA:DPAn3 (CHARGE), GLA:LA (Framingham), OA:SA (CHARGE)	NA
+FADS2	2	T2, T7, T13, T14	0.5001	0.8282	rs174555	1	NA	61792714	61362758	429956	AA:DGLA (Framingham), DGLA:GLA (CHARGE), DPAn3:EPA (CHARGE), DPAn3:EPA (Framingham)	NA
+FADS2	3	T3, T27	0.9997	1	rs968567	1	NA	61792714	61362758	429956	AA:DGLA (Shin), FADS2 expression in Adipose_Subcutaneous (GTEx) mac=86	NA
+FADS2	6	T28, T29, T31	0.9987	1	rs968567	1	NA	61792714	61362758	429956	FADS2 expression in Adipose_Visceral_Omentum (GTEx) mac=86, FADS2 expression in blood (eQTLGen), FADS2 expression in Whole_Blood (GTEx) mac=86	NA
+FADS2	7	T6, T8, T11, T22, T24	0.5663	0.9998	rs174556	1	NA	61792714	61362758	429956	ADA:AA (Shin), DGLA:GLA (Framingham), DHA:DPAn3 (Framingham), OA:SA (Framingham), POA:PA (CHARGE)	NA
+SCD	1	T20, T23	0.9765	0.9993	rs2305384	1	NA	102320363	101827619	492744	GLA:LA (Shin), OA:SA (Shin)	NA
+SCD	3	T15, T24, T25, T27, T28	0.8772	0.8793	rs603424	1	NA	102320363	101827619	492744	DPAn3:EPA (Shin), POA:PA (CHARGE), POA:PA (Framingham), SCD expression in Adipose_Subcutaneous (GTEx) mac=65, SCD expression in Adipose_Visceral_Omentum (GTEx) mac=65	NA
+SCD	4	T3, T12	0.8727	0.8746	rs1993110	0.9999	NA	102320363	101827619	492744	AA:DGLA (Shin), DHA:DPAn3 (Shin)	NA

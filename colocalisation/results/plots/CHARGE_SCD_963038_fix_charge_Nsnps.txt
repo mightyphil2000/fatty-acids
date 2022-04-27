@@ -1,0 +1,1 @@
+SCDgenomic region in CHARGE (N SNPs =501)

@@ -1,0 +1,5 @@
+iteration	traits	posterior_prob	regional_prob	candidate_snp	posterior_explained_by_snp	dropped_trait	gene	min	max	bp	gwis_fileimputed	traits_nice_names	dropped_trait_nice_names	nsnps
+1	T1, T3, T5, T7	0.554	0.7393	rs174559	0.0675	NA	FADS1	61303803	61792779	488976	FALSE	Esophageal squamous cell carcinoma BJ/N-UGC, FADS1 expression in B cells (BBJ), FADS1 expression in CD8 T cells (BBJ), FADS1 expression in NK cells (BBJ)	NA	370
+2	None	NA	0.0876	NA	NA	T4	FADS1	61303803	61792779	488976	FALSE	NA	FADS1 expression in CD4 T cells (BBJ)	370
+3	None	NA	7e-04	NA	NA	T8	FADS1	61303803	61792779	488976	FALSE	NA	FADS1 expression in Blood (BBJ)	370
+4	None	NA	2e-04	NA	NA	T6	FADS1	61303803	61792779	488976	FALSE	NA	FADS1 expression in Monocytes (BBJ)	370

@@ -1,0 +1,4 @@
+iteration	traits	posterior_prob	regional_prob	candidate_snp	posterior_explained_by_snp	dropped_trait	gene	min	max	bp	gwis_fileimputed	traits_nice_names	dropped_trait_nice_names	nsnps
+1	T1, T2, T4, T5, T6, T9	0.5733	0.8744	rs174550	0.9995	NA	FADS1	61294258	61908692	614434	TRUE	Malignant skin cancer UKB, AA:DGLA / D5D (CHARGE), FADS1 expression in adipose subcutaneous in GTEx (median MAC=203, min=10, max=580), FADS1 expression in adipose visceral omentum in GTEx (median MAC=171, min=7, max=468), FADS1 expression in liver in GTEx (median MAC=74, min=5, max=208), FADS1 expression in whole blood in GTEx (median MAC=237, min=12, max=662)	NA	1307
+2	None	NA	0.2592	NA	NA	T3	FADS1	61294258	61908692	614434	TRUE	NA	AA:DGLA / D5D (Framingham)	1307
+3	None	NA	0.0025	NA	NA	T8	FADS1	61294258	61908692	614434	TRUE	NA	FADS1 expression in skin sun exposed lower leg in GTEx (median MAC=219, min=12, max=600)	1307

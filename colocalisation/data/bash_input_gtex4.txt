@@ -1,0 +1,6 @@
+Esophagus_Gastroesophageal_Junction.allpairs.txt.gz	chr11	61276027	62392051	FADS
+Esophagus_Mucosa.allpairs.txt.gz	chr11	61276027	62392051	FADS
+Esophagus_Muscularis.allpairs.txt.gz	chr11	61276027	62392051	FADS
+Lung.allpairs.txt.gz	chr11	61276027	62392051	FADS
+Skin_Not_Sun_Exposed_Suprapubic.allpairs.txt.gz	chr11	61276027	62392051	FADS
+Skin_Sun_Exposed_Lower_leg.allpairs.txt.gz	chr11	61276027	62392051	FADS

@@ -1,0 +1,9 @@
+nsnps	PP.H0.abf	PP.H1.abf	PP.H2.abf	PP.H3.abf	PP.H4.abf	traits
+1313	0	0	0.00160553967165894	0.871375814928642	0.127018645399625	Malignant non-melanoma skin cancer UKB & AA:DGLA / D5D (CHARGE)
+1313	0	0	0.00183663676883147	0.996943406537225	0.00121995669399642	Malignant non-melanoma skin cancer UKB & AA:DGLA / D5D (Framingham)
+1313	8.03175618922283e-06	0.00435971679868361	0.00176673776562559	0.958967857681865	0.0348976559976378	Malignant non-melanoma skin cancer UKB & FADS1 expression in adipose subcutaneous in GTEx (median MAC=202, min=10, max=580)
+1313	0.000126059048306817	0.0684260997945554	0.0013024535060371	0.706761277275834	0.223384110375267	Malignant non-melanoma skin cancer UKB & FADS1 expression in adipose visceral omentum in GTEx (median MAC=171, min=7, max=468)
+1313	5.4265751078356e-05	0.0294559870837394	0.00149780541411882	0.812867487225217	0.156124454525846	Malignant non-melanoma skin cancer UKB & FADS1 expression in liver in GTEx (median MAC=74, min=5, max=208)
+1313	0.00164949120682864	0.895360162120105	0.000140445718860419	0.0762086858283627	0.0266412151258428	Malignant non-melanoma skin cancer UKB & FADS1 expression in skin not sun exposed suprapubic in GTEx (median MAC=182, min=9, max=517)
+1313	0.00151113585709521	0.820259508139852	0.000249020540070065	0.135127962849278	0.0428523726137043	Malignant non-melanoma skin cancer UKB & FADS1 expression in skin sun exposed lower leg in GTEx (median MAC=219, min=12, max=600)
+1313	7.47625100862615e-06	0.00405818308544008	0.00176144900484519	0.956093884604149	0.0380790070545569	Malignant non-melanoma skin cancer UKB & FADS1 expression in whole blood in GTEx (median MAC=236, min=11, max=662)

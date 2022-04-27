@@ -1,0 +1,4 @@
+iteration	traits	posterior_prob	regional_prob	candidate_snp	posterior_explained_by_snp	dropped_trait	gene	min	max	bp	gwis_fileimputed	traits_nice_names	dropped_trait_nice_names	nsnps
+1	T1, T2, T4, T6	0.7428	0.9959	rs174548	0.1283	NA	FADS1	61303610	61792779	489169	FALSE	GLA:LA lnD6Dpooled (Dorajoo/SCHS), FADS1 expression in B cells (BBJ), FADS1 expression in CD8 T cells (BBJ), FADS1 expression in NK cells (BBJ)	NA	383
+2	None	NA	0.0876	NA	NA	T3	FADS1	61303610	61792779	489169	FALSE	NA	FADS1 expression in CD4 T cells (BBJ)	383
+3	None	NA	8e-04	NA	NA	T7	FADS1	61303610	61792779	489169	FALSE	NA	FADS1 expression in Blood (BBJ)	383

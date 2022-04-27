@@ -1,0 +1,4 @@
+iteration	traits	posterior_prob	regional_prob	candidate_snp	posterior_explained_by_snp	dropped_trait	gene	min	max	bp	gwis_fileimputed	traits_nice_names	dropped_trait_nice_names	nsnps
+1	T4, T5, T7, T8, T9	0.9833	1	rs968567	1	NA	FADS2	61294258	61908672	614414	TRUE	FADS2 expression in adipose subcutaneous in GTEx (median MAC=202, min=10, max=580), FADS2 expression in adipose visceral omentum in GTEx (median MAC=170, min=10, max=468), FADS2 expression in lung in GTEx (median MAC=182, min=11, max=510), FADS2 expression in whole blood in GTEx (median MAC=236, min=14, max=662), FADS2 expression in blood in eQTLGen (Median N=31024, min=8242, max=31470)	NA	1175
+2	T2, T3	0.897	1	rs99780	0.6593	NA	FADS2	61294258	61908672	614414	TRUE	GLA:LA / D6D (CHARGE), GLA:LA / D6D (Framingham)	NA	1175
+3	None	NA	0.0172	NA	NA	T1	FADS2	61294258	61908672	614414	TRUE	NA	Lung cancer ILCCO/UKB	1175

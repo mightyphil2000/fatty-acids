@@ -1,0 +1,4 @@
+iteration	traits	posterior_prob	regional_prob	candidate_snp	posterior_explained_by_snp	dropped_trait	gene	min	max	bp	gwis_fileimputed	traits_nice_names	dropped_trait_nice_names	nsnps
+1	T3, T4, T5, T6, T7, T8	0.6128	0.9893	rs174549	0.6153	NA	FADS1	61294258	61908672	614414	TRUE	AA:DGLA / D5D (Framingham), FADS1 expression in adipose subcutaneous in GTEx (median MAC=202, min=10, max=580), FADS1 expression in adipose visceral omentum in GTEx (median MAC=170, min=10, max=468), FADS1 expression in liver in GTEx (median MAC=74, min=5, max=208), FADS1 expression in lung in GTEx (median MAC=182, min=11, max=510), FADS1 expression in whole blood in GTEx (median MAC=236, min=14, max=662)	NA	1175
+2	None	NA	1	NA	NA	T2	FADS1	61294258	61908672	614414	TRUE	NA	AA:DGLA / D5D (CHARGE)	1175
+3	None	NA	0.0018	NA	NA	T9	FADS1	61294258	61908672	614414	TRUE	NA	FADS1 expression in blood in eQTLGen (Median N=31238, min=8456, max=31684)	1175

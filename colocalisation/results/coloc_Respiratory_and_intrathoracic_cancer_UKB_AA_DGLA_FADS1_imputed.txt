@@ -1,0 +1,9 @@
+nsnps	PP.H0.abf	PP.H1.abf	PP.H2.abf	PP.H3.abf	PP.H4.abf	traits
+1303	0	0	0.997176909822917	0.00094512673761839	0.00187796343953853	Respiratory and intrathoracic cancer UKB & AA:DGLA / D5D (CHARGE)
+1303	0	0	0.997855690140702	0.000946451470663833	0.00119785838868729	Respiratory and intrathoracic cancer UKB & AA:DGLA / D5D (Framingham)
+1303	0.00451539891477141	4.2882100029758e-06	0.993244914097522	0.000941977119091264	0.00129342165861261	Respiratory and intrathoracic cancer UKB & FADS1 expression in adipose subcutaneous in GTEx (median MAC=204, min=10, max=580)
+1303	0.0880204334635752	8.35917513312061e-05	0.909342454235275	0.000861897947662796	0.00169162260215567	Respiratory and intrathoracic cancer UKB & FADS1 expression in adipose visceral omentum in GTEx (median MAC=171, min=7, max=468)
+1303	0.0348653507450469	3.3111126756281e-05	0.962296965791098	0.00091198713005784	0.00189258520704132	Respiratory and intrathoracic cancer UKB & FADS1 expression in liver in GTEx (median MAC=74, min=5, max=208)
+1303	0.921408565154424	0.000875048583857582	0.0775841894270861	7.36220242803805e-05	5.85748103518637e-05	Respiratory and intrathoracic cancer UKB & FADS1 expression in skin not sun exposed suprapubic in GTEx (median MAC=183, min=9, max=517)
+1303	0.858145694959819	0.000814968737556958	0.140799506691435	0.000133609064504456	0.000106220546684558	Respiratory and intrathoracic cancer UKB & FADS1 expression in skin sun exposed lower leg in GTEx (median MAC=219, min=13, max=600)
+1303	0.00422011605244138	4.00778407652916e-06	0.994281299396201	0.000943703908240053	0.000550872859041372	Respiratory and intrathoracic cancer UKB & FADS1 expression in whole blood in GTEx (median MAC=237, min=12, max=662)
