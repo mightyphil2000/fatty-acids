@@ -1,0 +1,4 @@
+EUR_1000g_allele_error	CHARGE_allele_error
+0	0
+
+

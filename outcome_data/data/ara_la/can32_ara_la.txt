@@ -1,0 +1,25 @@
+n	p	lnor	chr	position	lnor_se	id	rsid	effect_allele	other_allele	eaf	trait	ID	ncase	ncontrol	pmid	outcome	population	study	UKbiobank	effect_allele_confirmed	open_gwas	efo	efo_id
+NA	0.9541	-0.0014	6	35419095	0.0241	finn-a-ANY_CANC	rs36018387	C	T	0.8638	Any event in cancer register	32	9792	86707	finn-a-ANY_CANC	Overall cancer	European	FinnGen	FALSE	TRUE	TRUE	cancer	NA
+NA	0.684699	0.0666	3	18222564	0.1641	finn-a-ANY_CANC	rs187814248	C	T	0.002577	Any event in cancer register	32	9792	86707	finn-a-ANY_CANC	Overall cancer	European	FinnGen	FALSE	TRUE	TRUE	cancer	NA
+NA	0.790901	0.0044	3	142933227	0.0167	finn-a-ANY_CANC	rs9848779	C	G	0.3658	Any event in cancer register	32	9792	86707	finn-a-ANY_CANC	Overall cancer	European	FinnGen	FALSE	TRUE	TRUE	cancer	NA
+NA	0.8768	-0.0051	19	19268740	0.0329	finn-a-ANY_CANC	rs58542926	C	T	0.93547	Any event in cancer register	32	9792	86707	finn-a-ANY_CANC	Overall cancer	European	FinnGen	FALSE	TRUE	TRUE	cancer	NA
+NA	0.6827	-0.0072	19	44922203	0.0177	finn-a-ANY_CANC	rs157595	G	A	0.6934	Any event in cancer register	32	9792	86707	finn-a-ANY_CANC	Overall cancer	European	FinnGen	FALSE	TRUE	TRUE	cancer	NA
+NA	0.3012	-0.0218	16	72110275	0.0211	finn-a-ANY_CANC	rs9302635	T	C	0.8261	Any event in cancer register	32	9792	86707	finn-a-ANY_CANC	Overall cancer	European	FinnGen	FALSE	TRUE	TRUE	cancer	NA
+NA	0.936	0.0013	2	169055681	0.0162	finn-a-ANY_CANC	rs2389599	C	G	0.5272	Any event in cancer register	32	9792	86707	finn-a-ANY_CANC	Overall cancer	European	FinnGen	FALSE	TRUE	TRUE	cancer	NA
+NA	0.4465	-0.0123	2	20171619	0.0162	finn-a-ANY_CANC	rs907866	A	G	0.552	Any event in cancer register	32	9792	86707	finn-a-ANY_CANC	Overall cancer	European	FinnGen	FALSE	TRUE	TRUE	cancer	NA
+NA	0.6536	-0.0077	5	156970662	0.0171	finn-a-ANY_CANC	rs6882345	A	G	0.6685	Any event in cancer register	32	9792	86707	finn-a-ANY_CANC	Overall cancer	European	FinnGen	FALSE	TRUE	TRUE	cancer	NA
+NA	0.4446	0.0131	19	48665685	0.0171	finn-a-ANY_CANC	rs8111874	G	A	0.6604	Any event in cancer register	32	9792	86707	finn-a-ANY_CANC	Overall cancer	European	FinnGen	FALSE	TRUE	TRUE	cancer	NA
+NA	0.8266	-0.0036	12	120977490	0.0163	finn-a-ANY_CANC	rs7139079	A	G	0.5499	Any event in cancer register	32	9792	86707	finn-a-ANY_CANC	Overall cancer	European	FinnGen	FALSE	TRUE	TRUE	cancer	NA
+NA	0.3604	-0.0152	15	58386521	0.0166	finn-a-ANY_CANC	rs261290	C	T	0.6164	Any event in cancer register	32	9792	86707	finn-a-ANY_CANC	Overall cancer	European	FinnGen	FALSE	TRUE	TRUE	cancer	NA
+NA	0.785899	-0.0044	12	111466567	0.0163	finn-a-ANY_CANC	rs4766578	T	A	0.429	Any event in cancer register	32	9792	86707	finn-a-ANY_CANC	Overall cancer	European	FinnGen	FALSE	TRUE	TRUE	cancer	NA
+NA	0.6595	0.0125	8	20025439	0.0283	finn-a-ANY_CANC	rs7816447	C	T	0.08834	Any event in cancer register	32	9792	86707	finn-a-ANY_CANC	Overall cancer	European	FinnGen	FALSE	TRUE	TRUE	cancer	NA
+NA	0.8423	0.0033	8	58464798	0.0166	finn-a-ANY_CANC	rs6471717	G	A	0.3861	Any event in cancer register	32	9792	86707	finn-a-ANY_CANC	Overall cancer	European	FinnGen	FALSE	TRUE	TRUE	cancer	NA
+NA	0.1942	-0.0212	20	41284992	0.0164	finn-a-ANY_CANC	rs2179372	C	G	0.4158	Any event in cancer register	32	9792	86707	finn-a-ANY_CANC	Overall cancer	European	FinnGen	FALSE	TRUE	TRUE	cancer	NA
+NA	0.9278	0.0085	18	49583585	0.094	finn-a-ANY_CANC	rs77960347	G	A	0.007035	Any event in cancer register	32	9792	86707	finn-a-ANY_CANC	Overall cancer	European	FinnGen	FALSE	TRUE	TRUE	cancer	NA
+NA	0.9929	-2e-04	2	27508073	0.0169	finn-a-ANY_CANC	rs1260326	T	C	0.3512	Any event in cancer register	32	9792	86707	finn-a-ANY_CANC	Overall cancer	European	FinnGen	FALSE	TRUE	TRUE	cancer	NA
+NA	0.4797	0.012	13	113844399	0.0169	finn-a-ANY_CANC	rs6602911	C	T	0.6391	Any event in cancer register	32	9792	86707	finn-a-ANY_CANC	Overall cancer	European	FinnGen	FALSE	TRUE	TRUE	cancer	NA
+NA	0.0721905	-0.0304	16	15035602	0.0169	finn-a-ANY_CANC	rs4985155	G	A	0.3466	Any event in cancer register	32	9792	86707	finn-a-ANY_CANC	Overall cancer	European	FinnGen	FALSE	TRUE	TRUE	cancer	NA
+NA	0.637901	0.0078	8	125494452	0.0166	finn-a-ANY_CANC	rs112875651	A	G	0.3887	Any event in cancer register	32	9792	86707	finn-a-ANY_CANC	Overall cancer	European	FinnGen	FALSE	TRUE	TRUE	cancer	NA
+NA	0.942	-0.0015	15	58290341	0.0199	finn-a-ANY_CANC	rs1973688	T	C	0.2058	Any event in cancer register	32	9792	86707	finn-a-ANY_CANC	Overall cancer	European	FinnGen	FALSE	TRUE	TRUE	cancer	NA
+NA	0.2193	-0.0213	4	3442204	0.0173	finn-a-ANY_CANC	rs13108218	A	G	0.3204	Any event in cancer register	32	9792	86707	finn-a-ANY_CANC	Overall cancer	European	FinnGen	FALSE	TRUE	TRUE	cancer	NA
+NA	0.6384	0.0162	6	160122116	0.0345	finn-a-ANY_CANC	rs12208357	T	C	0.0569	Any event in cancer register	32	9792	86707	finn-a-ANY_CANC	Overall cancer	European	FinnGen	FALSE	TRUE	TRUE	cancer	NA

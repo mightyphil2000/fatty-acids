@@ -1,0 +1,2 @@
+EAS_1000g_allele_error	schs_allele_error
+0	rs2072114; rs2524299; rs2727270; rs2727271

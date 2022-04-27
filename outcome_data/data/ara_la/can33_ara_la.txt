@@ -1,0 +1,25 @@
+lnor	lnor_se	chr	n	position	p	id	rsid	effect_allele	other_allele	eaf	trait	ID	ncase	ncontrol	pmid	outcome	population	study	UKbiobank	effect_allele_confirmed	open_gwas	efo	efo_id
+-0.0145	0.0108	8	NA	125494452	0.1795	finn-a-II_NEOPLASM	rs112875651	A	G	0.3887	Neoplasms	33	31217	65282	finn-a-II_NEOPLASM	Overall cancer	European	FinnGen	FALSE	TRUE	TRUE	cancer	NA
+-0.0138	0.0138	16	NA	72110275	0.3177	finn-a-II_NEOPLASM	rs9302635	T	C	0.8261	Neoplasms	33	31217	65282	finn-a-II_NEOPLASM	Overall cancer	European	FinnGen	FALSE	TRUE	TRUE	cancer	NA
+0.0107	0.0226	6	NA	160122116	0.6362	finn-a-II_NEOPLASM	rs12208357	T	C	0.0569	Neoplasms	33	31217	65282	finn-a-II_NEOPLASM	Overall cancer	European	FinnGen	FALSE	TRUE	TRUE	cancer	NA
+0.0037	0.0106	12	NA	111466567	0.729001	finn-a-II_NEOPLASM	rs4766578	T	A	0.429	Neoplasms	33	31217	65282	finn-a-II_NEOPLASM	Overall cancer	European	FinnGen	FALSE	TRUE	TRUE	cancer	NA
+-0.0049	0.011	13	NA	113844399	0.6594	finn-a-II_NEOPLASM	rs6602911	C	T	0.6391	Neoplasms	33	31217	65282	finn-a-II_NEOPLASM	Overall cancer	European	FinnGen	FALSE	TRUE	TRUE	cancer	NA
+0.005	0.0109	3	NA	142933227	0.646501	finn-a-II_NEOPLASM	rs9848779	C	G	0.3658	Neoplasms	33	31217	65282	finn-a-II_NEOPLASM	Overall cancer	European	FinnGen	FALSE	TRUE	TRUE	cancer	NA
+-0.014	0.0113	4	NA	3442204	0.2166	finn-a-II_NEOPLASM	rs13108218	A	G	0.3204	Neoplasms	33	31217	65282	finn-a-II_NEOPLASM	Overall cancer	European	FinnGen	FALSE	TRUE	TRUE	cancer	NA
+-0.0029	0.0108	15	NA	58386521	0.7892	finn-a-II_NEOPLASM	rs261290	C	T	0.6164	Neoplasms	33	31217	65282	finn-a-II_NEOPLASM	Overall cancer	European	FinnGen	FALSE	TRUE	TRUE	cancer	NA
+-0.0089	0.0111	19	NA	48665685	0.4238	finn-a-II_NEOPLASM	rs8111874	G	A	0.6604	Neoplasms	33	31217	65282	finn-a-II_NEOPLASM	Overall cancer	European	FinnGen	FALSE	TRUE	TRUE	cancer	NA
+-0.0062	0.0106	12	NA	120977490	0.557799	finn-a-II_NEOPLASM	rs7139079	A	G	0.5499	Neoplasms	33	31217	65282	finn-a-II_NEOPLASM	Overall cancer	European	FinnGen	FALSE	TRUE	TRUE	cancer	NA
+-0.0057	0.0214	19	NA	19268740	0.7906	finn-a-II_NEOPLASM	rs58542926	C	T	0.93547	Neoplasms	33	31217	65282	finn-a-II_NEOPLASM	Overall cancer	European	FinnGen	FALSE	TRUE	TRUE	cancer	NA
+0.0023	0.0185	8	NA	20025439	0.8989	finn-a-II_NEOPLASM	rs7816447	C	T	0.08834	Neoplasms	33	31217	65282	finn-a-II_NEOPLASM	Overall cancer	European	FinnGen	FALSE	TRUE	TRUE	cancer	NA
+-0.0183	0.0108	8	NA	58464798	0.090469	finn-a-II_NEOPLASM	rs6471717	G	A	0.3861	Neoplasms	33	31217	65282	finn-a-II_NEOPLASM	Overall cancer	European	FinnGen	FALSE	TRUE	TRUE	cancer	NA
+0.0079	0.0156	6	NA	35419095	0.612901	finn-a-II_NEOPLASM	rs36018387	C	T	0.8638	Neoplasms	33	31217	65282	finn-a-II_NEOPLASM	Overall cancer	European	FinnGen	FALSE	TRUE	TRUE	cancer	NA
+-0.0177	0.011	16	NA	15035602	0.1091	finn-a-II_NEOPLASM	rs4985155	G	A	0.3466	Neoplasms	33	31217	65282	finn-a-II_NEOPLASM	Overall cancer	European	FinnGen	FALSE	TRUE	TRUE	cancer	NA
+0.016	0.0105	2	NA	169055681	0.1296	finn-a-II_NEOPLASM	rs2389599	C	G	0.5272	Neoplasms	33	31217	65282	finn-a-II_NEOPLASM	Overall cancer	European	FinnGen	FALSE	TRUE	TRUE	cancer	NA
+-0.0078	0.0106	2	NA	20171619	0.462701	finn-a-II_NEOPLASM	rs907866	A	G	0.552	Neoplasms	33	31217	65282	finn-a-II_NEOPLASM	Overall cancer	European	FinnGen	FALSE	TRUE	TRUE	cancer	NA
+0.012	0.011	2	NA	27508073	0.2775	finn-a-II_NEOPLASM	rs1260326	T	C	0.3512	Neoplasms	33	31217	65282	finn-a-II_NEOPLASM	Overall cancer	European	FinnGen	FALSE	TRUE	TRUE	cancer	NA
+0.0016	0.0106	20	NA	41284992	0.8827	finn-a-II_NEOPLASM	rs2179372	C	G	0.4158	Neoplasms	33	31217	65282	finn-a-II_NEOPLASM	Overall cancer	European	FinnGen	FALSE	TRUE	TRUE	cancer	NA
+-0.0106	0.0112	5	NA	156970662	0.3442	finn-a-II_NEOPLASM	rs6882345	A	G	0.6685	Neoplasms	33	31217	65282	finn-a-II_NEOPLASM	Overall cancer	European	FinnGen	FALSE	TRUE	TRUE	cancer	NA
+0.0769	0.1097	3	NA	18222564	0.4833	finn-a-II_NEOPLASM	rs187814248	C	T	0.002577	Neoplasms	33	31217	65282	finn-a-II_NEOPLASM	Overall cancer	European	FinnGen	FALSE	TRUE	TRUE	cancer	NA
+0.0067	0.0624	18	NA	49583585	0.9151	finn-a-II_NEOPLASM	rs77960347	G	A	0.007035	Neoplasms	33	31217	65282	finn-a-II_NEOPLASM	Overall cancer	European	FinnGen	FALSE	TRUE	TRUE	cancer	NA
+-0.0107	0.0115	19	NA	44922203	0.3555	finn-a-II_NEOPLASM	rs157595	G	A	0.6934	Neoplasms	33	31217	65282	finn-a-II_NEOPLASM	Overall cancer	European	FinnGen	FALSE	TRUE	TRUE	cancer	NA
+-0.0199	0.013	15	NA	58290341	0.126	finn-a-II_NEOPLASM	rs1973688	T	C	0.2058	Neoplasms	33	31217	65282	finn-a-II_NEOPLASM	Overall cancer	European	FinnGen	FALSE	TRUE	TRUE	cancer	NA
