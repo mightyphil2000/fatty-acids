@@ -1,0 +1,1 @@
+The number in each file name corresponds to the FAMRC identifier number. Details of the study corresponding to each file can be found in supplementary table S5 of the paper "Design and quality control of large-scale two-sample Mendelian randomisation studies" 
