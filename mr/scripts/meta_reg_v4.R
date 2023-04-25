@@ -31,7 +31,7 @@ table(mr_res$smoking1)
 dim(mr_res)
 # recode endometrial as smoking related cancer
 
-Model<-summary(?rma.uni(yi=as.numeric(mr_res$b),sei=as.numeric(mr_res$se),weights=Weights,mods=mr_res$smoking1,intercept=TRUE,slab=mr_res$cancer,method="REML",weighted=TRUE))
+Model<-summary(rma.uni(yi=as.numeric(mr_res$b),sei=as.numeric(mr_res$se),weights=Weights,mods=mr_res$smoking1,intercept=TRUE,slab=mr_res$cancer,method="REML",weighted=TRUE))
 m<-extract_meta_reg_results(dat=Model)
 m$model<-"smoking1"
 

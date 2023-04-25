@@ -1,141 +1,141 @@
-SNP	effect_allele.exposure	other_allele.exposure	beta.exposure	eaf.exposure	se.exposure	pval.exposure	id.exposure	id.outcome	outcome
-rs10226228	A	G	-0.0114099	0.62964	0.00143702	2e-15	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs10282292	C	T	0.00896219	0.361838	0.0014469	5.9e-10	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs1050847	C	T	0.00797046	0.425845	0.00140503	1.4e-08	csi	140; 60; 73; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs10759934	A	T	0.0081033	0.513764	0.00139392	6.1e-09	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs10819050	G	T	-0.0111702	0.588337	0.00140848	2.2e-15	csi	140; 60; 73; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs10823968	A	T	0.00813544	0.632969	0.00145258	2.1e-08	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs10879871	T	G	-0.00957988	0.343436	0.00145803	5e-11	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs10918701	G	A	0.00802389	0.372247	0.00143191	2.1e-08	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs10922907	A	T	0.0101748	0.45105	0.00139495	3e-13	csi	140; 60; 73; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs10945143	T	C	-0.00883899	0.743557	0.00159048	2.7e-08	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs11123962	T	G	-0.00890367	0.554046	0.00139223	1.6e-10	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs11134664	G	A	-0.00928494	0.313305	0.00149314	5e-10	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs11210229	A	G	0.011702	0.383666	0.00142273	2e-16	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs112282219	G	A	-0.0231662	0.958949	0.00350418	3.8e-11	csi	140; 60; 75	Overall cancer; Colorectal cancer; Lung cancer
-rs11255908	T	G	-0.0100713	0.743485	0.00158809	2.3e-10	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs113382419	C	A	-0.0282339	0.889325	0.00221376	3e-37	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs11768481	C	A	0.00901238	0.666168	0.00147464	9.9e-10	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs11783093	C	T	0.01571	0.838811	0.00189655	1.2e-16	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs11801576	T	C	-0.0102544	0.755413	0.00161776	2.3e-10	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs11861214	G	T	0.00945079	0.78364	0.00168455	2e-08	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs11948770	T	C	-0.0102364	0.768248	0.00164524	4.9e-10	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs12151765	A	G	0.0126888	0.877947	0.00212356	2.3e-09	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs12202536	A	G	-0.00823391	0.512754	0.00138601	2.8e-09	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs1221148	C	G	0.00916504	0.587062	0.00140711	7.3e-11	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs12244388	G	A	-0.0132503	0.661124	0.00146413	1.4e-19	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs12442096	C	T	0.00849543	0.614651	0.0014248	2.5e-09	csi	140; 60; 73; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs1246265	T	C	-0.00886526	0.30456	0.00150907	4.2e-09	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs12481282	G	C	-0.00894356	0.722343	0.00154935	7.8e-09	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs12623702	A	G	-0.00977238	0.613375	0.00142787	7.7e-12	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs12708665	A	G	-0.0090871	0.284632	0.00153886	3.5e-09	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs12831617	C	T	-0.00918459	0.764305	0.00163314	1.9e-08	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs12967855	A	G	0.0081887	0.331225	0.00147934	3.1e-08	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs13009008	A	G	0.00863272	0.327713	0.00147329	4.6e-09	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs13016665	C	A	-0.00848745	0.576725	0.0014118	1.8e-09	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs13106038	G	A	0.00888362	0.676381	0.00148411	2.2e-09	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs13153393	A	G	-0.0137451	0.883937	0.00217329	2.5e-10	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs136233	A	G	-0.00995614	0.809084	0.00176918	1.8e-08	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs1363374	C	T	0.00826725	0.60961	0.0014241	6.4e-09	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs1402671	A	C	0.00857731	0.64187	0.00144526	2.9e-09	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs147412694	G	A	-0.0115726	0.850009	0.00194865	2.9e-09	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs17309874	G	A	-0.0112899	0.740357	0.00158234	9.7e-13	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs17553262	A	C	-0.0127323	0.884605	0.00218148	5.3e-09	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs17576594	G	A	0.0109502	0.7235	0.00155159	1.7e-12	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs17733784	T	C	0.00841894	0.623822	0.00143622	4.6e-09	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs1881411	A	G	-0.00846359	0.605463	0.00141627	2.3e-09	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs1922018	C	T	0.0100328	0.364422	0.00143771	3e-12	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs1931262	T	C	-0.00764277	0.509468	0.00138589	3.5e-08	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs202645	A	G	-0.0101598	0.202939	0.00172497	3.9e-09	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs2062882	G	A	-0.0081103	0.586782	0.00141998	1.1e-08	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs2080870	A	T	0.00863309	0.258107	0.00158257	4.9e-08	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs2254710	C	A	0.00899636	0.236356	0.00163085	3.5e-08	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs2401924	G	C	0.0105718	0.501955	0.00138906	2.7e-14	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs2675638	G	A	0.00849857	0.58057	0.00140017	1.3e-09	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs2838834	C	T	-0.00936489	0.699459	0.00151488	6.3e-10	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs28635466	G	A	0.00844234	0.696005	0.00150481	2e-08	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs2867112	T	G	0.0147832	0.834596	0.00188747	4.8e-15	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs2890772	G	T	-0.0136979	0.413181	0.00140672	2.1e-22	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs2894808	T	A	-0.0152983	0.922121	0.0025912	3.5e-09	csi	140; 60; 75	Overall cancer; Colorectal cancer; Lung cancer
-rs317021	T	A	-0.011567	0.814287	0.00179087	1.1e-10	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs326341	G	A	0.00943522	0.524943	0.00139247	1.2e-11	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs329120	C	T	0.00965704	0.580672	0.00140509	6.3e-12	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs34866095	A	G	-0.00857198	0.686187	0.00150558	1.2e-08	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs348829	G	A	-0.00836241	0.342149	0.00146235	1.1e-08	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs35120974	A	G	-0.00844791	0.582619	0.00140937	2e-09	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs35169606	T	G	0.00877627	0.612204	0.00144385	1.2e-09	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs35175834	G	A	-0.0164032	0.78844	0.00169847	4.6e-22	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs35343344	C	A	0.00918144	0.732713	0.00159594	8.8e-09	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs35624276	G	A	0.00763621	0.515528	0.00139553	4.5e-08	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs35891966	G	A	0.0155949	0.928795	0.00269184	6.9e-09	csi	140; 60; 75	Overall cancer; Colorectal cancer; Lung cancer
-rs359239	C	T	-0.00788366	0.426602	0.00140856	2.2e-08	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs369230	G	T	-0.00908882	0.307565	0.001511	1.8e-09	csi	140; 60; 73; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs3742365	T	C	-0.0107929	0.595136	0.0014159	2.5e-14	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs3769949	T	A	-0.00825646	0.527845	0.00138563	2.5e-09	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs3811038	T	C	-0.00954466	0.723852	0.00155745	8.9e-10	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs3896224	A	G	0.00962696	0.585286	0.00141792	1.1e-11	csi	140; 60; 73; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs421983	T	C	0.00870743	0.519028	0.00138561	3.3e-10	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs4473348	A	T	-0.0104317	0.249978	0.00159675	6.4e-11	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs4543592	T	C	-0.00866243	0.519912	0.0013891	4.5e-10	csi	140; 60; 73; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs4571506	C	T	0.00787701	0.539523	0.00139172	1.5e-08	csi	140; 60; 73; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs4671357	T	C	-0.00944175	0.518819	0.00138991	1.1e-11	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs4731925	C	T	-0.00829239	0.315607	0.00149022	2.6e-08	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs4814873	C	T	0.00971214	0.76659	0.00163637	2.9e-09	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs4949465	T	C	-0.0116055	0.869552	0.00205788	1.7e-08	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs4957528	A	C	-0.0101225	0.208497	0.00172212	4.2e-09	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs530916	A	G	-0.00782281	0.439502	0.00139461	2e-08	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs549845	G	A	0.0112613	0.301161	0.00150857	8.3e-14	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs57611503	G	A	0.00774344	0.484578	0.00141026	4e-08	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs6011779	C	T	0.0191152	0.191239	0.00176364	2.3e-27	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs6050215	C	T	-0.0262369	0.0313095	0.00400416	5.7e-11	csi	140; 60; 75	Overall cancer; Colorectal cancer; Lung cancer
-rs60952428	T	C	0.0134109	0.909149	0.00241933	3e-08	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs6119897	G	A	-0.0128038	0.761716	0.00162704	3.6e-15	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs61796681	A	T	-0.0134163	0.912365	0.00244752	4.2e-08	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs62098013	G	A	-0.00856663	0.63991	0.00145676	4.1e-09	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs62155874	A	G	-0.0169073	0.87336	0.00208546	5.2e-16	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs62175972	T	C	0.0217461	0.965939	0.00385678	1.7e-08	csi	140; 60; 75	Overall cancer; Colorectal cancer; Lung cancer
-rs624833	T	G	0.00928567	0.694697	0.00150361	6.6e-10	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs6562474	C	G	0.00836914	0.650606	0.0014611	1e-08	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs6598539	T	C	-0.00815056	0.488672	0.00138941	4.5e-09	csi	140; 60; 73; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs6665841	C	T	0.0105825	0.228031	0.00165022	1.4e-10	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs6692614	C	G	-0.00781565	0.42081	0.00140722	2.8e-08	csi	140; 60; 135; 17	Overall cancer; Colorectal cancer; Basal cell carcinoma; Lung cancer
-rs6741228	T	C	0.00793282	0.433309	0.00140363	1.6e-08	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs67596067	G	A	-0.00887666	0.648812	0.00145843	1.2e-09	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs6778080	T	C	0.0111141	0.267372	0.00156621	1.3e-12	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs6779302	G	T	-0.00875253	0.632921	0.0014392	1.2e-09	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs6935954	A	G	0.0095817	0.421108	0.00140192	8.2e-12	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs6962772	A	G	0.011064	0.845551	0.00191645	7.8e-09	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs7039819	G	A	0.00873433	0.427307	0.00140501	5.1e-10	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs71367545	G	A	-0.0103197	0.790533	0.0017038	1.4e-09	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs71532325	C	T	0.0083377	0.682508	0.00149168	2.3e-08	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs7155595	A	C	-0.00885162	0.674282	0.00148508	2.5e-09	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs71627581	G	A	0.0132566	0.888811	0.00219871	1.6e-09	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs72678864	G	A	0.0123829	0.828591	0.0018387	1.6e-11	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs7297175	T	C	-0.00811649	0.431355	0.0013992	6.6e-09	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs732083	G	A	0.00834823	0.333362	0.00147311	1.5e-08	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs73220544	A	C	-0.0108189	0.842295	0.0019126	1.5e-08	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs7333559	G	A	0.01074	0.211711	0.00170716	3.2e-10	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs74086911	G	A	0.0148021	0.925459	0.00264197	2.1e-08	csi	140; 60; 75	Overall cancer; Colorectal cancer; Lung cancer
-rs7528604	G	A	0.00965269	0.565613	0.00140141	5.7e-12	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs7553348	G	A	0.00963399	0.437656	0.00139643	5.2e-12	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs7569203	A	C	-0.0107595	0.688725	0.0015002	7.4e-13	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs75742406	G	A	0.00961948	0.738854	0.00158486	1.3e-09	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs76608582	C	A	0.0216317	0.953011	0.00344003	3.2e-10	csi	140; 60; 75	Overall cancer; Colorectal cancer; Lung cancer
-rs7687139	G	C	0.00785173	0.592325	0.00143703	4.7e-08	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs77653640	G	A	-0.00971124	0.805984	0.00175811	3.3e-08	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs7766610	C	A	0.0125839	0.182634	0.00179283	2.2e-12	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs7807019	A	G	-0.0104211	0.540327	0.00139062	6.7e-14	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs8042134	T	G	-0.00994136	0.541083	0.0014011	1.3e-12	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs8042849	C	T	0.0192164	0.34229	0.00146183	1.8e-39	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs812887	A	G	0.00824801	0.414385	0.00141024	5e-09	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs860326	C	T	0.00833808	0.427696	0.0014023	2.7e-09	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs8614	C	A	-0.0114612	0.817489	0.00179679	1.8e-10	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs889398	C	T	0.0092407	0.588005	0.00141367	6.3e-11	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs909334	C	A	0.00965036	0.751601	0.00160423	1.8e-09	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs9277988	T	C	-0.00978362	0.802934	0.00174236	2e-08	csi	140; 60; 135; 17	Overall cancer; Colorectal cancer; Basal cell carcinoma; Lung cancer
-rs9435340	T	A	0.00834773	0.344234	0.00146424	1.2e-08	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs9554663	T	C	-0.00928263	0.744034	0.00159298	5.6e-09	csi	140; 60; 73; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs9842947	C	T	-0.00877189	0.326165	0.00148073	3.1e-09	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs986391	G	A	0.0111388	0.366555	0.0014379	9.4e-15	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs9889262	T	A	-0.00793678	0.63793	0.00144499	4e-08	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
-rs9919670	G	A	-0.0152438	0.612185	0.00142114	7.6e-27	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+SNP	effect_allele.exposure	other_allele.exposure	beta.exposure	eaf.exposure	se.exposure	pval.exposure	id.exposure	exposure	id.outcome	outcome
+rs10226228	A	G	-0.0164405577850326	0.62964	0.00207060625844639	2e-15	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs10282292	C	T	0.0129136453935127	0.361838	0.00208484237891337	5.9e-10	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs1050847	C	T	0.0114846587790682	0.425845	0.00202451177527448	1.4e-08	csi	csi	140; 60; 73; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs10759934	A	T	0.0116760683178165	0.513764	0.00200850334426354	6.1e-09	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs10819050	G	T	-0.0160951733643915	0.588337	0.00202948289021487	2.2e-15	csi	csi	140; 60; 73; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs10823968	A	T	0.0117223789364206	0.632969	0.00209302670727899	2.1e-08	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs10879871	T	G	-0.013803676694246	0.343436	0.00210087962798193	5e-11	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs10918701	G	A	0.0115616462200146	0.372247	0.00206324324472309	2.1e-08	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs10922907	A	T	0.0146608986363727	0.45105	0.00200998747423125	3e-13	csi	csi	140; 60; 73; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs10945143	T	C	-0.0127361261585399	0.743557	0.00229172721460649	2.7e-08	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs11123962	T	G	-0.0128293237569007	0.554046	0.00200606821839419	1.6e-10	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs11134664	G	A	-0.0133786967984435	0.313305	0.00215146972814341	5e-10	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs11210229	A	G	0.0168614455166523	0.383666	0.00205001575627301	2e-16	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs112282219	G	A	-0.033380244328138	0.958949	0.00504918305849792	3.8e-11	csi	csi	140; 60; 75	Overall cancer; Colorectal cancer; Lung cancer
+rs11255908	T	G	-0.014511765188161	0.743485	0.00228828345672025	2.3e-10	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs113382419	C	A	-0.0406823078595633	0.889325	0.00318981316244609	3e-37	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs11768481	C	A	0.0129859643091238	0.666168	0.00212481302483987	9.9e-10	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs11783093	C	T	0.022636584264793	0.838811	0.0027327443594776	1.2e-16	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs11801576	T	C	-0.014775594505722	0.755413	0.00233103504520761	2.3e-10	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs11861214	G	T	0.0136176705413025	0.78364	0.00242727294864781	2e-08	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs11948770	T	C	-0.0147496582538591	0.768248	0.00237063105638498	4.9e-10	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs12151765	A	G	0.0182833284798921	0.877947	0.0030598437225553	2.3e-09	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs12202536	A	G	-0.0118642646431395	0.512754	0.00199710580247268	2.8e-09	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs1221148	C	G	0.0132059325429789	0.587062	0.00202750885326753	7.3e-11	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs12244388	G	A	-0.0190923954477267	0.661124	0.00210966913555769	1.4e-19	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs12442096	C	T	0.0122410895646499	0.614651	0.00205299842523724	2.5e-09	csi	csi	140; 60; 73; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs1246265	T	C	-0.012773978677231	0.30456	0.00217442331104209	4.2e-09	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs12481282	G	C	-0.0128868013728346	0.722343	0.00223246287909975	7.8e-09	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs12623702	A	G	-0.014081050498891	0.613375	0.00205742199708275	7.7e-12	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs12708665	A	G	-0.0130936285724125	0.284632	0.0022173478078752	3.5e-09	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs12831617	C	T	-0.0132341021943078	0.764305	0.00235319613152158	1.9e-08	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs12967855	A	G	0.0117991214238772	0.331225	0.00213158526838185	3.1e-08	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs13009008	A	G	0.0124389111212198	0.327713	0.00212286780595015	4.6e-09	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs13016665	C	A	-0.0122295911596574	0.576725	0.0020342666877807	1.8e-09	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs13106038	G	A	0.0128004336541311	0.676381	0.00213845837512552	2.2e-09	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs13153393	A	G	-0.0198053541933804	0.883937	0.00313149982284099	2.5e-10	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs136233	A	G	-0.0143458308123537	0.809084	0.00254921655948991	1.8e-08	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs1363374	C	T	0.0119123043452011	0.60961	0.00205198979322035	6.4e-09	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs1402671	A	C	0.0123590706925685	0.64187	0.00208247929818808	2.9e-09	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs147412694	G	A	-0.0166749926838156	0.850009	0.00280781539959191	2.9e-09	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs17309874	G	A	-0.0162676494392798	0.740357	0.00227999826515293	9.7e-13	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs17553262	A	C	-0.0183460077552275	0.884605	0.00314330081743861	5.3e-09	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs17576594	G	A	0.0157781747305115	0.7235	0.0022356905015538	1.7e-12	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs17733784	T	C	0.0121308749032614	0.623822	0.00206945353614137	4.6e-09	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs1881411	A	G	-0.0121952112169102	0.605463	0.00204070752365999	2.3e-09	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs1922018	C	T	0.014456290427232	0.364422	0.00207160048143447	3e-12	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs1931262	T	C	-0.011012489313904	0.509468	0.00199693289412692	3.5e-08	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs202645	A	G	-0.0146392850931536	0.202939	0.00248551424310885	3.9e-09	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs2062882	G	A	-0.0116861546379854	0.586782	0.00204605327334951	1.1e-08	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs2080870	A	T	0.0124394442552859	0.258107	0.00228032967281562	4.9e-08	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs2254710	C	A	0.0129628810449658	0.236356	0.00234989646392347	3.5e-08	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs2401924	G	C	0.015232937080238	0.501955	0.00200150055626056	2.7e-14	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs2675638	G	A	0.0122456139996971	0.58057	0.0020175089872715	1.3e-09	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs2838834	C	T	-0.0134938969838012	0.699459	0.00218279495678228	6.3e-10	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs28635466	G	A	0.0121645920306832	0.696005	0.00216828506476786	2e-08	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs2867112	T	G	0.0213011554744295	0.834596	0.00271966096131565	4.8e-15	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs2890772	G	T	-0.0197373435773843	0.413181	0.00202694690114383	2.1e-22	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs2894808	T	A	-0.0220433645485731	0.922121	0.00373366754595363	3.5e-09	csi	csi	140; 60; 75	Overall cancer; Colorectal cancer; Lung cancer
+rs317021	T	A	-0.0166669236276805	0.814287	0.00258046974298471	1.1e-10	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs326341	G	A	0.0135952356834411	0.524943	0.0020064140350857	1.2e-11	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs329120	C	T	0.013914856760565	0.580672	0.00202459822944736	6.3e-12	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs34866095	A	G	-0.0123513906802113	0.686187	0.00216939455998644	1.2e-08	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs348829	G	A	-0.012049420663383	0.342149	0.00210710432842903	1.1e-08	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs35120974	A	G	-0.0121726178597318	0.582619	0.0020307652937792	2e-09	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs35169606	T	G	0.0126457527298265	0.612204	0.00208044762512548	1.2e-09	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs35175834	G	A	-0.0236354181420912	0.78844	0.00244733031675512	4.6e-22	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs35343344	C	A	0.0132295633502318	0.732713	0.00229959454433824	8.8e-09	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs35624276	G	A	0.0110030369910029	0.515528	0.00201082319790239	4.5e-08	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs35891966	G	A	0.0224707363431585	0.928795	0.00387868001192491	6.9e-09	csi	csi	140; 60; 75	Overall cancer; Colorectal cancer; Lung cancer
+rs359239	C	T	-0.0113595884089738	0.426602	0.00202959816244537	2.2e-08	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs369230	G	T	-0.0130961069253683	0.307565	0.00217720425360294	1.8e-09	csi	csi	140; 60; 73; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs3742365	T	C	-0.0155515207072873	0.595136	0.00204017438959391	2.5e-14	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs3769949	T	A	-0.0118967570031122	0.527845	0.00199655825937779	2.5e-09	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs3811038	T	C	-0.0137529280947676	0.723852	0.00224413419243806	8.9e-10	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs3896224	A	G	0.0138715144018963	0.585286	0.00204308501341409	1.1e-11	csi	csi	140; 60; 73; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs421983	T	C	0.0125465609754797	0.519028	0.00199652944132017	3.3e-10	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs4473348	A	T	-0.0150310665865717	0.249978	0.00230076167567207	6.4e-11	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs4543592	T	C	-0.0124817203458225	0.519912	0.00200155819237581	4.5e-10	csi	csi	140; 60; 73; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs4571506	C	T	0.0113500064048133	0.539523	0.00200533335792474	1.5e-08	csi	csi	140; 60; 73; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs4671357	T	C	-0.0136046447792558	0.518819	0.00200272532370964	1.1e-11	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs4731925	C	T	-0.0119485286436363	0.315607	0.0021472622917301	2.6e-08	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs4814873	C	T	0.0139942505093231	0.76659	0.00235785024782809	2.9e-09	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs4949465	T	C	-0.0167223983886095	0.869552	0.00296520522131332	1.7e-08	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs4957528	A	C	-0.0145855394156822	0.208497	0.00248140766989722	4.2e-09	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs530916	A	G	-0.0112719094686483	0.439502	0.00200949756725162	2e-08	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs549845	G	A	0.0162264396168754	0.301161	0.00217370285960145	8.3e-14	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs57611503	G	A	0.0111575450069617	0.484578	0.00203204769734354	4e-08	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs6011779	C	T	0.0275431467561025	0.191239	0.00254123395752766	2.3e-27	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs6050215	C	T	-0.0378048248056618	0.0313095	0.00576960568107661	5.7e-11	csi	csi	140; 60; 75	Overall cancer; Colorectal cancer; Lung cancer
+rs60952428	T	C	0.0193238044504591	0.909149	0.00348601956774931	3e-08	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs6119897	G	A	-0.0184490323112385	0.761716	0.00234440662394582	3.6e-15	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs61796681	A	T	-0.019331585326018	0.912365	0.00352663861997238	4.2e-08	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs62098013	G	A	-0.0123436818497965	0.63991	0.00209904968132271	4.1e-09	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs62155874	A	G	-0.0243617772845407	0.87336	0.00300494532277882	5.2e-16	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs62175972	T	C	0.0313340181464427	0.965939	0.00555724541443465	1.7e-08	csi	csi	140; 60; 75	Overall cancer; Colorectal cancer; Lung cancer
+rs624833	T	G	0.0133797486575468	0.694697	0.00216655598131034	6.6e-10	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs6562474	C	G	0.012059117939774	0.650606	0.00210530319982744	1e-08	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs6598539	T	C	-0.0117441653879854	0.488672	0.002002004872269	4.5e-09	csi	csi	140; 60; 73; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs6665841	C	T	0.0152483547410676	0.228031	0.00237780675273372	1.4e-10	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs6692614	C	G	-0.0112615926040184	0.42081	0.00202766735258447	2.8e-08	csi	csi	140; 60; 135; 17	Overall cancer; Colorectal cancer; Basal cell carcinoma; Lung cancer
+rs6741228	T	C	0.0114304231946171	0.433309	0.0020224945112407	1.6e-08	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs67596067	G	A	-0.0127904049700775	0.648812	0.00210145598913444	1.2e-09	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs6778080	T	C	0.0160143387127521	0.267372	0.002256756501678	1.3e-12	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs6779302	G	T	-0.0126115456954251	0.632921	0.00207374742672757	1.2e-09	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs6935954	A	G	0.0138062991374899	0.421108	0.00202003056731372	8.2e-12	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs6962772	A	G	0.0159421494784004	0.845551	0.00276141832681493	7.8e-09	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs7039819	G	A	0.012585321262986	0.427307	0.00202448295721686	5.1e-10	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs71367545	G	A	-0.0148696854638691	0.790533	0.0024550103291123	1.4e-09	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs71532325	C	T	0.0120138159531868	0.682508	0.00214936600993675	2.3e-08	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs7155595	A	C	-0.0127543247619304	0.674282	0.00213985605092036	2.5e-09	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs71627581	G	A	0.0191014731358787	0.888811	0.00316812757408294	1.6e-09	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs72678864	G	A	0.0178425562885108	0.828591	0.00264938812779598	1.6e-11	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs7297175	T	C	-0.0116950738268205	0.431355	0.00201611131147666	6.6e-09	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs732083	G	A	0.0120289886605266	0.333362	0.00212260844343152	1.5e-08	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs73220544	A	C	-0.0155889841822004	0.842295	0.00275587085072203	1.5e-08	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs7333559	G	A	0.015475296944868	0.211711	0.00245985176279338	3.2e-10	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs74086911	G	A	0.0213283885388856	0.925459	0.00380682218523585	2.1e-08	csi	csi	140; 60; 75	Overall cancer; Colorectal cancer; Lung cancer
+rs7528604	G	A	0.0139085888330315	0.565613	0.00201929570684427	5.7e-12	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs7553348	G	A	0.0138816439491517	0.437656	0.00201212001049554	5.2e-12	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs7569203	A	C	-0.0155033945510528	0.688725	0.0021616425024852	7.4e-13	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs75742406	G	A	0.0138607364483444	0.738854	0.00228362934041374	1.3e-09	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs76608582	C	A	0.0311691788568251	0.953011	0.00495674913866428	3.2e-10	csi	csi	140; 60; 75	Overall cancer; Colorectal cancer; Lung cancer
+rs7687139	G	C	0.0113135803799747	0.592325	0.0020706206674752	4.7e-08	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs77653640	G	A	-0.01399295369673	0.805984	0.00253326576459422	3.3e-08	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs7766610	C	A	0.0181321777676466	0.182634	0.00258329391263201	2.2e-12	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs7807019	A	G	-0.0150157930160302	0.540327	0.00200374836475534	6.7e-14	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs8042134	T	G	-0.0143245342677685	0.541083	0.00201884902695108	1.3e-12	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs8042849	C	T	0.0276889661276873	0.34229	0.00210635505893077	1.8e-39	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs812887	A	G	0.0118845813737655	0.414385	0.00203201887928591	5e-09	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs860326	C	T	0.0120143634962817	0.427696	0.00202057811040861	2.7e-09	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs8614	C	A	-0.0165144761028418	0.817489	0.00258899988804185	1.8e-10	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs889398	C	T	0.013314951254976	0.588005	0.00203696117616868	6.3e-11	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs909334	C	A	0.0139052315293181	0.751601	0.00231153962922399	1.8e-09	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs9277988	T	C	-0.0140972462472765	0.802934	0.00251057154421418	2e-08	csi	csi	140; 60; 135; 17	Overall cancer; Colorectal cancer; Basal cell carcinoma; Lung cancer
+rs9435340	T	A	0.012028268209086	0.344234	0.00210982763487463	1.2e-08	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs9554663	T	C	-0.0133753683127877	0.744034	0.00229532947180967	5.6e-09	csi	csi	140; 60; 73; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs9842947	C	T	-0.0126394415752066	0.326165	0.00213358812338682	3.1e-09	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs986391	G	A	0.0160499290139196	0.366555	0.00207187425298191	9.4e-15	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs9889262	T	A	-0.011436129170027	0.63793	0.00208209025441014	4e-08	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma
+rs9919670	G	A	-0.0219648353415437	0.612185	0.00204772472069178	7.6e-27	csi	csi	140; 60; 75; 135	Overall cancer; Colorectal cancer; Lung cancer; Basal cell carcinoma

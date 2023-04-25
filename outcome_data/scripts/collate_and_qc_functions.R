@@ -38,11 +38,19 @@ basic_qc<-function(dat=NULL){
 	# ID2<-ID2[!ID2 %in% ID1]	
 	dat1<-dat[!is.na(dat$eaf),]
 	dat2<-dat[is.na(dat$eaf),]
+
 	
 	MAF<-dat1$eaf
 	MAF[MAF>0.5]<-1-MAF[MAF>0.5]
 	dat1$MAC_case<-MAF*dat1$ncase*2
 	dat1$MAC_control<-MAF*dat1$ncontrol*2
+
+	id1<-unique(dat1$ID[which(dat1$MAC_case<50)]) #which datasets have counts<50
+	id2<-unique(dat1$ID[which(dat1$MAC_case>=50)]) #which datasets have count>=50
+	length(id2)-length(id1) #n datasets where all SNPs have mac >=50
+	id2[!id2 %in% id1] #dataset where all SNPs have mac>=50
+	id1[!id1 %in% id2] #dataset where all SNPs have mac<50
+
 	dat1<-dat1[dat1$MAC_case>=50 & dat1$MAC_control>=50,]
 	# dat1<-dat1[which(dat1$eaf > 0.001),]
 	dat2$MAC_case<-NA
@@ -78,17 +86,23 @@ collate_dat<-function(postqc=TRUE){
 		Dat$file.outcome<-Files[i]
 		Dat_list[[i]]<-Dat
 	}
+
 	Dat<-do.call(plyr::rbind.fill,Dat_list)
+
 	# unique(Dat[,names(Dat)[grep("file",names(Dat),ignore.case=T)]])
 	col_names_keep<-c("file.outcome","outcome","population","pmid","study","ncase","ncontrol","UKbiobank","rsid","Effect.Allele","Other.Allele","lnor","se","eaf","p","info","info1","info2","info3","HWEp","phet","I2","Q","Direction","effect_allele_confirmed","ID","test_statistic","all_summary_stats","summary_set","open_gwas","efo")
 	# Dat$open_gwas[is.na(Dat$open_gwas)]<-FALSE
 	Dat<-Dat[,col_names_keep]
 	
 	# set open_gwas to TRUE for all UKB datasets 
-	Dat$open_gwas[Dat$study == "UKB"]<-TRUE
-	Dat$open_gwas[Dat$ID == 163]<-FALSE 
-	Dat$open_gwas[Dat$ID == 73]<-FALSE #mistakenly coded as in open gwas
+	Dat$open_gwas[which(Dat$study == "UKB")]<-TRUE
+	Dat$open_gwas[which(Dat$ID == 163)]<-FALSE 
+	Dat$open_gwas[which(Dat$ID == 73)]<-FALSE #mistakenly coded as in open gwas
+	Dat$open_gwas[which(Dat$ID==128)]<-TRUE #mistakenly coded as FALSE for Open GWAS
 	# datasets obtained via correspondence
+	unique(Dat$ID[which(Dat$open_gwas)])
+
+	length(unique(Dat$study[which(Dat$open_gwas)]))
 	Dat$correspondence<-FALSE
 	Dat$correspondence[Dat$ID %in% c(1,2,3,4,5,21,22,23,24,25,26,27,57,59,60,61,62,63,64,65,66,67,68,69,70,71,73,80,81,82,83,84,85,86,87,89,94,95,96,96.2,97,98,99,100,101,102,103,104,105,107,121,123,124,125,128,129,130,132,133,134,165)]<-TRUE
 
@@ -200,7 +214,7 @@ make_cow_plot<-function(Plot_list=NULL,Title="",Xlab="",Ylab="",out_file=NULL,re
 # plot_grid(Plot, legend, rel_widths = c(3, .4))
 
 
-make_cow_plot2<-function(Plot_list=NULL,Title="",Xlab="",Ylab="",out_file=NULL,return_plot=FALSE,width=1000,height=1000,Title_size=0,Title_axis_size=10,bycols=TRUE,Legend_z=FALSE,Legend_eaf=FALSE){
+make_cow_plot2<-function(Plot_list=NULL,Title="",Xlab="",Ylab="",out_file=NULL,return_plot=FALSE,width=1000,height=1000,Title_size=0,Title_axis_size=10,bycols=TRUE,Legend_z=FALSE,Legend_eaf=FALSE,Tiff=FALSE){
 
 	# Plot<-cowplot::plot_grid(plotlist=Plot_list[[1]])
 	if(bycols){
@@ -271,9 +285,16 @@ make_cow_plot2<-function(Plot_list=NULL,Title="",Xlab="",Ylab="",out_file=NULL,r
 	                   gp=gpar(fontface="bold", col="black", fontsize=Title_axis_size))
 
 	if(!return_plot){
-		png(out_file, width = width, height = height,)
-			grid.arrange(arrangeGrob(Plot, left = y.grob, bottom = x.grob))
-		dev.off()	
+		if(!Tiff){
+			png(out_file, width = width, height = height,)
+				grid.arrange(arrangeGrob(Plot, left = y.grob, bottom = x.grob))
+			dev.off()	
+		}
+		if(Tiff){
+			tiff(out_file, width = width, height = height,)
+				grid.arrange(arrangeGrob(Plot, left = y.grob, bottom = x.grob))
+			dev.off()	
+		}
 	}
 	if(return_plot){
 		return(Plot)
@@ -347,6 +368,7 @@ make_plot_maf<-function(refstudy=NULL,target_dat=NULL,eaf="eaf",snp="rsid",ref_d
 	names(ref_dat)[names(ref_dat) == ref_dat_population]<-"ref_dat_population"
 	names(target_dat)[names(target_dat) == target_study]<-"target_study"
 	names(ref_dat)[names(ref_dat) == ref_study]<-"ref_study"
+
 
 	if(any(names(ref_dat) %in% c(target_dat_effect_allele,target_dat_other_allele,target_dat_effect_allele))) warning("effect allele, other allele or eaf present in refererence dataset with same name as in target dataset")
 	
@@ -465,8 +487,191 @@ make_plot_maf<-function(refstudy=NULL,target_dat=NULL,eaf="eaf",snp="rsid",ref_d
 		# head(dat2.m[,c("rsid","Effect.Allele","Other.Allele","eaf", "maf", "minor_allele2","major_allele2" )])
 		
 		Subtitle<-unique(paste0("Reported population: ",dat1$target_dat_population))
+		
+
 		Plot<-ggplot2::ggplot(dat1, ggplot2::aes(x=maf, y=eaf)) + ggplot2::geom_point(colour=Colour) +ggplot2::ggtitle(Title) +ggplot2::theme(plot.title = ggplot2::element_text(size = Title_size1,hjust = 0))+ggplot2::labs(y= Ylab, x =Xlab,subtitle=Subtitle)+
-			ggplot2::theme(axis.title=ggplot2::element_text(size=Title_xaxis_size),plot.subtitle = ggplot2::element_text(size = Subtitle_size1)) 
+			ggplot2::theme(axis.title=ggplot2::element_text(size=Title_xaxis_size),plot.subtitle = ggplot2::element_text(size = Subtitle_size1))
+
+			if(length(Pops)> 1){
+				Plot_list[[i]]<-Plot
+			}
+		}	
+
+		if(length(unique(dat.m.test$ref_dat_population)) > 1){
+			if(is.null(cowplot_title)){
+				cowplot_title<-target_study
+			}	
+			Plot<-make_cow_plot(Plot_list=Plot_list,Title=cowplot_title,Xlab="",Ylab="",return_plot=TRUE,Title_size=Title_size,Subtitle=Subtitle,Subtitle_size=8)
+		}
+		# Title_axis_size
+	return(Plot)
+}
+
+make_plot_maf2<-function(refstudy=NULL,target_dat=NULL,eaf="eaf",snp="rsid",ref_dat_maf="maf",target_dat_effect_allele="Effect.Allele",target_dat_other_allele="Other.Allele",ref_dat_minor_allele="minor_allele",ref_dat_major_allele="major_allele",outcome="outcome",ID=NULL,target_dat_population="population",ref_dat_population="population",target_study="study",ref_study="study",Title_xaxis_size=8,Title_size=10,Title="",Ylab="",Xlab="",cowplot_title=NULL,Dir="~/fatty-acids/outcome_data/data/",legend=TRUE){	
+
+	ref_dat<-load_refdata(refstudy=refstudy,Dir=Dir)
+
+	names(target_dat)[names(target_dat) == target_dat_population]<-"target_dat_population"
+	names(ref_dat)[names(ref_dat) == ref_dat_population]<-"ref_dat_population"
+	names(target_dat)[names(target_dat) == target_study]<-"target_study"
+	names(ref_dat)[names(ref_dat) == ref_study]<-"ref_study"
+
+
+	if(any(names(ref_dat) %in% c(target_dat_effect_allele,target_dat_other_allele,target_dat_effect_allele))) warning("effect allele, other allele or eaf present in refererence dataset with same name as in target dataset")
+	
+	if("maf" %in% names(target_dat)) {
+		names(target_dat)[names(target_dat) == "maf"]<-"maf_target_dat"
+	}
+
+	dat.m<-merge(ref_dat,target_dat,by=snp)
+
+	Pos<-which(dat.m[,target_dat_effect_allele] != dat.m[,ref_dat_minor_allele])
+	
+	# harmonise study to ref dataset minor allele. need to clean this up as a new function with flip_strand and harmonise_allele functions like in the GWAS catalog functions
+	dat.m[,eaf]<-as.numeric(dat.m[,eaf])
+	dat.m[,ref_dat_maf]<-as.numeric(dat.m[,ref_dat_maf])
+	dat.m[,eaf][Pos]<-1-dat.m[,eaf][Pos]
+	EA<-dat.m[,target_dat_effect_allele][Pos]
+	OA<-dat.m[,target_dat_other_allele][Pos]
+	dat.m[,target_dat_effect_allele][Pos]<-OA
+	dat.m[,target_dat_other_allele][Pos]<-EA
+	
+	# harmonise SNPs on different strands
+	Pos1<-which(dat.m[,target_dat_effect_allele] != dat.m[,ref_dat_minor_allele])
+	Pos2<-which(dat.m[,target_dat_effect_allele] == dat.m[,ref_dat_minor_allele])
+	dat.m1<-dat.m[Pos1,]
+	dat.m2<-dat.m[Pos2,]
+
+	
+	# dat.m1[,c("Effect.Allele","Other.Allele","minor_allele2","major_allele2")]
+	Pos<-which(dat.m1[,target_dat_effect_allele] != dat.m1[,"minor_allele2"])
+	# dat.m1[Pos,c("Effect.Allele","Other.Allele","minor_allele2","major_allele2")]
+	dat.m1[,eaf][Pos]<-1-dat.m1[,eaf][Pos]
+	EA<-dat.m1[,target_dat_effect_allele][Pos]
+	OA<-dat.m1[,target_dat_other_allele][Pos]
+	dat.m1[,target_dat_effect_allele][Pos]<-OA
+	dat.m1[,target_dat_other_allele][Pos]<-EA
+
+	dat.m<-rbind(dat.m1,dat.m2)
+
+	# dat.m[,c("Effect.Allele","Other.Allele","minor_allele","major_allele","eaf","maf")]
+
+# Pos<-which(dat.m1$Effect.Allele  != dat.m1$minor_allele2 &  dat.m1$Effect.Allele  != dat.m1$minor_allele)
+# dat.m1[Pos,c("Effect.Allele","Other.Allele","minor_allele","minor_allele2")]
+	dat.m$alleles<-paste0(dat.m[,ref_dat_minor_allele],dat.m[,ref_dat_major_allele])
+	dat.m$alleles2<-paste0(dat.m[,ref_dat_minor_allele],dat.m[,ref_dat_major_allele])
+	
+	dat.m.test<-dat.m
+	outcome_plot<-outcome
+	if(is.null(outcome)){
+		outcome_plot<-""
+	}
+
+	if(!is.null(outcome) & !is.null(target_study) & !is.null(ID)){
+		outfile_name<-unique(paste0(dat.m.test[,outcome]," | ", dat.m.test$target_study," | ID=",dat.m.test[,ID]))
+		outfile_name<-gsub("\\|","",outfile_name)
+		outfile_name<-gsub(" ","_",outfile_name)
+		outfile_name<-gsub("__","_",outfile_name)
+		outfile_name<-gsub("=","",outfile_name)
+		outfile_name<-gsub("/","_",outfile_name)
+		outcome_plot<-unique(paste0(dat.m.test[,outcome]," | ", dat.m.test$target_study," | ID: ",dat.m.test[,ID]))		
+		target_study<-unique(paste0(dat.m.test$target_study," | ID: ",dat.m.test[,ID]))		
+		# outcome_plot2<-unique(paste0(dat.m.test[,outcome]," | ", dat.m.test[,study]," | ID: ",dat.m.test[,ID]))
+	}
+
+	Plot_list<-NULL
+	dat.m.test<-dat.m.test[order(dat.m.test$ref_dat_population),]
+	Pops<-unique(dat.m.test$ref_dat_population)
+	# if(length(Pops)>1){
+	for(i in 1:length(Pops)){
+		# i<-1
+		# print(pop)
+		# dat1<-dat[dat$ref_dat_population==pop,]			
+		dat1<-dat.m.test[dat.m.test$ref_dat_population==Pops[i], ]
+		pop2<-c("European","East Asian","African","American","South Asian","Global","European","European")
+		Pops2<-c("EUR","EAS","AFR","AMR","SAS","ALL","EUR2","EUR1")
+		j<-which(Pops2 %in% Pops[i])
+		# if(Xlab==""){
+		# Xlab<-paste0(pop2[j]," MAF")
+		Xlab<-pop2[j]
+
+		# }
+		# Title<-pop2[i]
+		# Title<-gsub("ALL","Global pop",Title)
+		# if(Title == ""){
+		# 	Title<-target_study
+		# }
+
+		# if(subtitle_off) Title<-""
+
+		Colour<-rep("black",nrow(dat1))
+		Colour[which(dat1[,eaf]>0.5)]<-"blue"
+		# Colour[dat1[,target_dat_effect_allele]!=dat1[,ref_dat_minor_allele]]<-"red"	
+		
+		# fix harmonisation functions above so that efffect allele strand flipped to minor_allele (not harmonised with minor_allele2)
+		Colour[dat1$Effect.Allele!=dat1$minor_allele & dat1$Effect.Allele!=dat1$minor_allele2]<-"red"	
+
+		Diff<-abs(dat1[,eaf]-dat1[,ref_dat_maf])
+		Colour[which(Diff>0.10)]<-"red"
+		Shape<-rep(19,nrow(dat1))
+		Shape[which(dat1$alleles %in% c("AT","TA","GC","CG"))]<-1
+		dat1$eaf<-dat1[,eaf]
+		dat1$maf<-dat1[,ref_dat_maf]
+
+		Title_size1<-Title_size
+		Subtitle_size1<-8
+		if(length(unique(dat.m.test$ref_dat_population)) > 1){
+			Title_size1<-0
+			Subtitle_size1<-0
+		}
+
+		
+		# Temp<-dat1[dat1$eaf > 0.5,c("Effect.Allele","minor_allele","Other.Allele","major_allele","eaf","maf","alleles")]
+		# dim(Temp)
+		# length(which(Temp$alleles %in% c("CG","GC","TA","AT")))
+
+		# snps<-dat1$rsid[dat1$eaf>0.55]
+		# dat1[dat1$eaf>0.55,c("minor_allele","major_allele","Effect.Allele","Other.Allele","maf","eaf")]
+		# dat2<-dat[dat$rsid %in% snps, ]
+		# dat2[,c("rsid","Effect.Allele","Other.Allele","eaf")]
+		# head(ref_dat)
+		# dat2.m<-merge(dat2,ref_dat,by="rsid")
+		# head(dat2.m[,c("rsid","Effect.Allele","Other.Allele","eaf", "maf", "minor_allele2","major_allele2" )])
+		
+		Subtitle<-unique(paste0("Reported population: ",dat1$target_dat_population))
+		
+		Shape2<-Colour
+		Shape2[Shape2=="red"]<-1
+		Shape2[Shape2=="blue"]<-2
+		Shape2[Shape2=="black"]<-3		
+		# Shape2<-as.numeric(Shape2)
+		Plot<-ggplot2::ggplot(dat1, ggplot2::aes(x=maf, y=eaf)) + ggplot2::geom_point(aes(shape=Shape2)) +ggplot2::ggtitle(Title) +ggplot2::theme(plot.title = ggplot2::element_text(size = Title_size1,hjust = 0))+ggplot2::labs(y= Ylab, x =Xlab,subtitle=Subtitle)+
+			ggplot2::theme(axis.title=ggplot2::element_text(size=Title_xaxis_size),plot.subtitle = ggplot2::element_text(size = Subtitle_size1)) + 
+			ggplot2::scale_shape_manual(name = "Allele frequency conflict",
+		                     labels = c("High","Moderate","None") ,
+		                     values = c(3,2,1))+
+			ggplot2::theme(legend.title=ggplot2::element_text(size=8))+
+			ggplot2::theme(legend.text=ggplot2::element_text(size=8))
+
+		if(!legend){
+			Plot<-ggplot2::ggplot(dat1, ggplot2::aes(x=maf, y=eaf)) + ggplot2::geom_point(aes(shape=Shape2)) +ggplot2::ggtitle(Title) +ggplot2::theme(plot.title = ggplot2::element_text(size = Title_size1,hjust = 0))+ggplot2::labs(y= Ylab, x =Xlab,subtitle=Subtitle)+
+				ggplot2::theme(axis.title=ggplot2::element_text(size=Title_xaxis_size),plot.subtitle = ggplot2::element_text(size = Subtitle_size1)) + 
+				ggplot2::scale_shape_manual(name = "Allele frequency conflict",
+			                     labels = c("High","Moderate","None") ,
+			                     values = c(3,2,1))+
+				ggplot2::theme(legend.title=ggplot2::element_text(size=8))+
+				ggplot2::theme(legend.text=ggplot2::element_text(size=8))+
+				  theme(legend.position="none")+
+				  	ggplot2::theme(text = element_text(size=8)) 
+		}
+
+
+			
+# as.factor(unique(Shape2)))
+			# scale_shape_manual(labels = c("T999", "T888"), values = c("blue", "red"))
+
+
+			# scale_fill_discrete(labels=c("High", "Moderate", "None"))
 
 			if(length(Pops)> 1){
 				Plot_list[[i]]<-Plot
@@ -687,6 +892,157 @@ compare_gwas_catalog_hits<-function(dat=NULL,efo_id=NULL,efo=NULL,return_plot=FA
 	return(list(zscore=Plot1,eaf=Plot2))
 }
 
+make_plot_gwas_catalog_zscores2<-function(dat=NULL,efo_id=NULL,efo=NULL,gwas_catalog_ancestral_group=c("European","East Asian"),legend=TRUE,Title=Title,Title_size_subplot=Title_size_subplot,Ylab=Ylab,Xlab=Xlab,Title_xaxis_size=0){
+	# if(!is.null(trait)){
+		# gwas_catalog<-gwas_catalog_hits(trait=trait)
+	# }
+# gwas_catalog_ancestral_group="East Asian"
+	if(!is.null(efo)){
+		gwas_catalog<-gwas_catalog_hits(efo=efo)
+	}
+
+	# efo_id<-CheckSumStats::get_efo(unique(dat$outcome))$efo_id
+	# efo_id<-"EFO_0000096"
+	if(!is.null(efo_id)){
+		gwas_catalog<-gwas_catalog_hits(efo_id=efo_id)
+	}
+
+	
+	Dat.m<-merge(gwas_catalog,dat,by="rsid")
+	Dat.m<-Dat.m[!is.na(Dat.m$Effect.Allele.x),]
+	Dat.m<-Dat.m[nchar(Dat.m$Effect.Allele.y)==1,]
+	Dat.m<-Dat.m[nchar(Dat.m$Other.Allele)==1,]
+	Alleles<-paste0(Dat.m$Effect.Allele.y,Dat.m$Other.Allele)
+	Dat.m<-Dat.m[!Alleles %in% c("AT","TA","GC","CG"),]
+	Dat.m<-Dat.m[Dat.m$ancestral_group %in% gwas_catalog_ancestral_group,]		
+	Dat.m<-harmonise_effect_allele(Dat=Dat.m)
+
+	Pos<-Dat.m$Effect.Allele.x!=Dat.m$Effect.Allele.y	
+	if(any(Pos)) {
+		Dat.m<-flip_strand(Dat=Dat.m)
+	}
+	Pos<-Dat.m$Effect.Allele.x!=Dat.m$Effect.Allele.y
+	if(any(Pos)){
+		Dat.m<-harmonise_effect_allele(Dat=Dat.m)
+	}	
+	Pos<-Dat.m$Effect.Allele.x!=Dat.m$Effect.Allele.y
+
+	if(any(Pos)) {
+		stop("effect alleles not full harmonised")	
+		# Dat.m[Pos,c("rsid","Effect.Allele.x","Effect.Allele.y","Other.Allele")]
+	}
+
+	Dat.m$z.y<-Dat.m$lnor.y/Dat.m$se.y
+	Dat.m$z.x<-Dat.m$lnor.x/Dat.m$se.x
+
+	# head(Dat.m[,c("p.x","z.x","p.y","z.y")])
+	# max(Dat.m$p.x)
+	# dim(Dat.m)
+	# Ylab<-""
+	# Xlab<-""
+
+	Z_scores<-rep("black",nrow(Dat.m))
+	Z_scores[which(sign(Dat.m$z.y) != sign(as.numeric(Dat.m$z.x)))]<-"blue"
+	Z_scores[which(sign(Dat.m$z.y) != sign(as.numeric(Dat.m$z.x)) & abs(Dat.m$z.y) >= 3.890592 & abs(Dat.m$z.x) >= 3.890592 )]<-"red" # Z score of 3.890592 = 2 sided p value of 0.0001	
+	
+	# Z_scores[which(sign(Dat.m$z.y) != sign(as.numeric(Dat.m$z.x)) & abs(Dat.m$z.y) >=  4.891638  & abs(Dat.m$z.x) >=  4.891638 )]<-"red"
+
+	ancestry1<-Dat.m$ancestral_group
+	
+	if(is.null(Title)){
+		Title<-paste0(unique(dat$study)," | " ,unique(dat$ID) , " | EFO: ", efo)
+	}
+
+	labels_colour<-unique(Z_scores)
+	labels_colour[labels_colour == "red"]<-"high"
+	labels_colour[labels_colour == "blue"]<-"moderate"
+	labels_colour[labels_colour == "black"]<-"none"
+	values_colour<-unique(Z_scores)
+	Pos<-order(values_colour)
+	values_colour<-values_colour[Pos]
+	labels_colour<-labels_colour[Pos]
+
+	# unique(ancestry1)[order(unique(ancestry1))]
+	# 1:length(unique(ancestry1))
+	# ancestry2<-c("European")
+	
+	# Shape<-ancestry1
+	# Shape[Shape=="European"]<-15
+	# Shape[Shape=="East Asian"]<-16
+	# Shape<-as.numeric(Shape)
+	# # Shape<-unique(Shape)[order(unique(Shape))]
+
+	labels_shape<-unique(ancestry1)[order(unique(ancestry1))]
+	values_shape<-labels_shape
+	values_shape[values_shape == "European"]<-15
+	values_shape[values_shape == "East Asian"]<-16
+	values_shape<-as.numeric(values_shape)
+
+
+	values_shape2<-Z_scores
+	values_shape2[values_shape2=="red"]<-1
+	values_shape2[values_shape2=="blue"]<-2
+	values_shape2[values_shape2=="black"]<-3
+	labels_shape2<-c("High","Moderate","None")
+	Z_scores2<-values_shape2
+	values_shape2<-unique(as.numeric(values_shape2))
+
+	# Shape2<-Shape
+	# Shape2<-unique(Shape2)[order(unique(Shape2))]
+
+	labels_colour2<-unique(ancestry1)[order(unique(ancestry1))]
+	values_colour2<-labels_colour2
+	values_colour2[values_colour2 == "European"]<-"black"
+	values_colour2[values_colour2 == "East Asian"]<-"gray"
+	# values_colour2<-as.numeric(values_colour2)
+
+	Subtitle<-paste0(Dat.m$outcome," | ",Dat.m$population)
+
+		# ggplot2::ggplot(Dat.m) + ggplot2::geom_point(ggplot2::aes(x=z.x, y=z.y,colour=Z_scores,shape=ancestry1))
+		if(legend){
+			Plot<-ggplot2::ggplot(Dat.m) + ggplot2::geom_point(ggplot2::aes(x=z.x, y=z.y,colour=ancestry1,shape=Z_scores2)) +ggplot2::ggtitle(Title) +ggplot2::labs(y= Ylab, x =Xlab,subtitle=Subtitle) + ggplot2::theme(plot.title = ggplot2::element_text(size = Title_size_subplot, face = "plain"),
+				)+
+			ggplot2::theme(axis.title=ggplot2::element_text(size=Title_xaxis_size),plot.subtitle = ggplot2::element_text(size = 8))+
+			 ggplot2::scale_shape_manual(name = "Effect size conflict",
+		                     labels = labels_shape2,
+		                     # labels = unique(ancestry1)[order(unique(ancestry1))],
+		                     # labels = c("European","East Asian"),
+		                     values = values_shape2) + 
+		                     # values = 1:length(Shape2)) + 
+		 	ggplot2::scale_colour_manual(name="GWAS catalog ancestry",
+			              labels=labels_colour2,
+			              values=values_colour2)+
+		 	ggplot2::theme(legend.title=ggplot2::element_text(size=8))+
+			ggplot2::theme(legend.text=ggplot2::element_text(size=8))	
+
+			
+		}
+
+	if(!legend){
+		Plot<-ggplot2::ggplot(Dat.m) + ggplot2::geom_point(ggplot2::aes(x=z.x, y=z.y,colour=Z_scores,shape=ancestry1)) +ggplot2::ggtitle(Title) +ggplot2::labs(y= Ylab, x =Xlab,subtitle=Subtitle) + ggplot2::theme(plot.title = ggplot2::element_text(size = Title_size_subplot, face = "plain"))+
+		ggplot2::theme(axis.title=ggplot2::element_text(size=Title_xaxis_size))+
+		 ggplot2::scale_shape_manual(name = "GWAS catalog ancestry",
+	                    labels = labels_shape,	                     
+	                     values = values_shape) + 
+	 	ggplot2::scale_colour_manual(name="Effect size conflict",
+		              labels=labels_colour,
+		              values=values_colour)+
+	 	ggplot2::theme(legend.title=ggplot2::element_text(size=8),
+	 		legend.text=ggplot2::element_text(size=8),plot.subtitle = ggplot2::element_text(size = 8),
+	 		legend.position = "none")
+	}
+	 # ggplot2::scale_colour_manual(name="Z score conflict",
+  #                     labels=unique(Z_scores)[order(unique(Z_scores))] ,
+  #                     values=unique(Z_scores)[order(unique(Z_scores))]) 	 
+
+	  # ggplot2::scale_colour_manual(name="Z score conflict",
+                      # labels=c("none", "moderate","high"),
+                      # values=c("black","blue", "red")) 	 
+  	 
+  	
+	return(Plot)
+}
+
 make_plot_gwas_catalog_zscores<-function(dat=NULL,efo_id=NULL,efo=NULL,gwas_catalog_ancestral_group=c("European","East Asian"),legend=TRUE,Title=Title,Title_size_subplot=Title_size_subplot,Ylab=Ylab,Xlab=Xlab,Title_xaxis_size=0){
 	# if(!is.null(trait)){
 		# gwas_catalog<-gwas_catalog_hits(trait=trait)
@@ -696,10 +1052,13 @@ make_plot_gwas_catalog_zscores<-function(dat=NULL,efo_id=NULL,efo=NULL,gwas_cata
 		gwas_catalog<-gwas_catalog_hits(efo=efo)
 	}
 
+	# efo_id<-CheckSumStats::get_efo(unique(dat$outcome))$efo_id
+	# efo_id<-"EFO_0000096"
 	if(!is.null(efo_id)){
 		gwas_catalog<-gwas_catalog_hits(efo_id=efo_id)
 	}
 
+	
 	Dat.m<-merge(gwas_catalog,dat,by="rsid")
 	Dat.m<-Dat.m[!is.na(Dat.m$Effect.Allele.x),]
 	Dat.m<-Dat.m[nchar(Dat.m$Effect.Allele.y)==1,]
@@ -776,7 +1135,7 @@ make_plot_gwas_catalog_zscores<-function(dat=NULL,efo_id=NULL,efo=NULL,gwas_cata
 
 	Subtitle<-paste0(Dat.m$outcome," | ",Dat.m$population)
 
-	ggplot2::ggplot(Dat.m) + ggplot2::geom_point(ggplot2::aes(x=z.x, y=z.y,colour=Z_scores,shape=ancestry1))
+		# ggplot2::ggplot(Dat.m) + ggplot2::geom_point(ggplot2::aes(x=z.x, y=z.y,colour=Z_scores,shape=ancestry1))
 		if(legend){
 			Plot<-ggplot2::ggplot(Dat.m) + ggplot2::geom_point(ggplot2::aes(x=z.x, y=z.y,colour=Z_scores,shape=ancestry1)) +ggplot2::ggtitle(Title) +ggplot2::labs(y= Ylab, x =Xlab,subtitle=Subtitle) + ggplot2::theme(plot.title = ggplot2::element_text(size = Title_size_subplot, face = "plain"),
 				)+
@@ -846,7 +1205,7 @@ harmonise_effect_allele<-function(Dat=NULL){
 	return(Dat)
 }
 
-make_plot_gwas_catalog_eaf<-function(dat=NULL,efo_id=NULL,efo=NULL,gwas_catalog_ancestral_group=c("European","East Asian"),Title_size_subplot=Title_size_subplot,Title=Title,Ylab=Ylab,Xlab=Xlab,Title_xaxis_size=0,legend=TRUE){
+make_plot_gwas_catalog_eaf2<-function(dat=NULL,efo_id=NULL,efo=NULL,gwas_catalog_ancestral_group=c("European","East Asian"),Title_size_subplot=Title_size_subplot,Title=Title,Ylab=Ylab,Xlab=Xlab,Title_xaxis_size=0,Legend=TRUE){
 	# if(!is.null(trait)){
 		# gwas_catalog<-gwas_catalog_hits(trait=trait)
 	# }
@@ -903,12 +1262,164 @@ make_plot_gwas_catalog_eaf<-function(dat=NULL,efo_id=NULL,efo=NULL,gwas_catalog_
 	}	
 
 	Dat.m2<-Dat.m[!is.na(Dat.m$eaf.x),]
+	Dat.m2<-Dat.m2[!is.na(Dat.m2$eaf.y),]
 	ancestry2<-Dat.m2$ancestral_group
-	Pos1<-which(Dat.m2$eaf.x<0.5 & Dat.m2$eaf.y>0.5 | Dat.m2$eaf.x>0.5 & Dat.m2$eaf.y<0.5)
+	Pos1<-Dat.m2$eaf.x<0.5 & Dat.m2$eaf.y>0.5 | Dat.m2$eaf.x>0.5 & Dat.m2$eaf.y<0.5
 	EAF<-rep("black",nrow(Dat.m2))
-	EAF[Pos1]<-"blue"	 
-	Pos2<-which(Dat.m2$eaf.x<0.40 & Dat.m2$eaf.y>0.60 | Dat.m2$eaf.x>0.60 & Dat.m2$eaf.y<0.40)
-	EAF[Pos2]<-"red"	 
+	if(any(Pos1)) EAF[Pos1]<-"blue"	 
+	Pos2<-Dat.m2$eaf.x<0.40 & Dat.m2$eaf.y>0.60 | Dat.m2$eaf.x>0.60 & Dat.m2$eaf.y<0.40
+	if(any(Pos2)) EAF[Pos2]<-"red"	 
+	# Dat.m2[Pos2,c("eaf.x","eaf.y","Effect.Allele.x","Effect.Allele.y","Other.Allele","z.x","z.y")]
+
+	# Ylab<-paste0("EAF in ",unique(dat$study)," | ID:" ,unique(dat$ID))
+	# Xlab<-paste0("EAF in gwas catalog")
+	# Ylab<-""
+	# Xlab<-""
+	labels_colour<-unique(EAF)
+	labels_colour[labels_colour == "red"]<-"high"
+	labels_colour[labels_colour == "blue"]<-"moderate"
+	labels_colour[labels_colour == "black"]<-"none"
+	values_colour<-unique(EAF)
+	Pos<-order(values_colour)
+	values_colour<-values_colour[Pos]
+	labels_colour<-labels_colour[Pos]
+
+	labels_shape<-unique(ancestry2)[order(unique(ancestry2))]
+	values_shape<-labels_shape
+	values_shape[values_shape == "European"]<-15
+	values_shape[values_shape == "East Asian"]<-16
+	values_shape<-as.numeric(values_shape)
+
+	values_shape2<-unique(EAF)
+	EAF2<-EAF
+	EAF2[EAF2 == "red"]<-1
+	EAF2[EAF2 == "blue"]<-2
+	EAF2[EAF2 == "black"]<-3
+	values_shape2[values_shape2 == "red"]<-1
+	values_shape2[values_shape2 == "blue"]<-2
+	values_shape2[values_shape2 == "black"]<-3
+	labels_shape2<-unique(EAF)
+	values_shape2<-as.numeric(values_shape2)
+	# Pos<-order(labels_shape2)
+	# labels_shape2<-labels_shape2[Pos]
+	# values_shape2<-values_shape2[Pos]
+	labels_shape2[labels_shape2=="red"]<-"high"
+	labels_shape2[labels_shape2=="blue"]<-"moderate"
+	labels_shape2[labels_shape2=="black"]<-"none"
+
+	labels_colour2<-unique(ancestry2)[order(unique(ancestry2))]
+	values_colour2<-labels_colour2
+	values_colour2[values_colour2 == "European"]<-"black"
+	if("East Asians" %in% unique(ancestry2)) { 
+		values_colour2[values_colour2 == "East Asian"]<-"gray"
+	}
+	
+	# ancestry2[ancestry2=="European"]<-"black"
+	# ancestry2[ancestry2=="East Asian"]<-"gray"
+	# values_colour2<-as.numeric(values_colour2)
+
+	Subtitle<-paste0(Dat.m2$outcome," | ",Dat.m2$population)
+
+	
+	# ancestry2<-"European"
+
+	if(Legend){
+		Plot<-ggplot2::ggplot(Dat.m2) + ggplot2::geom_point(ggplot2::aes(x=eaf.x, y=eaf.y,colour=ancestry2,shape=EAF2)) +ggplot2::ggtitle(Title) +ggplot2::labs(y= Ylab, x =Xlab,subtitle=Subtitle) + ggplot2::theme(plot.title = ggplot2::element_text(size = Title_size_subplot, face = "plain"))+
+		ggplot2::theme(axis.title=ggplot2::element_text(size=Title_xaxis_size),plot.subtitle = ggplot2::element_text(size = 8))+
+		ggplot2::scale_shape_manual(name = "EAF conflict",
+		             labels = labels_shape2,
+		             values = values_shape2) + 
+		ggplot2::scale_colour_manual(name="GWAS catalog ancestry",
+		              labels=labels_colour2,
+		              values=values_colour2)+
+	 	ggplot2::theme(legend.title=ggplot2::element_text(size=8),
+	 		legend.text=ggplot2::element_text(size=8))
+	 }
+
+	if(!Legend){
+		# Dat.m2$eaf.y
+		Plot<-ggplot2::ggplot(Dat.m2) + ggplot2::geom_point(ggplot2::aes(x=eaf.x, y=eaf.y,colour=EAF,shape=ancestry2)) +ggplot2::ggtitle(Title) +ggplot2::labs(y= Ylab, x =Xlab,subtitle=Subtitle) + ggplot2::theme(plot.title = ggplot2::element_text(size = Title_size_subplot, face = "plain"))+
+		ggplot2::theme(axis.title=ggplot2::element_text(size=Title_xaxis_size),plot.subtitle = ggplot2::element_text(size = 8))+
+		ggplot2::scale_shape_manual(name = "GWAS catalog ancestry",
+		             labels = labels_shape,
+		             values = values_shape) + 
+		ggplot2::scale_colour_manual(name="EAF conflict",
+		              labels=labels_colour,
+		              values=values_colour)+
+	 	ggplot2::theme(legend.title=ggplot2::element_text(size=8),
+	 		legend.text=ggplot2::element_text(size=8),	
+	 		legend.position = "none")
+	 }
+	
+
+	
+	return(Plot)
+}
+
+make_plot_gwas_catalog_eaf<-function(dat=NULL,efo_id=NULL,efo=NULL,gwas_catalog_ancestral_group=c("European","East Asian"),Title_size_subplot=Title_size_subplot,Title=Title,Ylab=Ylab,Xlab=Xlab,Title_xaxis_size=0,Legend=TRUE){
+	# if(!is.null(trait)){
+		# gwas_catalog<-gwas_catalog_hits(trait=trait)
+	# }
+
+	if(!is.null(efo)){
+		gwas_catalog<-gwas_catalog_hits(efo=efo)
+	}
+
+	if(!is.null(efo_id)){
+		gwas_catalog<-gwas_catalog_hits(efo_id=efo_id)
+	}
+
+	Dat.m<-merge(gwas_catalog,dat,by="rsid")		
+	Dat.m<-Dat.m[Dat.m$ancestral_group %in% gwas_catalog_ancestral_group,]	
+	Pos<-which(Dat.m$Effect.Allele.x!=Dat.m$Effect.Allele.y)
+	lnor.y<-Dat.m$lnor.y[Pos]*-1
+	Dat.m$lnor.y[Pos]<-lnor.y
+	oa<-Dat.m$Effect.Allele.y[Pos]
+	ea<-Dat.m$Other.Allele[Pos]
+	Dat.m$Effect.Allele.y[Pos]<-ea
+	Dat.m$Other.Allele[Pos]<-oa
+	eaf<-1-Dat.m$eaf.y[Pos]
+	Dat.m$eaf.y[Pos]<-eaf
+
+	Dat.m<-Dat.m[!is.na(Dat.m$Effect.Allele.x),]
+	Dat.m<-Dat.m[nchar(Dat.m$Effect.Allele.y)==1,]
+	Dat.m<-Dat.m[nchar(Dat.m$Other.Allele)==1,]
+	Alleles<-paste0(Dat.m$Effect.Allele.y,Dat.m$Other.Allele)
+	Dat.m<-Dat.m[!Alleles %in% c("AT","TA","GC","CG"),]
+	Dat.m<-Dat.m[Dat.m$ancestral_group %in% gwas_catalog_ancestral_group,]		
+	Dat.m<-harmonise_effect_allele(Dat=Dat.m)
+
+	Pos<-Dat.m$Effect.Allele.x!=Dat.m$Effect.Allele.y	
+	if(any(Pos)) {
+		Dat.m<-flip_strand(Dat=Dat.m)
+	}
+	Pos<-Dat.m$Effect.Allele.x!=Dat.m$Effect.Allele.y
+	if(any(Pos)){
+		Dat.m<-harmonise_effect_allele(Dat=Dat.m)
+	}	
+	Pos<-Dat.m$Effect.Allele.x!=Dat.m$Effect.Allele.y
+
+	if(any(Pos)) {
+		stop("effect alleles not full harmonised")	
+		# Dat.m[Pos,c("rsid","Effect.Allele.x","Effect.Allele.y","Other.Allele")]
+	}
+
+	Dat.m$z.y<-Dat.m$lnor.y/Dat.m$se.y
+	Dat.m$z.x<-Dat.m$lnor.x/Dat.m$se.x
+	ancestry1<-Dat.m$ancestral_group
+	
+	if(is.null(Title)){
+		Title<-paste0(unique(dat$study)," | " ,unique(dat$ID) , " | EFO: ", efo)
+	}	
+
+	Dat.m2<-Dat.m[!is.na(Dat.m$eaf.x),]
+	Dat.m2<-Dat.m2[!is.na(Dat.m2$eaf.y),]
+	ancestry2<-Dat.m2$ancestral_group
+	Pos1<-Dat.m2$eaf.x<0.5 & Dat.m2$eaf.y>0.5 | Dat.m2$eaf.x>0.5 & Dat.m2$eaf.y<0.5
+	EAF<-rep("black",nrow(Dat.m2))
+	if(any(Pos1)) EAF[Pos1]<-"blue"	 
+	Pos2<-Dat.m2$eaf.x<0.40 & Dat.m2$eaf.y>0.60 | Dat.m2$eaf.x>0.60 & Dat.m2$eaf.y<0.40
+	if(any(Pos2)) EAF[Pos2]<-"red"	 
 	# Dat.m2[Pos2,c("eaf.x","eaf.y","Effect.Allele.x","Effect.Allele.y","Other.Allele","z.x","z.y")]
 
 	# Ylab<-paste0("EAF in ",unique(dat$study)," | ID:" ,unique(dat$ID))
@@ -932,7 +1443,8 @@ make_plot_gwas_catalog_eaf<-function(dat=NULL,efo_id=NULL,efo=NULL,gwas_catalog_
 
 	Subtitle<-paste0(Dat.m2$outcome," | ",Dat.m2$population)
 
-	if(!legend){
+	if(!Legend){
+		# Dat.m2$eaf.y
 		Plot<-ggplot2::ggplot(Dat.m2) + ggplot2::geom_point(ggplot2::aes(x=eaf.x, y=eaf.y,colour=EAF,shape=ancestry2)) +ggplot2::ggtitle(Title) +ggplot2::labs(y= Ylab, x =Xlab,subtitle=Subtitle) + ggplot2::theme(plot.title = ggplot2::element_text(size = Title_size_subplot, face = "plain"))+
 		ggplot2::theme(axis.title=ggplot2::element_text(size=Title_xaxis_size),plot.subtitle = ggplot2::element_text(size = 8))+
 		ggplot2::scale_shape_manual(name = "GWAS catalog ancestry",
@@ -947,7 +1459,7 @@ make_plot_gwas_catalog_eaf<-function(dat=NULL,efo_id=NULL,efo=NULL,gwas_catalog_
 	 }
 
 
-	if(legend){
+	if(Legend){
 		Plot<-ggplot2::ggplot(Dat.m2) + ggplot2::geom_point(ggplot2::aes(x=eaf.x, y=eaf.y,colour=EAF,shape=ancestry2)) +ggplot2::ggtitle(Title) +ggplot2::labs(y= Ylab, x =Xlab,subtitle=Subtitle) + ggplot2::theme(plot.title = ggplot2::element_text(size = Title_size_subplot, face = "plain"))+
 		ggplot2::theme(axis.title=ggplot2::element_text(size=Title_xaxis_size),plot.subtitle = ggplot2::element_text(size = 8))+
 		ggplot2::scale_shape_manual(name = "GWAS catalog ancestry",
@@ -967,7 +1479,8 @@ make_plot_gwas_catalog_eaf<-function(dat=NULL,efo_id=NULL,efo=NULL,gwas_catalog_
 	
 	return(Plot)
 }
-		
+
+# Plot4<-Plot		
 
 predict_lnor_and_plot1<-function(dat=NULL,Xlab="",Ylab="",threshold=NULL,maf_filter=FALSE){
 
@@ -1140,6 +1653,95 @@ make_plot_predlnor<-function(dat=NULL,Xlab="",Ylab="",linear_regression=TRUE,sub
         # values = c("orange","yellow","blue","black"))
         labels = c("0-0.10","0.11-0.20","0.21-0.3","0.31-0.4","0.41-0.5"),
         values = c("red","orange","yellow","blue","black"))
+	return(Plot)
+}
+
+
+make_plot_predlnor3<-function(dat=NULL,Xlab="",Ylab="",linear_regression=TRUE,subtitle="",threshold=NULL,maf_filter=FALSE,bias=FALSE,Title_size=0,Title=NULL,Title_xaxis_size=10,legend=TRUE,standard_errors=FALSE){
+
+	outcome_name<-unique(paste0(dat$outcome," | " ,dat$study," | ",dat$ID))
+	dat$bias<-(dat$lnor_sh-dat$lnor )/dat$lnor*100	
+	# summary(dat$bias)
+
+	# for(i in 1:ncol(dat)){
+	# 	dat[,i][dat[,i] == "Inf" | dat[,i] == "-Inf" ]<-NA
+	# }
+	
+	# dat<-dat[complete.cases(dat),]
+	
+	if(is.null(Title)){
+	# if(!is.null(outcome_name)){
+		Title<-outcome_name
+	}
+
+	if(maf_filter){
+		maf<-dat$eaf
+		maf[maf>0.5]<-1-maf[maf>0.5]
+		dat<-dat[maf>=threshold,]
+	}
+	
+	MAF<-rep("black",nrow(dat))
+	MAF<-dat$eaf
+	MAF[MAF>0.5]<-1-MAF[MAF>0.5]
+	MAF[MAF<=0.10]<-"0.01-0.10"
+	MAF[MAF>0.10 & MAF<=0.20]<-"0.11-0.20"
+	MAF[MAF>0.20 & MAF<=0.30]<-"0.21-0.30"
+	MAF[MAF>0.30 & MAF<=0.40]<-"0.31-0.40"
+	MAF[MAF>0.40 & MAF<=0.50]<-"0.41-0.50"
+	Shape<-rep(19,nrow(dat))
+
+	dat$Y<-dat$lnor_sh
+	dat$X<-dat$lnor
+
+	if(standard_errors){
+		dat$Y<-dat$se_sh
+		dat$X<-dat$se
+	}
+
+	if(bias){
+		dat$X<-dat$bias
+		Med<-round(summary(dat$bias)[3],1)
+		p25<-round(summary(dat$bias)[2],1)
+		p75<-round(summary(dat$bias)[5],1)
+		Min<-round(summary(dat$bias)[1],1)
+		Max<-round(summary(dat$bias)[6],1)
+		subtitle<-paste0("Median bias=",Med,"% (IQR:",p25,"%, ",p75,"% | min=",Min,"%, max=",Max,"%)")
+	}
+
+	# dat$X<-dat[,1]
+	# dat$Y<-dat[,2]
+	if(bias){	
+		linear_regression<-FALSE
+	}
+
+	Values<-c("red","orange","purple","blue","black")
+	Labels<-c("0.01-0.10","0.11-0.20","0.21-0.30","0.31-0.40","0.41-0.50")
+
+	if(linear_regression){	
+		Model<-summary(lm(Y~X,dat))
+		int<-Model$coefficients[1,1]
+		slope<-Model$coefficients[2,1]
+		subtitle<-paste0("intercept=",round(int,3)," | ","slope=",round(slope,3))
+	}		
+
+	if(!legend){
+		Plot<-ggplot2::ggplot(dat) + ggplot2::geom_point(ggplot2::aes(x=X, y=Y,colour=MAF))+theme(legend.position = "none")  + ggplot2::ggtitle(Title) +ggplot2::labs(y= Ylab, x =Xlab,subtitle=subtitle) + ggplot2::theme(plot.title = ggplot2::element_text(size = Title_size, face = "plain"))+
+		ggplot2::theme(axis.title=ggplot2::element_text(size=Title_xaxis_size))+
+		ggplot2::scale_colour_manual(name = "MAF",
+	        labels = Labels,
+	        values = Values)
+	}
+
+
+	if(legend){
+		Plot<-ggplot2::ggplot(dat) + ggplot2::geom_point(ggplot2::aes(x=X, y=Y,colour=MAF))+ ggplot2::ggtitle(Title) +ggplot2::labs(y= Ylab, x =Xlab,subtitle=subtitle) + ggplot2::theme(plot.title = ggplot2::element_text(size = Title_size, face = "plain"))+scale_colour_grey(start=0.8,end=0.2)
+		# +
+		# 		ggplot2::theme(axis.title=ggplot2::element_text(size=Title_xaxis_size))+
+		# 		ggplot2::scale_colour_manual(name = "MAF",
+		# 	        labels = Labels,
+		# 	        values = Values)
+	}
+
 	return(Plot)
 }
 

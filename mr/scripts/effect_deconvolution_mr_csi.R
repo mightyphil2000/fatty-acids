@@ -2,11 +2,13 @@ source("~/fatty-acids/mr/scripts/mr_functions.R")
 
 res_csi<-format_res_csi()
 res_csi$id.outcome
-res_csi[,c()]
-snp_csi<-format_snp_csi()
-decon_res<-csi_decon()
+snp_csi<-format_snp_csi() #updated to transform beta.csi to SD scale
 
-write.table(decon_res,"~/fatty-acids/mr/results/decon_csi_cancer.txt",sep="\t",col.names=TRUE,row.names=FALSE,quote=FALSE)
+
+
+decon_res<-csi_decon()
+head(decon_res)
+write.table(decon_res,"~/fatty-acids/mr/results/decon_csi_cancer_v2.txt",sep="\t",col.names=TRUE,row.names=FALSE,quote=FALSE)
 
 # snp_csi_effect<-snp_csi$beta*-1
 	# snp_csi_effect_lci<-snp_csi$uci*-1

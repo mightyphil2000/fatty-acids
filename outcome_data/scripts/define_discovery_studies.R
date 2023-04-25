@@ -12,11 +12,15 @@ library(gsheet)
 
 url<-"https://docs.google.com/spreadsheets/d/1sTliqObb08y3rdfB-vsYecjveud1pPk4FTWSYcpx3Xk/edit?usp=sharing"
 meta.tab<-data.frame(gsheet2tbl(url))
+meta.tab<-meta.tab[meta.tab$excluded..reason.!="Not part of FAMRC",]
 meta.tab1<-format_dat(dat=meta.tab) #meta data after some basic formatting and excluding lowest quality studies
 meta.tab2<-format_dat2(dat=meta.tab1)
+# meta.tab2$cases
 meta.tab3<-combine_cancers(dat=meta.tab2)
 meta.tab4<-meta.tab3[meta.tab3$cases>1000,]
 meta.tab5<-combine_cancer_groups2(dat=meta.tab2,cancers=meta.tab4$cancer,IDS=meta.tab4$ID)
+meta.tab5[,c("cases","ID","cancer","Cancer.Group","original_name")]
+names(meta.tab5)
 meta.tab6<-rbind(meta.tab4,meta.tab5)
 meta.tab7<-combine_nervous2(dat=meta.tab2,IDS=meta.tab6$ID)
 meta.tab8<-rbind(meta.tab6,meta.tab7)
@@ -155,6 +159,7 @@ combine_cancer_groups2<-function(dat=NULL,cancers=NULL,IDS=NULL){
 	# dat2[order(dat2$Cancer.Group),c("study.abbreviation","cancer","Cancer.Group","cases")]
 	groups<-unique(dat2$Cancer.Group)
 	Dat_list<-NULL
+	# i<-1
 	for(i in 1:length(groups)){
 		print(groups[i])
 		Dat<-dat2[dat2$Cancer.Group == groups[i],]	
@@ -259,7 +264,7 @@ fads_power2<-function(dat=NULL){
 First.upper<-function(name=NULL){
 		paste(toupper(substr(name, 1, 1)), substr(name, 2, nchar(name)), sep="")
 	}
-
+# dat=meta.tab
 format_dat<-function(dat=NULL){
 	remove_columns<-c("include_site_discovery", "meta_analyse_cancer",    "site.ind",  "power80","power15","power20","power_include","power","INITIAL.SAMPLE.SIZE"  ,  "MAPPED_TRAIT"   ,        "MAPPED_TRAIT_URI" )	
 	dat<-dat[,!names(dat) %in% remove_columns]
@@ -267,18 +272,25 @@ format_dat<-function(dat=NULL){
 	dat$include[dat$ID == 43]<-0 #FInGen Malignant neoplasm of bronchus and lung 43 ID 42 slightly larger 
 	dat$include[dat$cancer=="Male genital cancer"  ]<-0 #controls include males and females
 	dat$include[dat$cancer=="Malignant neoplasm of breast" & dat$study.abbreviation == "FinnGen"]<-0 #includes males and females
-
+	
 	dat$cancer<-tolower(dat$cancer)
+
 	dat$cancer<-First.upper(dat$cancer)	
 	dat$Cancer.Group<-tolower(dat$Cancer.Group)
 	dat$Cancer.Group<-First.upper(dat$Cancer.Group)	
+
 	dat$site<-tolower(dat$site)
 	dat$site<-First.upper(dat$site)	
+
 	dat$system<-tolower(dat$system)
 	dat$system<-First.upper(dat$system)	
+
 	dat$cell<-tolower(dat$cell)
-	dat$cell<-First.upper(dat$cell)			
+	dat$cell<-First.upper(dat$cell)	
+
 	dat<-dat[dat$MAC100rs174546 == "PASS",]
+	dat[is.na(dat$MAC100rs174546),]
+	
 	dat$Cancer.Group[dat$Cancer.Group=="Stomach cancer"]<-"Gastric adenocarcinoma"
 	dat$study[dat$study.abbreviation == "PanScan I+II"]<-"Pancreatic Cancer Cohort Consortium I+II"
 	dat$study[dat$study.abbreviation == "PanScan III"]<-"Pancreatic Cancer Cohort Consortium III"
@@ -312,12 +324,15 @@ format_dat2<-function(dat=NULL){
 	return(dat3)
 }
 
+meta.dat[is.na(meta.dat$cancer),]
 combine_cancers<-function(dat=NULL){
 	cancers<-unique(dat$cancer)
 	Dat_list<-NULL
+	# i<-1
 	for(i in 1:length(cancers)){
 		print(cancers[i])
 		Dat<-dat[dat$cancer == cancers[i],]
+
 		Dat[,c("cancer","study.abbreviation","cases")]
 		Dat$cases<-sum(Dat$cases)
 		Dat$controls<-sum(Dat$controls)

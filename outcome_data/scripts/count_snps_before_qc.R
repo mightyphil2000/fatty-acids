@@ -39,8 +39,6 @@ unique(Dat$correspondence[which(Dat$open_gwas)])
 length(unique(Dat$study[which(!Dat$open_gwas)]))
 
 Dat<-basic_qc(dat=Dat)
-
-
 nrow(Dat)
 length(unique(Dat$study))
 length(unique(Dat$ID))
@@ -58,6 +56,7 @@ Dat2_2<-Dat2_2[Dat2_2$rsid %in% snps_fa,]
 Dat2<-rbind(Dat2_1,Dat2_2)
 dim(Dat2)
 dim(Dat2_1)
+dim(Dat2_2)
 length(unique(Dat2$study))
 length(unique(Dat2$ID))
 

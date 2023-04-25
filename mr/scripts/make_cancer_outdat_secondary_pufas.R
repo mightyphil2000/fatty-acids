@@ -2,9 +2,14 @@ source("~/fatty-acids/mr/scripts/mr_functions.R")
 
 Dir<-"~/fatty-acids/outcome_data/secondary_pufas/"
 Files<-dir(Dir)
+
+#Files<-Files[11:14]
+
 Dat_list<-NULL
 for(i in 1:length(Files)){
 	print(i)
+	#i<-c(11,12,13,14)
+	#i<-11
 	print(Files[i])
 	# i<-which(Files== "gli66_csi_inst.txt")
 	In_file<-paste0(Dir,Files[i])
@@ -20,6 +25,7 @@ for(i in 1:length(Files)){
 }
 
 Dat<-do.call(plyr::rbind.fill,Dat_list)
+
 # Dat[Dat$study == "ILCCO" & Dat$rsid =="rs1741" ,]
 col_names_keep<-c("file.outcome","outcome","population","pmid","study","ncase","ncontrol","UKbiobank","rsid","effect_allele","other_allele","lnor","lnor_se","eaf","p","info1","HWEp","phet","I2","Q","Direction","effect_allele_confirmed","id","z_score","open_gwas","efo","proxy","study")
 

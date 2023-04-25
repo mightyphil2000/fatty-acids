@@ -1,0 +1,29 @@
+cancer	median.age.diagnosis	id.outcome
+Acute lymphoblastic leukaemia	16	4; 21; 130
+Bladder cancer	73	28; 105; 136
+Breast cancer	63	6; 31; 139
+Central nervous system and eye cancer	59	35; 138; 165
+Cervical cancer	49	92
+Chronic lymphocytic leukaemia	71	83
+Colorectal cancer	68	60
+Diffuse large b cell lymphoma	67	84
+Endocrine gland cancer	51	37
+Endometrial cancer	62	25
+Esophageal adenocarcinoma	68	24; 144
+Follicular lymphoma	67	40; 85
+Hodgkin’s lymphoma	40	69
+Kidney cancer	65	41; 89; 145
+Leukaemia	67	146
+Liver & bile duct cancer	64	147
+Lung cancer	71	75
+Lymphoma	66	151
+Melanoma	64	95; 153
+Multiple myeloma	70	47; 96; 154
+Myeloid leukaemia	68	155
+Non-hodgkin lymphoma unspecified	67	49
+Oral cavity and pharyngeal cancer	63	50; 81; 157
+Ovarian cancer	64	118
+Pancreatic cancer	71	121
+Prostate cancer	66	128
+Small bowel cancer	66	161
+Thyroid cancer	51	26; 55; 131; 163

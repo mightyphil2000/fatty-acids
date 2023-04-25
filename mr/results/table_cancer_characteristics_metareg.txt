@@ -1,0 +1,53 @@
+cancer	id.outcome	median.age.diagnosis	survival_time	incidence	stem_cell_divisions	system2_num	infl_agent	infl	smoking1
+Acute lymphoblastic leukaemia	4; 21; 130	16	68.3	1.9	NA	0	0	0	0
+B cell non-hodgkin lymphoma	5	NA	NA	NA	NA	0	1	0	0
+Basal cell carcinoma	1; 70; 135	NA	NA	NA	3.55e+12	0	0	0	0
+Bladder cancer	28; 105; 136	73	77.8	21.7	NA	0	1	1	1
+Blood cancer	10; 29; 137	NA	NA	NA	NA	0	0	0	0
+Breast cancer	6; 31; 139	63	90.7	67.8	NA	0	0	0	0
+Central nervous system and eye cancer	35; 138; 165	59	32.4	7	NA	0	0	0	0
+Cervical cancer	11; 92; 129	NA	NA	NA	NA	0	1	0	1
+Cervical cancer	92	49	68.7	3.7	NA	NA	NA	NA	NA
+Chronic lymphocytic leukaemia	83	71	83.4	5.1	1.3e+11	0	0	0	0
+Chronic myeloid leukaemia	87	NA	NA	NA	NA	0	0	0	0
+Colorectal cancer	3; 36; 60	NA	NA	NA	1.17e+12	1	1	1	1
+Colorectal cancer	60	68	65.5	39.3	NA	NA	NA	NA	NA
+Diffuse large b cell lymphoma	84	67	71.4	20.4	NA	0	0	0	0
+Endocrine gland cancer	37	51	96.7	15.6	NA	0	0	0	0
+Endometrial cancer	13; 25; 38	NA	NA	NA	NA	0	0	0	0
+Endometrial cancer	25	62	84.9	13.4	NA	NA	NA	NA	NA
+Esophageal adenocarcinoma	24; 144	68	19.7	4.5	NA	1	1	1	1
+Esophageal squamous cell carcinoma	14; 99	NA	NA	NA	1.2e+09	1	1	1	1
+Ewing's sarcoma	27	NA	NA	NA	NA	0	0	0	0
+Follicular lymphoma	40; 85	67	71.4	20.4	NA	0	0	0	0
+Gastric adenocarcinoma	15; 101	NA	NA	NA	NA	1	1	0	1
+Glioma	66; 67; 133; 134	NA	NA	NA	2.7e+08	0	0	0	0
+Hodgkin’s lymphoma	69	40	86.6	2.7	NA	0	0	0	0
+Kidney cancer	41; 89; 145	65	74.1	16.1	NA	0	0	0	1
+Leukaemia	146	67	61	14.5	NA	0	0	0	0
+Liver & bile duct cancer	147	64	16.8	7.8	NA	NA	NA	NA	NA
+Liver cancer	16; 23; 148	NA	NA	NA	2.71e+11	1	1	0	1
+Lung adenocarcinoma	72	NA	NA	NA	9.27e+09	NA	NA	NA	NA
+Lung cancer	17; 42; 75; 149	NA	NA	NA	NA	0	1	1	1
+Lung cancer	75	71	18.3	57.3	NA	NA	NA	NA	NA
+Lymphoma	151	66	73.4	23.1	NA	0	0	0	0
+Marginal zone lymphoma	86	NA	NA	NA	NA	0	1	1	0
+Melanoma	95; 153	64	91.2	26.6	7.64e+11	0	1	1	0
+Meningioma	94	NA	NA	NA	NA	0	0	0	0
+Multiple myeloma	47; 96; 154	70	49.2	6	NA	0	0	0	0
+Myeloid leukaemia	155	68	38.7	6.6	NA	0	0	0	1
+Nasopharyngeal carcinoma	132	NA	NA	NA	NA	1	0	0	1
+Neuroblastoma	107	NA	NA	NA	NA	0	0	0	0
+Non-follicular lymphoma	48	NA	NA	NA	NA	0	0	0	0
+Non-hodgkin lymphoma unspecified	49	67	71.4	20.4	NA	0	1	0	0
+Oral cavity and pharyngeal cancer	50; 81; 157	63	65.9	11.7	3.19e+10	1	1	1	1
+Ovarian cancer	118	64	46.6	6.5	NA	NA	NA	NA	NA
+Ovarian cancer	18; 51; 118; 120; 158	NA	NA	NA	NA	0	1	0	0
+Pancreatic cancer	121	71	8.1	12.5	NA	NA	NA	NA	NA
+Pancreatic cancer	19; 52; 121; 123; 125	NA	NA	NA	3.43e+11	1	1	1	1
+Prostate cancer	128	66	98.9	52.1	NA	NA	NA	NA	NA
+Prostate cancer	20; 53; 128; 159	NA	NA	NA	NA	0	0	0	0
+Small bowel cancer	161	66	68.5	2.2	2.92e+11	1	0	0	0
+Squamous cell carcinoma	2; 71; 162	NA	NA	NA	NA	0	0	0	0
+Thyroid cancer	26; 55; 131; 163	51	98.4	14.9	5.85e+08	0	0	0	0
+Uveal melanoma	165	NA	NA	NA	NA	0	0	0	0

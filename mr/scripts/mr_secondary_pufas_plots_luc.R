@@ -7,15 +7,14 @@ source("~/fatty-acids/mr/scripts/mr_functions.R")
 # load("~/fatty-acids/mr/results/res_single_ara_la_fixed_effects_v2.Rdata")
 load("~/fatty-acids/mr/results/mr_secondary_pufas_inclfads_v3.Rdata")
 fads1<-res4
-head(fads1)
-fads1[fads1$outcome2 == "Lung cancer",]
+#fads1[fads1$outcome2 == "Lung cancer",]
 fads1$fads<-TRUE
 load("~/fatty-acids/mr/results/mr_secondary_pufas_exclfads_v3.Rdata")
 fads2<-res4
 fads2$fads<-FALSE
 Dat<-rbind(fads1,fads2)
-Plot_dat[Plot_dat$exposure =="Omega-6 fatty acids",]
 Plot_dat<-format_plot(dat=Dat,cancer=c("Lung cancer"   ))
+Plot_dat[Plot_dat$exposure =="Omega-6 fatty acids",]
 dim(Plot_dat)
 Plot_dat$study.abbreviation
 Plot_dat$ncase

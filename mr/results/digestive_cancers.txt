@@ -1,0 +1,44 @@
+cancer	system2_num	id.outcome
+Colorectal cancer	1	3; 36; 60
+Pancreatic cancer	1	19; 52; 121; 123; 125
+Gastric adenocarcinoma	1	15; 101
+Oral cavity and pharyngeal cancer	1	50; 81; 157
+Esophageal adenocarcinoma	1	24; 144
+Liver cancer	1	16; 23; 148
+Esophageal squamous cell carcinoma	1	14; 99
+Nasopharyngeal carcinoma	1	132
+Small bowel cancer	1	161
+Lung cancer	0	17; 42; 75; 149
+Kidney cancer	0	41; 89; 145
+Cervical cancer	0	11; 92; 129
+Bladder cancer	0	28; 105; 136
+Myeloid leukaemia	0	155
+Breast cancer	0	6; 31; 139
+Prostate cancer	0	20; 53; 128; 159
+Ovarian cancer	0	18; 51; 118; 120; 158
+Basal cell carcinoma	0	1; 70; 135
+Melanoma	0	95; 153
+Endometrial cancer	0	13; 25; 38
+Glioma	0	66; 67; 133; 134
+Squamous cell carcinoma	0	2; 71; 162
+Blood cancer	0	10; 29; 137
+Diffuse large b cell lymphoma	0	84
+Acute lymphoblastic leukaemia	0	4; 21; 130
+Chronic lymphocytic leukaemia	0	83
+Hodgkin’s lymphoma	0	69
+Follicular lymphoma	0	40; 85
+Thyroid cancer	0	26; 55; 131; 163
+Multiple myeloma	0	47; 96; 154
+Neuroblastoma	0	107
+Lymphoma	0	151
+Meningioma	0	94
+Leukaemia	0	146
+Central nervous system and eye cancer	0	35; 138; 165
+Marginal zone lymphoma	0	86
+Ewing's sarcoma	0	27
+Non-follicular lymphoma	0	48
+Endocrine gland cancer	0	37
+Uveal melanoma	0	165
+B cell non-hodgkin lymphoma	0	5
+Chronic myeloid leukaemia	0	87
+Non-hodgkin lymphoma unspecified	0	49

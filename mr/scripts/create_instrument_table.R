@@ -16,10 +16,13 @@ excl<-c("Stearidonic acid (18:4n3)","Eicosadienoic acid (20:2n6)","Adrenic acid 
 
 exp_dat<-exp_dat[!exp_dat$exposure %in% excl,]
 length(unique(exp_dat$exposure))
-exp_dat<-exp_dat[,c("exposure","SNP","beta.exposure","se.exposure","eaf.exposure","consortium","FADS","chr","position","samplesize.exposure","median_n","pval.exposure","id","pmid")]
+exp_dat<-exp_dat[,c("exposure","SNP","beta.exposure","se.exposure","effect_allele.exposure","other_allele.exposure","eaf.exposure","consortium","FADS","chr","position","samplesize.exposure","median_n","pval.exposure","id","pmid")]
 exp_dat1<-exp_dat[exp_dat$FADS,]
 length(unique(exp_dat$SNP))
 exp_dat1[,c("exposure","SNP","beta.exposure","se.exposure","eaf.exposure","consortium","FADS","chr","position")]
+exp_dat$effect_allele.exposure<-toupper(exp_dat$effect_allele.exposure)
+exp_dat$other_allele.exposure<-toupper(exp_dat$other_allele.exposure)
+
 write.table(exp_dat,"~/fatty-acids/mr/results/instruments_table.txt",sep="\t",col.names=TRUE,row.names=FALSE,quote=FALSE)
 
 

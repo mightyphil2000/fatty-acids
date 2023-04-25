@@ -1,5 +1,6 @@
 
 
+
 format_bystudy<-function(cancer=NULL,overall_effect=TRUE){
 	# load("~/fatty-acids/mr/results/mr_results_rep_v2.Rdata")
 	# mr_res2<-mr_res1[mr_res1$population == "European",]
@@ -264,6 +265,10 @@ format_all_discovery<-function(Power=NULL){
 
 format_dat2<-function(dat=NULL,p_threshold=NULL,sort=NULL){
 	id.disc<-disc.tab9$ID
+	# id.disc[grep("86",id.disc)]
+
+	# mr_res1$id.outcome[grep("49",mr_res1$id.outcome)]
+	
 	id.disc<-id.disc[grep(";",id.disc,invert=T)]
 	dat1<-dat[dat$exposure !="GLA:LAadj_rs174546",]
 	dat2<-dat1[grep(";",dat1$id.outcome),]
@@ -644,6 +649,7 @@ format_colorectal2<-function(){
 
 format_all_discovery_v2<-function(){
 	load("~/fatty-acids/mr/results/mr_results_rep_v3.Rdata")
+	# mr_res1$id.outcome[grep("86",mr_res1$id.outcome)]
 	mr_res1$pval<-as.numeric(mr_res1$pval)
 	mr_res1$b<-as.numeric(mr_res1$b)
 	mr_res1$se<-as.numeric(mr_res1$se)
@@ -661,8 +667,6 @@ format_all_discovery_v2<-function(){
 	return(mr_res1)
 }
 
-mr_res1[mr_res1$cancer %in% c("Colorectal cancer","Esophageal squamous cell carcinoma","Lung cancer","Basal cell carcinoma"),c("outcome","cases","OR","LCI","UCI","study")]
-
 format_plot_dat<-function(){
 	plot_dat$cancer[plot_dat$cancer=="Cancer (all cause)"]<-"Cancer (all sites)"
 	plot_dat$cancer[plot_dat$cancer=="Cancer (excluding non-melanoma skin cancer)"]<-"Cancer (excl nmsc)"
@@ -672,7 +676,15 @@ format_plot_dat<-function(){
 	plot_dat$cancer[plot_dat$cancer=="Low malignant 
 	potential ovarian cancer"]<-"LMP ovarian cancer"
 	plot_dat$cancer[plot_dat$cancer=="Central nervous system and eye cancer"]<-"CNS & eye cancer"
-	plot_dat$cancer[plot_dat$cancer=="Malignant non-melanoma skin cancer"  ]<-"Malignant nmsc"
+	plot_dat$cancer[plot_dat$cancer=="Malignant non-melanoma skin cancer"  ]<-"Non-melanoma"
+	plot_dat$cancer[plot_dat$cancer=="Malignant skin cancer"  ]<-"Overall skin cancer"
+	plot_dat$cancer<-gsub("Low malignant potential","LMP",plot_dat$cancer)
+	plot_dat$cancer<-gsub("Low grade","LG",plot_dat$cancer)
+	plot_dat$cancer<-gsub("Noncardia","NC",plot_dat$cancer)
+
+
+	
+
 	plot_dat$cancer[plot_dat$cancer=="Respiratory and intrathoracic cancer"  ]<-"Respiratory & intrathoracic cancer"  
 	plot_dat$cancer[plot_dat$cancer=="Esophageal squamous cell carcinoma"  ]<-"Esophageal SCC" 
 	plot_dat$cancer<-trimws(gsub("cancer","",plot_dat$cancer))
@@ -691,7 +703,7 @@ format_plot_dat<-function(){
 	plot_dat$system[plot_dat$system=="Blood"]<-"CBlood"
 	plot_dat$system[plot_dat$system=="Respiratory"]<-"DRespiratory"
 	plot_dat$system[plot_dat$system=="Integumentary"]<-"EIntegumentary"
-	plot_dat$system[plot_dat$system=="Integumentary"]<-"EIntegumentary"
+	# plot_dat$system[plot_dat$system=="Integumentary"]<-"EIntegumentary"
 	# plot_dat$system[plot_dat$system=="Nervous"]<-"FNervous"
 	plot_dat$system[plot_dat$system %in% c("Endocrine","Multiple","Urinary","Nervous")]<-"GOther"	
 	# plot_dat<-plot_dat[!plot_dat$cancer %in% c("Leukaemia","Oral","Invasive mucinous ovarian","Neuroblastoma","LMP serous ovarian","Diffuse large b cell lymphoma"),]
@@ -961,4 +973,112 @@ find_exposure_info<-function()
 	exp_dat<-format_exposure3(dat=eur1,standardise_beta=TRUE,beta="beta",se="se",pval="pval",effect_allele="effect_allele",other_allele="other_allele",eaf="effect_allele_freq",rsid="snp",ID="ID",exposure="trait",samplesize="n")
 	exp_dat<-unique(exp_dat[,c("exposure","consortium","id.exposure")])
 	return(exp_dat)
+}
+
+format_plot2<-function(dat=NULL,cancer=NULL){
+	if(!is.null(cancer))
+	{
+		dat<-dat[dat$outcome %in%cancer,]
+	}
+	
+	dat$PUFA<-NA
+	dat$PUFA[grep("n3",dat$exposure)]<-"Omega 3"
+	dat$PUFA[dat$exposure=="Omega-3 fatty acids"]<-"Omega 3"
+	dat$PUFA[grep("n6",dat$exposure)]<-"Omega 6"
+	dat$PUFA[dat$exposure=="Omega-6 fatty acids"]<-"Omega 6"
+	dat$PUFA[grep("n3 or n6",dat$exposure)]<-"other"
+	dat$PUFA[is.na(dat$PUFA)] <- "other"
+
+	dat1<-dat[grep(":",dat$exposure),]
+	dat1<-dat1[dat1$exposure!= "Other polyunsaturated fatty acids than 18:2",]
+	dat2<-dat[grep(":",dat$exposure,invert=TRUE),]
+	dat2<-rbind(dat2,dat[dat$exposure== "Other polyunsaturated fatty acids than 18:2",])
+	Pos<-gregexpr(":",dat1$exposure)
+	dat1$chain.length<-as.numeric(substr(dat1$exposure,start=unlist(Pos)-2,stop=unlist(Pos)-1))
+	dat2$chain.length<-NA
+	dat<-rbind(dat1,dat2)
+
+	# dat<-dat[dat$population =="European",]
+	# dat<-dat[dat$exposure=="Arachidonic acid",]
+	dat$b<-as.numeric(dat$b)
+	dat$se<-as.numeric(dat$se)
+	#dat$ncase.outcome<-as.numeric(dat$ncase.outcome)
+	#dat<-dat[order(dat$ncase.outcome,decreasing=TRUE),]
+	# dat$ncase.outcome<-as.numeric(dat$ncase.outcome)
+	dat$shape<-15
+	dat$weight<-1/dat$se/5
+	# dat$name <- paste(dat$outcome2,"\n",dat$ncase.outcome)
+
+	#dat$outcome_name<-paste(dat$outcome,"\nN. cases=",dat$ncase.outcome)
+	# dat<-dat[dat$outcome2 !="Overall cancer (excluding non-melanoma skin cancer)",]
+	#dat$outcome_name<-gsub("\\(excluding non-melanoma skin cancer)","\n(excl. nm-skin cancer)",dat$outcome_name)
+	#dat$outcome_name<-gsub("Respiratory and","Respiratory &\n",dat$outcome_name)
+	dat<-dat[!dat$exposure %in% c("Ratio of omega-6 fatty acids to omega-3 fatty acids","Other polyunsaturated fatty acids than 18:2" ,"Dihomo-linolenic acid (20:3n3 or n6)", "Tetradecadienoic acid (14:2n9)"),]
+	exp_dat<-find_exposure_info()
+	exp_dat<-exp_dat[,c("id.exposure","consortium","exposure")]
+	dat<-merge(dat,exp_dat,by="exposure")
+
+	load("~/fatty-acids/mr/results/secondary_pufas_exclfads_heterogeneity_altmethod.Rdata")
+	het1<-het[,c("outcome","id.outcome","id.exposure","method","Q","Q_pval","Q_df")]
+	het1$fads<-FALSE
+	load("~/fatty-acids/mr/results/secondary_pufas_inclfads_heterogeneity_altmethod.Rdata")
+	
+	het2<-het[,c("outcome","id.outcome","id.exposure","method","Q","Q_pval","Q_df")]
+	het2$fads<-TRUE
+	het<-rbind(het1,het2)
+	het<-het[het$method !="MR Egger",]
+	het<-merge(het,exp_dat,by="id.exposure")
+	het[het$exposure=="Eicosapentaenoic acid (20:5n3)" , ]
+	dat<-merge(dat,het,by=c("exposure","id.outcome","fads"),all.x=TRUE)
+	Dups<-unique(dat$exposure[duplicated(dat$exposure)])
+	dat<-dat[dat$exposure %in% Dups,]
+	# dat<-dat[!dat$exposure %in% c("Omega-3 fatty acids","Omega-6 fatty acids"),]
+	dat<-dat[dat$PUFA !="other",]
+	dat$exposure2<-paste0(dat$exposure,"\n(",dat$consortium,")")
+	dat$exposure3<-paste0(dat$exposure,"\n(",dat$consortium," nsnps=",dat$nsnp,")")
+	
+	
+	dat$pval<-formatC(as.numeric(dat$pval), format = "e", digits = 2)
+	# dat$pval<-paste(dat$pval,c("A","B","C"))
+	dat$Q_pval<-formatC(as.numeric(dat$Q_pval), format = "e", digits = 2)
+	dat$Q_pval<-gsub(" ","",dat$Q_pval)
+	dat$pval_name<-paste0(dat$pval,"\n")
+	dat$Q_pval_name<-paste0(dat$Q_pval)
+	dat$Q_pval_name[dat$Q_pval_name=="NA"]<-c("NA1","NA2","NA3")
+	dat$nsnps_name<-paste0(substring(dat$exposure,1,1),substring(dat$exposure,10,10),"   ",dat$nsnp)
+	
+	dat$FADS<-dat$fads
+	# dat$FADS<-""
+	dat$FADS[dat$fads]<-"included"
+	dat$FADS[!dat$fads]<-"excluded"
+	dat$FADS2[dat$FADS=="excluded"]<-"B"
+	dat$FADS2[dat$FADS=="included"]<-"A"
+
+	dat1<-dat[dat$exposure %in% c("Omega-6 fatty acids","Omega-3 fatty acids"),]
+	dat2<-dat[!dat$exposure %in% c("Omega-6 fatty acids","Omega-3 fatty acids"),]
+	exp<-unlist(strsplit(dat2$exposure,split="\\("))
+	exp<-trimws(exp[seq(1,length(exp),by=2)])
+	dat2$exposure_clean<-exp
+	dat1$exposure_clean<-dat1$exposure
+	dat<-rbind(dat1,dat2)
+	names(dat)[names(dat) == "consortium.x"]<-"consortium"
+	dat$exposure_study<-paste0(dat$exposure_clean," (",dat$consortium,")")
+	
+	# dat<-dat[order(dat$exposure),]
+	dat1<-dat[dat$PUFA == "Omega 6",]
+	dat<-dat[dat$PUFA != "Omega 6",]
+	dat2<-dat1[dat1$exposure=="Linoleic acid (18:2n6)",]
+	dat1<-dat1[dat1$exposure!="Linoleic acid (18:2n6)",]		
+	dat<-dat[order(dat$PUFA,dat$chain.length,dat$exposure,dat$FADS2),]
+	dat1<-dat1[order(dat1$PUFA,dat1$chain.length,dat1$exposure,dat1$FADS2),]
+	dat2<-dat2[order(dat2$PUFA,dat2$chain.length,dat2$exposure,dat2$FADS2),]
+	dat1<-rbind(dat2,dat1)
+	dat<-rbind(dat,dat1)
+	# dat$exposure[dat$exposure=="Alpha-linolenic acid (18:3n3)"   ][1]<-paste0("Omega 3 PUFAs\n\n","Alpha-linolenic acid (18:3n3)"  )
+	# dat$exposure[dat$exposure=="Linoleic acid (18:2n6)"   ][1]<-paste0("Omega 6 PUFAs\n\n","Linoleic acid (18:2n6)"   )
+	dat$or<-round(exp(dat$b),2)
+	dat$lci<-round(exp(dat$b-1.96*dat$se),2)
+	dat$uci<-round(exp(dat$b+1.96*dat$se),2)
+
+	return(dat)
 }

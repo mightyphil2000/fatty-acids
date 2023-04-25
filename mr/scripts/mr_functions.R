@@ -157,9 +157,32 @@ mr_meta_analysis<-function(Dat=NULL,beta.col="b",se.col="se",outcome="cancer",nc
 
 	# i<-which(IDS == "86; 5; 49")
 	# i<-which(IDS=="118; 120; 158; 18; 51")
+	i<-which(IDS=="96; 154; 47")
+	grep(96.2,IDS)
 	L<-NULL
 	for(i in 1:length(IDS)){
 		ID<-trimws(unlist(strsplit(IDS[i],split=";")))
+		Dat2<-Dat[Dat$id.outcome %in% ID,]
+		Dat2
+		# Dat2[order(Dat2$exposure),c("exposure","id.exposure","id.outcome","population")]
+		# Meta_analysis<-meta_analysis(dat=Dat2,beta.col=beta.col,se.col=se.col,outcome=outcome,ncase=ncase,ncontrol=ncontrol)
+		Meta_analysis<-meta_analysis_v2(dat=Dat2,beta.col=beta.col,se.col=se.col,outcome=outcome,ncase=ncase,ncontrol=ncontrol) #updated so that only GLA:LA is used in East Asian studies and only AA:DGLA used for European populations. This reflects the definition of PUFA desaturase activity as AA:DGLA in European studies and as GLA:LA in East Asian studies 
+		# Dat3<-rbind.fill(Dat2,Meta_analysis)
+		L[[i]]<-Meta_analysis
+	}
+	Dat4<-do.call(rbind,L)
+	return(Dat4)
+}
+
+mr_meta_analysis_excl5<-function(Dat=NULL,beta.col="b",se.col="se",outcome="cancer",ncase="cases",ncontrol="controls"){
+	id.ma<-disc.tab9$ID[grep(";",disc.tab9$ID)] #identify IDs for outcomes that should be meta analysed
+	IDS<-unique(id.ma)
+	# i<-which(IDS == "86; 5; 49")
+	# i<-which(IDS=="118; 120; 158; 18; 51")
+	L<-NULL
+	for(i in 1:length(IDS)){
+		ID<-trimws(unlist(strsplit(IDS[i],split=";")))		
+		ID<-ID[ID!="5"]
 		Dat2<-Dat[Dat$id.outcome %in% ID,]
 		# Dat2[order(Dat2$exposure),c("exposure","id.exposure","id.outcome","population")]
 		# Meta_analysis<-meta_analysis(dat=Dat2,beta.col=beta.col,se.col=se.col,outcome=outcome,ncase=ncase,ncontrol=ncontrol)
@@ -2554,6 +2577,10 @@ format_snp_csi<-function()
 	dat$beta.csi<-as.numeric(dat$beta.csi)
 	dat$eaf.csi<-as.numeric(dat$eaf.csi)
 	dat$pval.csi<-as.numeric(dat$pval.csi)
+	
+	# transformed beta.csi to SD scale
+	dat$beta.csi<-dat$beta.csi/0.6940093 #transform to SD scale
+	dat$se.csi<-dat$se.csi/0.6940093 #transform to SD scale
 	# Fix TRUE alleles as T alleles
 	
 	Pos<-which(dat$other_allele.csi) 
@@ -2570,8 +2597,10 @@ format_snp_csi<-function()
 	dat$eaf.csi[Pos]<-eaf
 	dat$effect_allele.csi[Pos]<-ea
 	dat$other_allele.csi[Pos]<-oa
-	dat$lci.csi<-round(dat$beta.csi-1.96*dat$se.csi,3)
-	dat$uci.csi<-round(dat$beta.csi+1.96*dat$se.csi,3)
+	dat$lci.csi<-dat$beta.csi-1.96*dat$se.csi
+	dat$uci.csi<-dat$beta.csi+1.96*dat$se.csi
+	# dat$lci.csi<-round(dat$beta.csi-1.96*dat$se.csi,4)
+	# dat$uci.csi<-round(dat$beta.csi+1.96*dat$se.csi,4)
 	dat<-dat[,!names(dat) %in% c("CHR","BP")]
 	return(dat)
 }
@@ -2754,7 +2783,8 @@ gscan_decon<-function(method=NULL)
 
 format_res_csi<-function()
 {
-	load("~/fatty-acids/mr/results/res_csi.Rdata")
+	# load("~/fatty-acids/mr/results/res_csi.Rdata")
+	load("~/fatty-acids/mr/results/res_csi_v2.Rdata")
 	res_csi<-res_csi[res_csi$outcome2 %in% c("Lung cancer","Colorectal cancer","Basal cell carcinoma","Overall cancer"),]
 	# res_csi[res_csi$outcome2 %in% c("Lung cancer","Colorectal cancer","Basal cell carcinoma","Overall cancer"), ]
 
@@ -2774,6 +2804,9 @@ csi_decon<-function()
 {	
 	res_csi<-merge(res_csi,snp_csi,by="exposure") 	
 	res_csi$lnor_decon<-res_csi$b*res_csi$beta.csi
+	exp(res_csi$b)
+	b1<-exp(res_csi$lnor_decon)
+	# head(res_csi)
 	res_csi$se_decon<-res_csi$se*res_csi$beta.csi
 	res_csi$or_decon<-exp(res_csi$lnor_decon)
 	res_csi$lci_decon<-exp(res_csi$lnor_decon-1.96*res_csi$se_decon)
@@ -2901,4 +2934,145 @@ extract_meta_results<-function(dat=NULL)
 	b<-data.frame(matrix(a,nrow=1,ncol=length(a)))
 	names(b)<-c("fe","se.fe","or_fe","or_fe_lci","or_fe_uci","re","se.re","or_re","or_re_lci","or_re_uci","fe.pval","re.pval","Q","df.Q","pval.Q","K","I2","I2_lower","I2_upper")	
 	return(b)
+}
+
+meta_analysis<-function(dat=NULL){
+	studies<-unique(dat$study)
+	outcomes<-unique(dat$outcome)
+	exposures<-unique(dat$exposure)
+	snps<-unique(dat$snps)
+	#i<-1
+	Res<-NULL
+	for(i in 1:length(outcomes)){
+		dat2<-dat[dat$outcome == outcomes[i],]
+		for(j in 1:length(exposures)){
+			for(k in 1:length(snps)){
+				
+			}
+		#	j<-1
+			dat2<-dat2[dat2$exposure==exposures[j],]
+		
+	
+			b<-dat2$b
+			se<-dat2$se
+			w<-1/se^2
+			b.fixed<-sum(b*w)/(sum(w))
+			se.fixed<-sqrt(sum(w)^-1)
+			z<-abs(b.fixed/se.fixed)
+			p.fixed<-pnorm(z,lower.tail=F)*2
+
+			
+
+			study<-"Overall fixed effect"
+			Q<-sum((b.fixed-b)^2*w)
+			df.Q<-length(b)-1		
+			Q.p<-pchisq(Q, df.Q, lower.tail = FALSE)
+			
+			dat2.matrix<-c(b.fixed,se.fixed,p.fixed,study,outcomes[i],exposures[j])
+			meta_results<-data.frame(matrix(dat2.matrix,nrow=1,ncol=length(dat2.matrix)),stringsAsFactors=F)
+			index<-paste(outcomes[j],exposures[j])
+			names(meta_results)<-c("b","se","p","study","outcome","exposure")
+			Res[[index]]<-meta_results
+		}
+	}			
+	return(Res)
+}
+
+
+meta_analysis_v3<-function(dat2=NULL,beta.col=NULL,se.col=NULL,outcome="outcome",ncase="ncase",ncontrol="ncontrol"){
+	
+	# i<-1
+	Res<-NULL
+	snps<-unique(dat2$SNP)
+	i<-which(snps == "rs174528")
+	for(i in 1:length(snps)){
+		dat<-dat2[dat2$SNP == snps[i] ,]
+		# harmonisation
+		if(nrow(dat)>2) stop("script assumes there are only two rows in the data")
+		if(nrow(dat)==2){
+			if(dat$effect_allele.outcome[1] !=dat$effect_allele.outcome[2]){
+				Pos<-2
+				ea<-dat$effect_allele.outcome[1]
+				oa<-dat$other_allele.outcome[1]
+				dat$effect_allele.outcome[2]<-ea
+				dat$other_allele.outcome[2]<-oa
+				eaf<-1-dat$eaf.outcome[2]
+				dat$eaf.outcome[2]<-eaf
+				beta<-dat$beta.outcome[2]*-1
+				dat$beta.outcome[2]<-beta		
+			}	
+			if(dat$effect_allele.outcome[1] !=dat$effect_allele.outcome[2]) stop("effect alleles still different after effect allele harmonisation")
+			if(dat$other_allele.outcome[1] !=dat$other_allele.outcome[2]) stop("effect alleles still different after effect allele harmonisation")
+			#if(dat$effect_allele.outcome[1] ==dat$effect_allele.outcome[2]) message("harmonisation successful")
+		}
+
+		print(snps[i])
+		b<-dat[,beta.col]
+		se<-dat[,se.col]	
+		# p<-temp$p
+		w<-1/se^2
+		b.fixed<-sum(b*w)/(sum(w))
+		se.fixed<-sqrt(sum(w)^-1)
+		z<-abs(b.fixed/se.fixed)
+		p.fixed<-pnorm(z,lower.tail=F)*2
+		nstudies.fixed<-length(b)
+		cancer<-unique(dat[,outcome])		
+				
+		cases<-sum(dat[,ncase])
+		controls<-sum(dat[,ncontrol])
+		study<-"Overall fixed effect"
+		Q<-sum((b.fixed-b)^2*w)
+		df.Q<-length(b)-1		
+		Q.p<-pchisq(Q, df.Q, lower.tail = FALSE)
+		#if(length(unique(dat$effect_allele.outcome)) != 1) warning("effect alleles different, attempting harmonisation")
+		#if(length(unique(dat$other_allele.outcome)) != 1) warning("other alleles different, attempting harmonisation")
+		EA<-unique(dat$effect_allele.outcome)
+		OA<-unique(dat$other_allele.outcome)
+		EAF<-round(sum((dat$eaf.outcome*w))/sum(w),3)
+		population<- paste(sort(unique(dat$population)),collapse="; ")
+		id.outcome<-paste(sort(as.numeric(dat$id.outcome)),collapse="; ")
+		# exposure<-unique(dat1$exposure)
+		dat.matrix<-c(population,cancer,id.outcome,b.fixed,se.fixed,p.fixed,nstudies.fixed,cases,controls,study,Q.p,EA,OA,EAF)
+		meta_results<-data.frame(matrix(dat.matrix,nrow=length(cancer),ncol=length(dat.matrix)),stringsAsFactors=F)
+		meta_results$SNP<-snps[i]
+		names(meta_results)<-c("population","outcome","id.outcome",beta.col,se.col,"pval","nstudies",ncase,ncontrol,"study","Q.p","effect_allele.outcome","other_allele.outcome","eaf.outcome","SNP")	
+		Res[[i]]<-meta_results			
+	}
+	Res2<-do.call(rbind,Res)
+	Res2$beta.outcome<-as.numeric(Res2$beta.outcome)
+	Res2$se.outcome<-as.numeric(Res2$se.outcome)
+	Res2$eaf.outcome<-as.numeric(Res2$eaf.outcome)
+	return(Res2)
+}
+
+
+
+
+
+
+check_palindromic_snp_threshold<-function(){
+	maf<-exp_dat$eaf
+	Pos<-maf>0.5
+	maf[Pos]<-1-maf[Pos]
+	exp_dat$maf<-maf
+	alleles<-paste0(exp_dat$effect_allele.exposure,exp_dat$other_allele.exposure)
+	Pos<-which(alleles %in% c("GC","CG","AT","TA","cg","gc","at","ta"))
+
+	exp1<-exp_dat[Pos,]
+	Pos<-exp1$maf>=0.42 & exp1$maf<0.45
+	exp1<-exp1[Pos,c("SNP","exposure","effect_allele.exposure","other_allele.exposure","maf","eaf.exposure")]
+	return(exp1)
+	# snps == "rs3798713"
+	# Pos<-maf>0.41 & maf<0.45
+	# snps[Pos]
+	# exp_dat[exp_dat$SNP=="rs3798713",c("effect_allele.exposure","other_allele.exposure","eaf.exposure")]
+}
+
+
+check_palindromic_snp_outcomedat<-function(snp="rs28601761"){
+	outcome_dat<-outcome_dat[outcome_dat$population=="European",]
+	maf<-outcome_dat$eaf.outcome[outcome_dat$SNP==snp]
+	maf<-1-maf[maf>0.5]
+	sort(maf)
+	return(maf)
 }

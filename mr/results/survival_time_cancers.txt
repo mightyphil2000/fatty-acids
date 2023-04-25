@@ -1,0 +1,29 @@
+cancer	survival_time	id.outcome
+Acute lymphoblastic leukaemia	68.3	4; 21; 130
+Bladder cancer	77.8	28; 105; 136
+Breast cancer	90.7	6; 31; 139
+Central nervous system and eye cancer	32.4	35; 138; 165
+Cervical cancer	68.7	92
+Chronic lymphocytic leukaemia	83.4	83
+Colorectal cancer	65.5	60
+Diffuse large b cell lymphoma	71.4	84
+Endocrine gland cancer	96.7	37
+Endometrial cancer	84.9	25
+Esophageal adenocarcinoma	19.7	24; 144
+Follicular lymphoma	71.4	40; 85
+Hodgkin’s lymphoma	86.6	69
+Kidney cancer	74.1	41; 89; 145
+Leukaemia	61	146
+Liver & bile duct cancer	16.8	147
+Lung cancer	18.3	75
+Lymphoma	73.4	151
+Melanoma	91.2	95; 153
+Multiple myeloma	49.2	47; 96; 154
+Myeloid leukaemia	38.7	155
+Non-hodgkin lymphoma unspecified	71.4	49
+Oral cavity and pharyngeal cancer	65.9	50; 81; 157
+Ovarian cancer	46.6	118
+Pancreatic cancer	8.1	121
+Prostate cancer	98.9	128
+Small bowel cancer	68.5	161
+Thyroid cancer	98.4	26; 55; 131; 163

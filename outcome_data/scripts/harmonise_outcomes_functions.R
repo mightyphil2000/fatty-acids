@@ -847,8 +847,13 @@ gwas_catalog_hits<-function(trait=NULL,efo=NULL,efo_id=NULL){
 		}
 		if(!is.null(Dat)){
 			Dat<-do.call(rbind,Dat)
-			Dat<-Dat[,c("variant_id","risk_allele","log_odds_ratios","standard_errors","risk_frequency","pvalue","z_scores","study_id")]
-			names(Dat)<-c("rsid","Effect.Allele","lnor","se","eaf","p","test_statistic","study_id")		
+			Dat<-Dat[,c("variant_id","risk_allele","or_per_copy_number", "log_odds_ratios","standard_errors","risk_frequency","pvalue","z_scores","study_id")]
+			names(Dat)<-c("rsid","Effect.Allele","or","lnor","se","eaf","p","test_statistic","study_id")	
+			Pos<-is.na(Dat$lnor)
+			Dat$lnor[Pos]<-log(Dat$or[Pos])
+			se<-Dat$lnor/Dat$test_statistic
+			Pos<-is.na(Dat$se)
+			Dat$se[Pos]<-se[Pos]
 			Dat<-merge(Dat,ancestry_tab,by="study_id")				
 			return(Dat)
 		table(Dat$study_id,Dat$ancestral_group)

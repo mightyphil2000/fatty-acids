@@ -1,0 +1,13 @@
+cancer	stem_cell_divisions	id.outcome
+Basal cell carcinoma	3.55e+12	1; 70; 135
+Chronic lymphocytic leukaemia	1.3e+11	83
+Colorectal cancer	1.17e+12	3; 36; 60
+Esophageal squamous cell carcinoma	1.2e+09	14; 99
+Glioma	2.7e+08	66; 67; 133; 134
+Liver cancer	2.71e+11	16; 23; 148
+Lung adenocarcinoma	9.27e+09	72
+Melanoma	7.64e+11	95; 153
+Oral cavity and pharyngeal cancer	3.19e+10	50; 81; 157
+Pancreatic cancer	3.43e+11	19; 52; 121; 123; 125
+Small bowel cancer	2.92e+11	161
+Thyroid cancer	5.85e+08	26; 55; 131; 163

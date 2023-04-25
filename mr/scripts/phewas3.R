@@ -81,6 +81,7 @@ mr_results<-mr(dat, method_list="mr_wald_ratio")
 save(list=c("mr_results","dat","out_dat_all","eur","ao"),file="~/fatty-acids/mr/results/mr_results_phewas_v2.Rdata")
 load("~/fatty-acids/mr/results/mr_results_phewas_v2.Rdata")
 dim(mr_results)
+head(mr_results)
 
 # blood clotting disorder;
 #  hemorrhagic stroke 
@@ -157,7 +158,14 @@ Pos2<-Color>Psig
 Color[Pos1]<-"red"
 Color[Pos2]<-"black"
 
-
+# head(plot_dat)
+# a<-plot_dat[plot_dat$Category == "BAutoimmune/inflammatory",]
+# head(a)
+# a<-a[,c("trait2","id.outcome","batch","year","group_name","author","consortium","sex","population","unit","ncase","ncontrol","sample_size","pmid","trait","note")]
+# head(a)
+# names(a)[names(a)=="trait"]<-"originalname"
+# names(a)[names(a)=="trait2"]<-"outcome_nice_name"
+# write.table("a","~/protein_prs_ukb/data/autoimmune_infl_diseases.txt",sep="\t",col.names=TRUE,row.names=FALSE,quote=FALSE)
 
 P1<-forestplot(df = plot_dat1,logodds = TRUE,name=outcome,estimate=b,se=se,xlab = "", psignif = 0.05/nrow(plot_dat))+theme(legend.position = "none")+geom_point(shape=15,fill="black",colour=Color[1:42])  +xlim(Min, Max)+theme(plot.title = element_text(size = ""),text = element_text(size=12))
 P1<-P1+ggforce::facet_col(

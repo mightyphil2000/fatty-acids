@@ -2,19 +2,27 @@ source("~/fatty-acids/outcome_data/scripts/harmonise_outcomes_functions.R")
 source("~/fatty-acids/outcome_data/scripts/collate_and_qc_functions.R")
 
 Dat<-collate_dat(postqc=FALSE) 
-Dat<-basic_qc(dat=Dat)
-
-nrow(Dat)
-length(unique(Dat$study))
 length(unique(Dat$ID))
+length(unique(Dat$study))
+
+Dat<-basic_qc(dat=Dat)
+unique(Dat$ID)
+length(unique(Dat$study))
+
+length(unique(Dat$ID))
+
+table(unique(Dat$study))
 
 snp1<-readLines("~/fatty-acids/outcome_data/data/snplist_Europeans_rsidsonly2.txt")
 snp2<-readLines("~/fatty-acids/outcome_data/data/snplist_East_Asians_rsidsonly2_nodups.txt")
 
 snps_fa<-unique(c(snp1,snp2))
 
+dim(Dat[Dat$rsid %in% snps_fa,])
+
 Dat1<-Dat[Dat$summary_set == "FAregions",]
 Dat1<-Dat1[Dat1$rsid %in% snps_fa,]
+dim(Dat1)
 
 Dat2<-Dat[Dat$summary_set != "FAregions",]
 # exclude FA region SNPs that anre't in the fatty acid snp set
@@ -25,6 +33,9 @@ dim(Dat)
 # N SNPs that correspond to the fatty acid SNP set
 dim(Dat[Dat$rsid %in% snps_fa,])
 dim(Dat)
+
+length(unique(Dat$ID))
+length(unique(Dat$study))
 
 # datasets with incorrect effect allele 
 N_incorrect_effect_allele<-nrow(Dat[Dat$ID == 967,])

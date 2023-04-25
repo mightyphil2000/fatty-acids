@@ -29,7 +29,7 @@ length(which(Res1$Freq==1))
 IDS<-c(967,67,106,5,133,68,132,74)
 i<-which(IDS==967)
 IDS<-unique(Dat$ID)
-# IDS<-132
+# IDS<-5
 for(i in 1:length(IDS))
 {
 
